@@ -1,0 +1,2986 @@
+<?xml-stylesheet type="text/xsl" href="https://csg-sdo-stylesheetsweb01.azurewebsites.net/ced/4.0/ced.xsl" alternate="no" title="Allscripts Default" ?>
+<!-- This XML document was retrieved from a public repository of certified EHR samples for Meaningful Use 
+That repository states "The public will be able to view-download the submitted files from this repository." 
+The original files have been edited to make them human-readable and easier to download. Please refer to source repository for original versions 
+The copy date of original repository was February 1, 2018. Here is original repository: https://github.com/siteadmin/2015-C-CDA-Certification-Samples 
+All of these samples were supposed be C-CDA 2.1 clinical documents. The following disclaimer applies to ALL INFORMATION contained herein: 
+THIS INFORMATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE INFORMATION OR THE USE OR OTHER DEALINGS IN THE INFORMATION. 
+Beyond that, I hope they are useful and "hooray" for government transparency! John D'Amore, Diameter Health, Inc. -->
+<ClinicalDocument 
+  xmlns="urn:hl7-org:v3" 
+  xmlns:sdtc="urn:hl7-org:sdtc" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <realmCode code="US" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.14" extension="2015-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.14" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" />
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.5.5.1" />
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.5.5.2" />
+  <id root="17988de0-2843-44c4-b06b-0125c7fcab60" />
+  <code code="57133-1" codeSystem="2.16.840.1.113883.6.1" />
+  <title>Referral Note</title>
+  <effectiveTime value="20161019180943+0000" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  <languageCode code="en-US" />
+  <recordTarget>
+    <patientRole>
+      <id extension="160826170350220" root="1.3.6.1.4.1.22812.3.2009333.3" />
+      <addr use="H">
+        <streetAddressLine>1357 Amber Dr.</streetAddressLine>
+        <city>Beaverton</city>
+        <state>OR</state>
+        <postalCode>97006</postalCode>
+      </addr>
+      <telecom nullFlavor="NI" />
+      <patient>
+        <name use="L">
+          <family>Newman</family>
+          <given>Alice</given>
+          <given>Jones</given>
+        </name>
+        <name>
+          <family qualifier="BR">Newman</family>
+          <given qualifier="BR">Alicia</given>
+          <given>Jones</given>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" />
+        <birthTime value="19700501" />
+        <raceCode code="2106-3" codeSystem="2.16.840.1.113883.6.238" displayName="White" />
+        <sdtc:raceCode code="2108-9" codeSystem="2.16.840.1.113883.6.238" />
+        <ethnicGroupCode code="2186-5" codeSystem="2.16.840.1.113883.6.238" displayName="Not Hispanic or Latino" />
+        <languageCommunication>
+          <languageCode code="en" />
+          <preferenceInd value="true" />
+        </languageCommunication>
+      </patient>
+      <providerOrganization>
+        <id extension="3" root="1.3.6.1.4.1.22812.3.2009333.3" />
+        <name>Seattle Grace Hospital</name>
+        <telecom nullFlavor="NI" />
+        <addr use="H">
+          <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+          <city nullFlavor="UNK"></city>
+          <state>WA</state>
+        </addr>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20161019180943+0000" />
+    <assignedAuthor>
+      <id extension="9" root="1.3.6.1.4.1.22812.3.2009333.3" />
+      <code code="260000000X" codeSystem="2.16.840.1.113883.6.101" />
+      <addr use="H">
+        <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+        <city nullFlavor="UNK"></city>
+      </addr>
+      <telecom use="WP" value="mailto:appadmin@allscripts.com" />
+      <assignedPerson>
+        <name>
+          <family>Allscripts</family>
+          <given>AppAdmin</given>
+        </name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <author>
+    <time value="20161019180943+0000" />
+    <assignedAuthor>
+      <id extension="9381049028" root="2.16.840.1.113883.4.6" />
+      <id extension="3" root="1.3.6.1.4.1.22812.3.2009333.3.3.3" />
+      <addr use="H">
+        <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+        <city nullFlavor="UNK"></city>
+        <state>WA</state>
+      </addr>
+      <telecom nullFlavor="NI" />
+      <assignedAuthoringDevice>
+        <manufacturerModelName> 17.100.610.0</manufacturerModelName>
+        <softwareName> 17.100.610.0</softwareName>
+      </assignedAuthoringDevice>
+      <representedOrganization>
+        <id extension="3" root="1.3.6.1.4.1.22812.3.2009333.3" />
+        <name>Seattle Grace Hospital</name>
+        <telecom nullFlavor="NI" />
+        <addr use="H">
+          <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+          <city nullFlavor="UNK"></city>
+          <state>WA</state>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="3" root="1.3.6.1.4.1.22812.3.2009333.3" />
+        <name>Seattle Grace Hospital</name>
+        <telecom nullFlavor="NI" />
+        <addr use="H">
+          <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+          <city nullFlavor="UNK"></city>
+          <state>WA</state>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient>
+    <intendedRecipient>
+      <id root="1.3.6.1.4.1.22812.3.2009333.3" extension="0" />
+      <informationRecipient>
+        <name>
+          <family>Recipient</family>
+          <given>Unknown</given>
+        </name>
+      </informationRecipient>
+      <receivedOrganization>
+        <id root="1.3.6.1.4.1.22812.3.2009333.3" extension="0" />
+        <name>Unknown Organization</name>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+  <authenticator>
+    <time value="20161019180943+0000" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="1.3.6.1.4.1.22812.3.2009333.3" extension="9" />
+      <addr use="H">
+        <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+        <city nullFlavor="UNK"></city>
+      </addr>
+      <telecom use="WP" value="mailto:appadmin@allscripts.com" />
+      <assignedPerson>
+        <name>
+          <family>Allscripts</family>
+          <given>AppAdmin</given>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <id root="1.3.6.1.4.1.22812.3.2009333.3.3.8" extension="40780" />
+      <effectiveTime xsi:type="IVL_TS">
+        <low value="20150622100000" />
+        <high value="20161019180943+0000" />
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <assignedEntity>
+          <id extension="17" root="1.3.6.1.4.1.22812.3.2009333.3" />
+          <id root="2.16.840.1.113883.4.6" />
+          <code code="260000000X" codeSystem="2.16.840.1.113883.6.101" />
+          <addr use="H">
+            <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+            <city nullFlavor="UNK"></city>
+          </addr>
+          <telecom use="WP" value="mailto:mlprovider@allscripts.com" />
+          <assignedPerson>
+            <name>
+              <family>Allscripts</family>
+              <given>Midlevel Provider</given>
+              <suffix>PA</suffix>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <assignedEntity>
+          <id extension="379" root="1.3.6.1.4.1.22812.3.2009333.3" />
+          <id extension="1234567891" root="2.16.840.1.113883.4.6" />
+          <code code="260000000X" codeSystem="2.16.840.1.113883.6.101" />
+          <addr use="H">
+            <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+            <city nullFlavor="UNK"></city>
+          </addr>
+          <telecom use="WP" value="mailto:adavis@allscripts.com" />
+          <assignedPerson>
+            <name>
+              <family>Davis</family>
+              <given>Albert</given>
+              <suffix>M.D.</suffix>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <assignedEntity>
+          <id extension="47" root="1.3.6.1.4.1.22812.3.2009333.3" />
+          <id root="2.16.840.1.113883.4.6" />
+          <code code="260000000X" codeSystem="2.16.840.1.113883.6.101" />
+          <addr use="H">
+            <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+            <city nullFlavor="UNK"></city>
+          </addr>
+          <telecom use="WP" value="mailto:cardioprov@allscripts.com" />
+          <assignedPerson>
+            <name>
+              <family>Allscripts</family>
+              <given>Cardiologist</given>
+              <suffix>M.D.</suffix>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <assignedEntity>
+          <id extension="441" root="1.3.6.1.4.1.22812.3.2009333.3" />
+          <id root="2.16.840.1.113883.4.6" />
+          <code code="260000000X" codeSystem="2.16.840.1.113883.6.101" />
+          <addr use="H">
+            <streetAddressLine>2472</streetAddressLine>
+            <streetAddressLine>Rockyplace</streetAddressLine>
+            <city>Beaverton</city>
+            <state>OR</state>
+            <postalCode>97006</postalCode>
+          </addr>
+          <telecom use="WP" value="mailto:tdavis@allscripts.com" />
+          <assignedPerson>
+            <name>
+              <family>Davis</family>
+              <given>Tracy</given>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <assignedEntity>
+          <id extension="0" root="1.3.6.1.4.1.22812.3.2009333.3" />
+          <id root="2.16.840.1.113883.4.6" />
+          <assignedPerson>
+            <name>
+              <family>Recipient</family>
+              <given>Unknown</given>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <componentOf>
+    <encompassingEncounter>
+      <id root="1.3.6.1.4.1.22812.3.2009333.3" extension="40780" />
+      <effectiveTime xsi:type="IVL_TS">
+        <low value="20150622100000" />
+        <high value="20161019180943+0000" />
+      </effectiveTime>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1" extension="2014-06-09" />
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1" />
+          <code code="42349-1" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Reason for Referral</title>
+          <text>
+            <list>
+              <item>
+                <paragraph styleCode="xSecondary">ms Alice Newman is being referred to Community Health Hospitals Inpatient facility because of the high fever noticed and suspected Anemia.</paragraph>
+              </item>
+            </list>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.4" />
+          <code code="10164-2" codeSystem="2.16.840.1.113883.6.1" />
+          <title>History of Present Illness</title>
+          <text>
+            <paragraph></paragraph>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.8" />
+          <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Assessments</title>
+          <text>
+            <list>
+              <caption styleCode="Bold">Assessment Narrative: </caption>
+              <item>
+                <content styleCode="xSecondary">The patient was found to have fever and Dr Davis is suspecting Anemia based on the patient history. So Dr Davis asked the patient to closely monitor the temperature and blood pressure and get admitted to Community Health Hospitals if the fever does not subside within a day.</content>
+              </item>
+            </list>
+            <list>
+              <caption styleCode="Bold">Assessed Problems: </caption>
+              <item>
+                <content styleCode="xSecondary">Fever</content>
+              </item>
+              <item>
+                <content styleCode="xSecondary">Overweight</content>
+              </item>
+            </list>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.5" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.5" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1" />
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Problems</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_743119ca-c78e-43f0-8e5e-5df1b73c6f32">Essential hypertension</content>
+                    <content styleCode="xSecondary">(401.9) (I10)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>5-Oct-2011</content>
+                    <br />
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_2e758c26-f031-44ac-920e-80d84abc275d">Chronic rejection of renal transplant</content>
+                    <content styleCode="xSecondary">(996.81) (T86.11)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>31-Dec-2011</content>
+                    <br />
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_4ed52c57-e37b-40e7-8d84-f34847e6e4c4">Fever</content>
+                    <content styleCode="xSecondary">(780.60) (R50.9)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>26-Aug-2016</content>
+                    <br />
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_e415e38c-8bb5-4b3b-b55a-d5c094bd3da6">Dependence on walking stick</content>
+                    <content styleCode="xSecondary">(719.7) (R26.2)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>1-May-2006</content>
+                    <br />
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_f738da9f-1a5a-45c1-963a-1050f108333c">Amnesia</content>
+                    <content styleCode="xSecondary">(780.93) (R41.3)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>1-May-2005</content>
+                    <br />
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_3e21ef19-50bb-4e6c-a7e0-7680f3c84aba">Overweight</content>
+                    <content styleCode="xSecondary">(278.02) (E66.3)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>31-Dec-2006</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Status: </content>
+                    <content ID="_3fdecb17-af6c-412f-84d6-d2cf28f97058" styleCode="xSecondary">Auto Complete</content>
+                    <content styleCode="xLabel xSecondary"> as of </content>
+                    <content styleCode="xSecondary">1-Jun-2007</content>
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_5d16c85d-88a3-4162-854d-d695b1f18b9c">Chronic illness</content>
+                    <content styleCode="xSecondary">(799.9) (R69)</content>
+                    <br />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_dbd78ba3-b457-4af1-a0f5-74b41e44eef4">Severe hypothyroidism</content>
+                    <content styleCode="xSecondary">(244.8) (E03.8)</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Onset: </content>
+                    <content>31-Dec-2006</content>
+                    <br />
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14952800055" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14952800057" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20111005" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14952800055" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14952800057" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_743119ca-c78e-43f0-8e5e-5df1b73c6f32" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20111005" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="59621000" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_743119ca-c78e-43f0-8e5e-5df1b73c6f32" />
+                    </originalText>
+                    <translation code="401.9" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="I10" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="30422" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14952800067" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14952800069" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20111231" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14952800067" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14952800069" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_2e758c26-f031-44ac-920e-80d84abc275d" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20111231" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="236578006" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_2e758c26-f031-44ac-920e-80d84abc275d" />
+                    </originalText>
+                    <translation code="996.81" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="T86.11" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="502050" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14952800073" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14952800075" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160826" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14952800073" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14952800075" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_4ed52c57-e37b-40e7-8d84-f34847e6e4c4" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20160826" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="386661006" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_4ed52c57-e37b-40e7-8d84-f34847e6e4c4" />
+                    </originalText>
+                    <translation code="780.60" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="R50.9" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="27348" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14959300013" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14959300015" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20060501" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14959300013" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14959300015" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_e415e38c-8bb5-4b3b-b55a-d5c094bd3da6" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20060501" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="105504002" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_e415e38c-8bb5-4b3b-b55a-d5c094bd3da6" />
+                    </originalText>
+                    <translation code="719.7" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="R26.2" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="32931859" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14959300019" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14959300021" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20050501" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14959300019" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14959300021" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_f738da9f-1a5a-45c1-963a-1050f108333c" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20050501" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="48167000" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_f738da9f-1a5a-45c1-963a-1050f108333c" />
+                    </originalText>
+                    <translation code="780.93" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="R41.3" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="37910" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14952800079" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14977400023" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20061231" />
+                <high value="20070601" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14952800079" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14977400023" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_3e21ef19-50bb-4e6c-a7e0-7680f3c84aba" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20061231" />
+                    <high value="20070601" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="238131007" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_3e21ef19-50bb-4e6c-a7e0-7680f3c84aba" />
+                    </originalText>
+                    <translation code="278.02" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="E66.3" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="50813" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14959300069" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14984800001" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low nullFlavor="NI" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14959300069" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14984800001" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_5d16c85d-88a3-4162-854d-d695b1f18b9c" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low nullFlavor="NI" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="27624003" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_5d16c85d-88a3-4162-854d-d695b1f18b9c" />
+                    </originalText>
+                    <translation code="799.9" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="R69" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="321781" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id extension="14952800061" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <id extension="14984900005" root="1.3.6.1.4.1.22812.3.2009333.3.4.1" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20061231" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id extension="14952800061" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <id extension="14984900005" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                    <translation nullFlavor="NI" />
+                  </code>
+                  <text>
+                    <reference value="#_dbd78ba3-b457-4af1-a0f5-74b41e44eef4" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20061231" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="83986005" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_dbd78ba3-b457-4af1-a0f5-74b41e44eef4" />
+                    </originalText>
+                    <translation code="244.8" codeSystem="2.16.840.1.113883.6.103" />
+                    <translation code="E03.8" codeSystem="2.16.840.1.113883.6.90" />
+                    <translation code="18857" codeSystem="2.16.840.1.113883.3.247.1.1" />
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.56" />
+          <code code="10190-7" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Mental Status</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content styleCode="xSecondary" ID="_79cde81a-70e6-4541-b554-90e9f2728560">Amnesia</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary">1-May-2005</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.74" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.74" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.28" extension="14959300019" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.28" extension="14959300021" />
+              <code code="373930000" codeSystem="2.16.840.1.113883.6.96">
+                <translation code="75275-8" codeSystem="2.16.840.1.113883.6.1" />
+              </code>
+              <text>
+                <reference value="#_79cde81a-70e6-4541-b554-90e9f2728560" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime value="20050501" />
+              <value xsi:type="CD" code="48167000" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_79cde81a-70e6-4541-b554-90e9f2728560" />
+                </originalText>
+              </value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.14" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.14" />
+          <code code="47420-5" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Functional Status</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping" ID="_8c593feb-a6aa-46bc-ba55-e36f4ec5400c">Dependence on walking stick</content>
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary">1-May-2006</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.67" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.67" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.35" extension="14959300013" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.35" extension="14959300015" />
+              <code code="54522-8" codeSystem="2.16.840.1.113883.6.1" />
+              <text>
+                <reference value="#_8c593feb-a6aa-46bc-ba55-e36f4ec5400c" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime value="20060501" />
+              <value xsi:type="CD" code="105504002" codeSystem="2.16.840.1.113883.6.96" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.6" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.6" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1" />
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Allergies and Adverse Reactions</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID="_f801917b-0524-4b72-a468-45aae16ee841">Ampicillin-Sulbactam SOLR</content>
+                    <content styleCode="xSecondary"> (drug allergy)</content>
+                  </td>
+                  <td></td>
+                  <td>
+                    <content>
+                      <content styleCode="xLabel xSecondary">Reaction</content>:             
+                      <content ID="_37fe8a55-c1a8-46fc-a6be-ef7f06500641" styleCode="xAlert">Hives</content>
+                      <content styleCode="xAlert"> (Severe)</content>
+                    </content>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID="_49fd6792-a5a4-44c7-9954-185706602332">Bicillin L-A SUSP</content>
+                    <content styleCode="xSecondary"> (drug allergy)</content>
+                  </td>
+                  <td></td>
+                  <td>
+                    <content>
+                      <content styleCode="xLabel xSecondary">Reaction</content>:             
+                      <content ID="_4c42d797-cad0-4ddf-b9b9-f804f32bbb2a" styleCode="xAlert">Hives</content>
+                      <content styleCode="xAlert"> (Severe)</content>
+                    </content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10" extension="14952800011" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10" extension="14952800013" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low nullFlavor="NI" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10.2" extension="14952800011" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10.2" extension="14952800013" />
+                  <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low nullFlavor="NI" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="416098002" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_f801917b-0524-4b72-a468-45aae16ee841" />
+                    </originalText>
+                  </value>
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <playingEntity classCode="MMAT">
+                        <code code="1009148" codeSystem="2.16.840.1.113883.6.88" />
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                  <entryRelationship typeCode="MFST" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.9" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.9" />
+                      <id nullFlavor="NI" />
+                      <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                      <text>
+                        <reference value="#_37fe8a55-c1a8-46fc-a6be-ef7f06500641" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="CD" nullFlavor="UNK" codeSystem="2.16.840.1.113883.6.96">
+                        <originalText>
+                          <reference value="#_37fe8a55-c1a8-46fc-a6be-ef7f06500641" />
+                        </originalText>
+                      </value>
+                      <entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09" />
+                          <templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                          <code code="SEV" codeSystem="2.16.840.1.113883.5.4" />
+                          <text>Severe</text>
+                          <statusCode code="completed" />
+                          <value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" />
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10" extension="14952800001" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10" extension="14952800007" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low nullFlavor="NI" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10.2" extension="14952800001" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.10.2" extension="14952800007" />
+                  <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <statusCode code="completed" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low nullFlavor="NI" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="416098002" codeSystem="2.16.840.1.113883.6.96">
+                    <originalText>
+                      <reference value="#_49fd6792-a5a4-44c7-9954-185706602332" />
+                    </originalText>
+                  </value>
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <playingEntity classCode="MMAT">
+                        <code code="7980" codeSystem="2.16.840.1.113883.6.88" />
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                  <entryRelationship typeCode="MFST" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.9" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.9" />
+                      <id nullFlavor="NI" />
+                      <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                      <text>
+                        <reference value="#_4c42d797-cad0-4ddf-b9b9-f804f32bbb2a" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="CD" nullFlavor="UNK" codeSystem="2.16.840.1.113883.6.96">
+                        <originalText>
+                          <reference value="#_4c42d797-cad0-4ddf-b9b9-f804f32bbb2a" />
+                        </originalText>
+                      </value>
+                      <entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09" />
+                          <templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                          <code code="SEV" codeSystem="2.16.840.1.113883.5.4" />
+                          <text>Severe</text>
+                          <statusCode code="completed" />
+                          <value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" />
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.1" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.1" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Medications</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_a0a4b283-8e12-4544-bcc0-cf201f51ee3d">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_0bc6cb17-fedc-4eed-999f-1bfe004fd1bb">Aranesp (Albumin Free) 500 MCG/ML Injection Solution Prefilled Syringe</content>
+                      <content styleCode="xSecondary" ID="_cd5a5f70-37c4-4246-8566-536a12311676"> INJECT 1 ML Weekly</content>
+                      <br />
+                      <content styleCode="xLabel">Quantity: </content>
+                      <content>4</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Refills: </content>
+                      <content styleCode="xSecondary">0</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content>Davis, M.D. Albert</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">26-Aug-2016</content>
+                    <br />
+                    <content styleCode="xSecondary" ID="_dac24cf4-b0e2-47f8-a16a-b097ce151a59">1 ML Syringe</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_403583f2-9f6d-40df-88fa-75cad1025ed2">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_210859ef-af3b-4956-be30-141e856aea7f">Clindamycin HCl - 300 MG Oral Capsule</content>
+                      <content styleCode="xSecondary" ID="_410a9432-c400-4104-b12c-34ac5246f052"> Take three times a day as needed if pain does not subside.</content>
+                      <br />
+                      <content styleCode="xLabel">Quantity: </content>
+                      <content>30</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Refills: </content>
+                      <content styleCode="xSecondary">0</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content>Davis, M.D. Albert</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">7-Sep-2016</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_baac0a66-68da-4366-b68f-72613f61c34b">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_9a042c31-7892-4130-a1d1-db799510ecad">Levothyroxine Sodium 25 MCG Oral Tablet</content>
+                      <content styleCode="xSecondary" ID="_6692dd2e-3f37-488d-9de6-f1942ce388d4"> Take 1 daily in the morning 1 hour before breakfast</content>
+                      <br />
+                      <content styleCode="xLabel">Quantity: </content>
+                      <content>1</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Refills: </content>
+                      <content styleCode="xSecondary">2</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content>Allscripts, PA Midlevel Provider</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">20-Sep-2016</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_70dc6f7e-ef0a-41f9-ba81-506a39660eab">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_c771ed51-4167-47e8-85b7-e3025908014f">Liothyronine Sodium 50 MCG Oral Tablet</content>
+                      <content styleCode="xSecondary" ID="_401ecc92-f85f-4bf8-a709-0d56c3d38b54"> Take 1 daily in the morning 1 hour before breakfast</content>
+                      <br />
+                      <content styleCode="xLabel">Quantity: </content>
+                      <content>5</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Refills: </content>
+                      <content styleCode="xSecondary">2</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content>Allscripts, PA Midlevel Provider</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">20-Sep-2016</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_bafdc65c-e7da-4b5c-9e31-8bea6bacfbe9">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_5c8a4a4b-8c64-41ee-8ae9-d8bbd25e2f9a">CefTRIAXone Sodium 100 GM Injection Solution Reconstituted</content>
+                      <content styleCode="xSecondary" ID="_4b3dc645-c3aa-4779-befa-51683b4c40a3"> INJECT 1 ML Twice daily</content>
+                      <br />
+                      <content styleCode="xLabel">Quantity: </content>
+                      <content>18</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Refills: </content>
+                      <content styleCode="xSecondary">0</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content>Davis, M.D. Albert</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">26-Aug-2016</content>
+                    <content styleCode="xLabel xSecondary"> End: </content>
+                    <content styleCode="xSecondary">4-Sep-2016</content>
+                    <br />
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Complete</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_1ef211ef-20ec-4235-90fe-b8cea8f58bf8">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_636a77d6-2fe3-4dfc-8c24-e8de4ad92af6">Tylenol Extra Strength 500 MG Oral Tablet</content>
+                      <content styleCode="xSecondary" ID="_d4273373-b093-47ce-9bf6-50edc08000ed"> TAKE 1 TABLET Every 6 hours</content>
+                      <br />
+                      <content styleCode="xLabel">Quantity: </content>
+                      <content>40</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Refills: </content>
+                      <content styleCode="xSecondary">0</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content>Davis, M.D. Albert</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">26-Aug-2016</content>
+                    <content styleCode="xLabel xSecondary"> End: </content>
+                    <content styleCode="xSecondary">5-Sep-2016</content>
+                    <br />
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Complete</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14952800047" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14952800049" />
+              <text>
+                <reference value="#_a0a4b283-8e12-4544-bcc0-cf201f51ee3d" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160826000000" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+                <period value="1" unit="wk" />
+              </effectiveTime>
+              <doseQuantity value="1" />
+              <administrationUnitCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C42945" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="731241" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_0bc6cb17-fedc-4eed-999f-1bfe004fd1bb" />
+                      </originalText>
+                      <translation code="55513003201" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <name>Aranesp (Albumin Free)        </name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14952800047" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14952800049" />
+                  <statusCode code="completed" />
+                  <repeatNumber value="1" />
+                  <quantity value="4" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="731241" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_0bc6cb17-fedc-4eed-999f-1bfe004fd1bb" />
+                          </originalText>
+                          <translation code="55513003201" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                        <name>Aranesp (Albumin Free)        </name>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="INT">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.20" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                      <code code="423564006" codeSystem="2.16.840.1.113883.6.96" />
+                      <text>
+                        <reference value="#_dac24cf4-b0e2-47f8-a16a-b097ce151a59" />
+                      </text>
+                      <statusCode code="completed" />
+                    </act>
+                  </entryRelationship>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <substanceAdministration classCode="SBADM" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.147" />
+                  <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_cd5a5f70-37c4-4246-8566-536a12311676" />
+                  </text>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedLabeledDrug nullFlavor="NA" />
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14959400011" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14959400013" />
+              <text>
+                <reference value="#_403583f2-9f6d-40df-88fa-75cad1025ed2" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160907000000" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <routeCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C38288" />
+              <doseQuantity nullFlavor="NI" />
+              <administrationUnitCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C25158" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="284215" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_210859ef-af3b-4956-be30-141e856aea7f" />
+                      </originalText>
+                      <translation code="68084024411" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <name>Clindamycin HCl               </name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14959400011" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14959400013" />
+                  <statusCode code="completed" />
+                  <repeatNumber value="1" />
+                  <quantity value="30" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="284215" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_210859ef-af3b-4956-be30-141e856aea7f" />
+                          </originalText>
+                          <translation code="68084024411" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                        <name>Clindamycin HCl               </name>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <substanceAdministration classCode="SBADM" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.147" />
+                  <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_410a9432-c400-4104-b12c-34ac5246f052" />
+                  </text>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedLabeledDrug nullFlavor="NA" />
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14984600029" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14984600031" />
+              <text>
+                <reference value="#_baac0a66-68da-4366-b68f-72613f61c34b" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160920000000" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <routeCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C38288" />
+              <doseQuantity nullFlavor="NI" />
+              <administrationUnitCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C42998" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="966220" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_9a042c31-7892-4130-a1d1-db799510ecad" />
+                      </originalText>
+                      <translation code="51079044420" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <name>Levothyroxine Sodium          </name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14984600029" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14984600031" />
+                  <statusCode code="completed" />
+                  <repeatNumber value="3" />
+                  <quantity value="1" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="966220" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_9a042c31-7892-4130-a1d1-db799510ecad" />
+                          </originalText>
+                          <translation code="51079044420" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                        <name>Levothyroxine Sodium          </name>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <substanceAdministration classCode="SBADM" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.147" />
+                  <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_6692dd2e-3f37-488d-9de6-f1942ce388d4" />
+                  </text>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedLabeledDrug nullFlavor="NA" />
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14984900009" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14984900011" />
+              <text>
+                <reference value="#_70dc6f7e-ef0a-41f9-ba81-506a39660eab" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160920000000" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <routeCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C38288" />
+              <doseQuantity nullFlavor="NI" />
+              <administrationUnitCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C42998" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="903703" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_c771ed51-4167-47e8-85b7-e3025908014f" />
+                      </originalText>
+                      <translation code="42794002002" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <name>Liothyronine Sodium           </name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14984900009" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14984900011" />
+                  <statusCode code="completed" />
+                  <repeatNumber value="3" />
+                  <quantity value="5" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="903703" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_c771ed51-4167-47e8-85b7-e3025908014f" />
+                          </originalText>
+                          <translation code="42794002002" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                        <name>Liothyronine Sodium           </name>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <substanceAdministration classCode="SBADM" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.147" />
+                  <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_401ecc92-f85f-4bf8-a709-0d56c3d38b54" />
+                  </text>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedLabeledDrug nullFlavor="NA" />
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14952800035" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14957200000" />
+              <text>
+                <reference value="#_bafdc65c-e7da-4b5c-9e31-8bea6bacfbe9" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160826000000" />
+                <high value="20160904235900" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+                <period value="0.5" unit="d" />
+              </effectiveTime>
+              <doseQuantity value="1" />
+              <administrationUnitCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C42973" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="309090" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_5c8a4a4b-8c64-41ee-8ae9-d8bbd25e2f9a" />
+                      </originalText>
+                      <translation code="66288610001" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <name>CefTRIAXone Sodium            </name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14952800035" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14957200000" />
+                  <statusCode code="completed" />
+                  <repeatNumber value="1" />
+                  <quantity value="18" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="309090" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_5c8a4a4b-8c64-41ee-8ae9-d8bbd25e2f9a" />
+                          </originalText>
+                          <translation code="66288610001" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                        <name>CefTRIAXone Sodium            </name>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <substanceAdministration classCode="SBADM" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.147" />
+                  <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_4b3dc645-c3aa-4779-befa-51683b4c40a3" />
+                  </text>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedLabeledDrug nullFlavor="NA" />
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14952800041" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14957600000" />
+              <text>
+                <reference value="#_1ef211ef-20ec-4235-90fe-b8cea8f58bf8" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160826000000" />
+                <high value="20160905235900" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+                <period value="6" unit="h" />
+              </effectiveTime>
+              <routeCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C38288" />
+              <doseQuantity value="1" />
+              <administrationUnitCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C42998" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="209459" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_636a77d6-2fe3-4dfc-8c24-e8de4ad92af6" />
+                      </originalText>
+                      <translation code="50580045170" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <name>Tylenol Extra Strength        </name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14952800041" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14957600000" />
+                  <statusCode code="completed" />
+                  <repeatNumber value="1" />
+                  <quantity value="40" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="209459" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_636a77d6-2fe3-4dfc-8c24-e8de4ad92af6" />
+                          </originalText>
+                          <translation code="50580045170" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                        <name>Tylenol Extra Strength        </name>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <substanceAdministration classCode="SBADM" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.147" />
+                  <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_d4273373-b093-47ce-9bf6-50edc08000ed" />
+                  </text>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedLabeledDrug nullFlavor="NA" />
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.7" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.7" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1" />
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Procedures</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_1bbf87ab-af4d-4925-be2c-e2faa47ac7b1">Electrocardiogram (EKG/ECG)</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Date: </content>
+                    <content styleCode="xSecondary">6-Sep-2016</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_d1b2acb6-c659-4289-8eb7-d7150052dfb6">Urinalysis</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Date: </content>
+                    <content styleCode="xSecondary">6-Sep-2016</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_2a973dc1-6a47-4231-ba66-60787353e4a2">Chest X-Ray Posterior-Anterior And Lateral Views</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Date: </content>
+                    <content styleCode="xSecondary">6-Sep-2016</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_2dacb15d-49d1-4612-a2e1-fc8c9c90b422">History of Oxygen Via Face Mask With Nebulizer</content>
+                  </td>
+                  <td></td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Status: </content>
+                    <content styleCode="xSecondary">Completed</content>
+                    <content styleCode="xSecondary"> 6-Sep-2016 0:00</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_84bd2a17-7251-461e-9e8b-6fa4ce243418">History of Pacemaker Placement - Transvenous Electrode</content>
+                  </td>
+                  <td></td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Status: </content>
+                    <content styleCode="xSecondary">Completed</content>
+                    <content styleCode="xSecondary"> 6-Sep-2016 0:00</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400003" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14977500025" />
+              <code code="46825001" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_1bbf87ab-af4d-4925-be2c-e2faa47ac7b1" />
+                </originalText>
+                <translation code="93000" codeSystem="2.16.840.1.113883.6.12" />
+              </code>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160906" />
+              </effectiveTime>
+            </procedure>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400001" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14997800001" />
+              <code code="27171005" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_d1b2acb6-c659-4289-8eb7-d7150052dfb6" />
+                </originalText>
+                <translation code="24357-6" codeSystem="2.16.840.1.113883.6.1" />
+              </code>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160906" />
+              </effectiveTime>
+            </procedure>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400005" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14977500021" />
+              <code code="399208008" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_2a973dc1-6a47-4231-ba66-60787353e4a2" />
+                </originalText>
+                <translation code="71020" codeSystem="2.16.840.1.113883.6.12" />
+              </code>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160906" />
+              </effectiveTime>
+            </procedure>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400017" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400019" />
+              <code code="56251003" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_2dacb15d-49d1-4612-a2e1-fc8c9c90b422" />
+                </originalText>
+                <translation code="344940" codeSystem="2.16.840.1.113883.6.26" />
+              </code>
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <high value="20160906000000" />
+              </effectiveTime>
+            </procedure>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400023" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14959400025" />
+              <code code="175135009" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_84bd2a17-7251-461e-9e8b-6fa4ce243418" />
+                </originalText>
+                <translation code="42592" codeSystem="2.16.840.1.113883.6.26" />
+              </code>
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <high value="20160906000000" />
+              </effectiveTime>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.2" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.2" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.2.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.2.1" />
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Immunizations</title>
+          <text>
+            <table styleCode="xBorderBottom">
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_5da4cda2-fca5-4a36-9dc6-c09b12529f57">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_1deb9bcc-91af-4881-b294-6810358f5f59">DTaP</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Lot #: </content>
+                      <content styleCode="xSecondary">2</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">On: </content>
+                    <content styleCode="xSecondary">4-Jan-2012</content>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr ID="_91c945da-1b48-410b-b41a-011363bd206b">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_65c4c73e-9f75-45f6-a0e4-d74cad7dbd92">Influenza</content>
+                      <br />
+                      <content styleCode="xLabel xSecondary">Lot #: </content>
+                      <content styleCode="xSecondary">1</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">On: </content>
+                    <content styleCode="xSecondary">10-May-2014</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <table styleCode="xBorderBottom">
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_3cba5cc2-aceb-4457-a737-f77290bfd414">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_d0c6dec9-b6d0-4d88-a3be-8156670cc1bc">Fluzone Quadrivalent 9 MCG/STRAIN Intradermal Suspension Pen-injector</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">Not Administered</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary">Patient Objection</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="true">
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4" extension="14959300007" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4" extension="14959300009" />
+              <text>
+                <reference value="#_3cba5cc2-aceb-4457-a737-f77290bfd414" />
+              </text>
+              <statusCode code="aborted" />
+              <effectiveTime nullFlavor="NI" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  <manufacturedMaterial>
+                    <code code="166" codeSystem="2.16.840.1.113883.12.292">
+                      <originalText>
+                        <reference value="#_d0c6dec9-b6d0-4d88-a3be-8156670cc1bc" />
+                      </originalText>
+                      <translation code="49281071048" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                    <lotNumberText nullFlavor="NI"></lotNumberText>
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name></name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="RSON">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.53" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4.1" extension="14959300007" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4.1" extension="14959300009" />
+                  <code code="PATOBJ" codeSystem="2.16.840.1.113883.5.8" />
+                  <statusCode code="completed" />
+                </observation>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4" extension="14959300001" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4" extension="14959300003" />
+              <text>
+                <reference value="#_5da4cda2-fca5-4a36-9dc6-c09b12529f57" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime value="20120104" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  <manufacturedMaterial>
+                    <code code="20" codeSystem="2.16.840.1.113883.12.292">
+                      <originalText>
+                        <reference value="#_1deb9bcc-91af-4881-b294-6810358f5f59" />
+                      </originalText>
+                    </code>
+                    <lotNumberText>2</lotNumberText>
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name>Immuno Inc</name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4" extension="14959200001" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.4" extension="14959200003" />
+              <text>
+                <reference value="#_91c945da-1b48-410b-b41a-011363bd206b" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime value="20140510" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  <manufacturedMaterial>
+                    <code code="141" codeSystem="2.16.840.1.113883.12.292">
+                      <originalText>
+                        <reference value="#_65c4c73e-9f75-45f6-a0e4-d74cad7dbd92" />
+                      </originalText>
+                    </code>
+                    <lotNumberText>1</lotNumberText>
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name>Immuno Inc</name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.20" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.20" />
+          <code code="11348-0" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Past Medical History</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID="_c6e28d8f-3dc8-481f-8485-4756aaf92928">Overweight</content>
+                    <content> (278.02) (E66.3)</content>
+                    <br />
+                  </td>
+                  <td></td>
+                  <td>
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Auto Complete</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+              <id extension="14952800079" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+              <id extension="14977400023" root="1.3.6.1.4.1.22812.3.2009333.3.4.1.2.1" />
+              <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+                <translation nullFlavor="NI" />
+              </code>
+              <text>
+                <reference value="#_c6e28d8f-3dc8-481f-8485-4756aaf92928" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low nullFlavor="NI" />
+                <high nullFlavor="UNK" />
+              </effectiveTime>
+              <value xsi:type="CD" code="238131007" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>
+                  <reference value="#_c6e28d8f-3dc8-481f-8485-4756aaf92928" />
+                </originalText>
+                <translation code="278.02" codeSystem="2.16.840.1.113883.6.103" />
+                <translation code="E66.3" codeSystem="2.16.840.1.113883.6.90" />
+                <translation code="50813" codeSystem="2.16.840.1.113883.3.247.1.1" />
+              </value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.17" />
+          <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Social History</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_ac6b8737-bd07-4d6c-822a-e34d80036d38">-</content>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Smoking Status</caption>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xSecondary">Current every day smoker</content>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xSecondary">Heavy tobacco smoker</content>
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary">Recorded: 1-May-2005</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Birth Sex</caption>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content>Female</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.38" />
+              <id nullFlavor="NI" />
+              <code nullFlavor="NA">
+                <originalText>
+                  <reference value="#_ac6b8737-bd07-4d6c-822a-e34d80036d38" />
+                </originalText>
+                <translation nullFlavor="NI" />
+              </code>
+              <text>
+                <reference value="#_ac6b8737-bd07-4d6c-822a-e34d80036d38" />
+              </text>
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low nullFlavor="NI" />
+              </effectiveTime>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.200" extension="2016-06-01" />
+              <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" />
+              <statusCode code="completed" />
+              <value xsi:type="CD" code="F" codeSystem="2.16.840.1.113883.5.1" />
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" />
+              <id nullFlavor="NI" />
+              <code code="72166-2" codeSystem="2.16.840.1.113883.6.1" />
+              <statusCode code="completed" />
+              <effectiveTime nullFlavor="NI" />
+              <value xsi:type="CD" code="449868002" codeSystem="2.16.840.1.113883.6.96" />
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" />
+              <id nullFlavor="NI" />
+              <code code="72166-2" codeSystem="2.16.840.1.113883.6.1" />
+              <statusCode code="completed" />
+              <effectiveTime value="20050501" />
+              <value xsi:type="CD" code="428071000124103" codeSystem="2.16.840.1.113883.6.96" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.58" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.58" />
+          <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Health Concerns</title>
+          <text>
+            <table>
+              <caption>Concerns</caption>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content></content>
+                    <content ID="_a6281476-5bf8-4c3a-8af2-add88350b94a">Chronic illness</content>
+                  </td>
+                  <td>
+                    <content>6-Sep-2016</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Active</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content></content>
+                    <content ID="_060ef929-8013-48be-a519-1da1e48dc425">Essential hypertension</content>
+                  </td>
+                  <td>
+                    <content>19-Sep-2016</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Active</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content></content>
+                    <content ID="_53e0b721-51ee-4c42-ba50-a248a7c27070">Severe hypothyroidism</content>
+                  </td>
+                  <td>
+                    <content>19-Sep-2016</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Active</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content></content>
+                    <content ID="_fbce2720-3029-43c9-aef2-94c41e26fae4">Overweight</content>
+                  </td>
+                  <td>
+                    <content>19-Sep-2016</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">Status: </content>
+                    <content>Active</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="780571" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="14959300083" />
+              <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" />
+              <text>
+                <reference value="#_a6281476-5bf8-4c3a-8af2-add88350b94a" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160906" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="772584" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="14980300003" />
+              <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" />
+              <text>
+                <reference value="#_060ef929-8013-48be-a519-1da1e48dc425" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160919" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="452469" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="14980300011" />
+              <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" />
+              <text>
+                <reference value="#_53e0b721-51ee-4c42-ba50-a248a7c27070" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160919" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.132" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="807664" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.32" extension="14980300017" />
+              <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" />
+              <text>
+                <reference value="#_fbce2720-3029-43c9-aef2-94c41e26fae4" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160919" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.60" />
+          <code code="61146-7" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Goals</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_fa914651-3ad9-4953-84d1-e20afb817615">Goal 1</content>
+                    <content styleCode="xSecondary"> Get rid of intermittent fever that is occuring every few weeks.</content>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content ID="_fa96d326-6b04-4fde-8f91-23fa7fdea08f">Goal 2</content>
+                    <content styleCode="xSecondary"> Need to gain more energy to do regular activities.</content>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="GOL">
+              <templateId root="2.16.840.1.113883.10.20.22.4.121" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.34" extension="14959300061" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.34" extension="14959400085" />
+              <code nullFlavor="UNK" />
+              <text>
+                <reference value="#_fa914651-3ad9-4953-84d1-e20afb817615" />
+              </text>
+              <statusCode code="active" />
+              <value xsi:type="ST">Get rid of intermittent fever that is occuring every few weeks.</value>
+              <author>
+                <templateId root="2.16.840.1.113883.10.20.22.4.119" />
+                <time nullFlavor="NI" />
+                <assignedAuthor>
+                  <id nullFlavor="UNK" />
+                  <addr>
+                    <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+                    <city nullFlavor="UNK"></city>
+                  </addr>
+                  <telecom nullFlavor="UNK" />
+                </assignedAuthor>
+              </author>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="GOL">
+              <templateId root="2.16.840.1.113883.10.20.22.4.121" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.34" extension="14959300063" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.34" extension="14959400087" />
+              <code nullFlavor="UNK" />
+              <text>
+                <reference value="#_fa96d326-6b04-4fde-8f91-23fa7fdea08f" />
+              </text>
+              <statusCode code="active" />
+              <value xsi:type="ST">Need to gain more energy to do regular activities.</value>
+              <author>
+                <templateId root="2.16.840.1.113883.10.20.22.4.119" />
+                <time nullFlavor="NI" />
+                <assignedAuthor>
+                  <id nullFlavor="UNK" />
+                  <addr>
+                    <streetAddressLine nullFlavor="UNK"></streetAddressLine>
+                    <city nullFlavor="UNK"></city>
+                  </addr>
+                  <telecom nullFlavor="UNK" />
+                </assignedAuthor>
+              </author>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.23" />
+          <code code="46264-8" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Medical Equipment</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping" ID="_e22bfd70-de9b-42b7-b6fd-0b469b607ed9">Viva? Quad XT CRT-D</content>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14953000097" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.7" extension="14953000099" />
+              <code nullFlavor="NI">
+                <originalText>
+                  <reference value="#_e22bfd70-de9b-42b7-b6fd-0b469b607ed9" />
+                </originalText>
+              </code>
+              <statusCode code="active" />
+              <participant typeCode="DEV">
+                <participantRole classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.37" />
+                  <id root="2.16.840.1.113883.3.3719" extension="(01)00643169007222(17)160128(21)BLC200461H" />
+                  <playingDevice>
+                    <code nullFlavor="NI" />
+                  </playingDevice>
+                  <scopingEntity>
+                    <id root="2.16.840.1.113883.3.3719" />
+                  </scopingEntity>
+                </participantRole>
+              </participant>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" />
+          <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Plan of Treatment</title>
+          <text>
+            <table>
+              <caption>Planned Medications</caption>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr ID="_0fa3b626-59f9-48ff-aed5-9e6ba2337d73">
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_e377ae44-4806-4b12-9f4d-125831946fed">Clindamycin HCl - 300 MG Oral Capsule</content>
+                      <content styleCode="xSecondary" ID="_8772a210-3b6f-4638-82d8-300f7de68865"> Take three times a day as needed if pain does not subside.</content>
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Ordered: </content>
+                    <content styleCode="xSecondary">7-Sep-2016</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary">Request</content>
+                    <br />
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Planned Encounters</caption>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_ed5cada8-e63c-43a7-a6d9-2f166d863c19">Follow-up visit in 1 week</content>
+                      <br />
+                      <content styleCode="xSecondary"></content>
+                    </content>
+                  </td>
+                  <td></td>
+                  <td>
+                    <content>Request </content>
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Planned Observations</caption>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_360a6693-d67c-48be-963f-7fe91d45d327">Urinalysis</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">13-Sep-2016</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content>Intent</content>
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_ea1f4506-2821-42d0-bc6c-06ba79be394a">Electrocardiogram (EKG/ECG)</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">23-Jun-2015</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content>Intent</content>
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_ec45ddc0-dba3-4460-8155-91392ea04e25">Chest X-Ray Posterior-Anterior And Lateral Views</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">23-Jun-2015</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content>Intent</content>
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_261a1b4f-f869-423f-9189-0cba80b1ac57">Goal 1</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">6-Sep-2016</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content>Goal</content>
+                    <br />
+                    <content styleCode="xLabel xSecondary">Comments: </content>
+                    <content styleCode="xSecondary" ID="_c022de60-d314-459d-a5bd-41ec2b4f7346">           Get rid of intermittent fever that is occuring every few weeks.</content>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xContentWrapping">
+                      <content ID="_4822c27f-314f-4cf5-96cb-dd253dcc74d4">Goal 2</content>
+                      <br />
+                    </content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel xSecondary">Start: </content>
+                    <content styleCode="xSecondary">6-Sep-2016</content>
+                    <br />
+                  </td>
+                  <td>
+                    <content>Goal</content>
+                    <br />
+                    <content styleCode="xLabel xSecondary">Comments: </content>
+                    <content styleCode="xSecondary" ID="_1dc9bdbe-4678-4655-b52d-d08289bea189">           Need to gain more energy to do regular activities.</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14959400001" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14997800001" />
+              <code code="27171005" codeSystem="2.16.840.1.113883.6.5">
+                <originalText>
+                  <reference value="#_360a6693-d67c-48be-963f-7fe91d45d327" />
+                </originalText>
+              </code>
+              <text>
+                <reference value="#_360a6693-d67c-48be-963f-7fe91d45d327" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160913" />
+              </effectiveTime>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14959400003" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14977500025" />
+              <code code="46825001" codeSystem="2.16.840.1.113883.6.5">
+                <originalText>
+                  <reference value="#_ea1f4506-2821-42d0-bc6c-06ba79be394a" />
+                </originalText>
+              </code>
+              <text>
+                <reference value="#_ea1f4506-2821-42d0-bc6c-06ba79be394a" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20150623" />
+              </effectiveTime>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14959400005" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14977500021" />
+              <code code="399208008" codeSystem="2.16.840.1.113883.6.5">
+                <originalText>
+                  <reference value="#_ec45ddc0-dba3-4460-8155-91392ea04e25" />
+                </originalText>
+              </code>
+              <text>
+                <reference value="#_ec45ddc0-dba3-4460-8155-91392ea04e25" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20150623" />
+              </effectiveTime>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="GOL">
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14959300061" />
+              <code nullFlavor="NI">
+                <originalText>
+                  <reference value="#_261a1b4f-f869-423f-9189-0cba80b1ac57" />
+                </originalText>
+              </code>
+              <text>
+                <reference value="#_261a1b4f-f869-423f-9189-0cba80b1ac57" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160906" />
+              </effectiveTime>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="GOL">
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.13.2" extension="14959300063" />
+              <code nullFlavor="NI">
+                <originalText>
+                  <reference value="#_4822c27f-314f-4cf5-96cb-dd253dcc74d4" />
+                </originalText>
+              </code>
+              <text>
+                <reference value="#_4822c27f-314f-4cf5-96cb-dd253dcc74d4" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160906" />
+              </effectiveTime>
+            </observation>
+          </entry>
+          <entry>
+            <encounter classCode="ENC" moodCode="RQO">
+              <templateId root="2.16.840.1.113883.10.20.22.4.40" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.40" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.3.4" extension="14959400009" />
+              <code nullFlavor="NI" />
+              <statusCode code="active" />
+            </encounter>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <templateId root="2.16.840.1.113883.10.20.22.4.42" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.42" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14959400011" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9" extension="14959400013" />
+              <text>
+                <reference value="#_0fa3b626-59f9-48ff-aed5-9e6ba2337d73" />
+              </text>
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low nullFlavor="NI" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code code="284215" codeSystem="2.16.840.1.113883.6.88">
+                      <originalText>
+                        <reference value="#_e377ae44-4806-4b12-9f4d-125831946fed" />
+                      </originalText>
+                      <translation code="68084024411" codeSystem="2.16.840.1.113883.6.69" />
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="REFR">
+                <supply classCode="SPLY" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14959400011" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.9.5" extension="14959400013" />
+                  <statusCode code="completed" />
+                  <product>
+                    <manufacturedProduct classCode="MANU">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <manufacturedMaterial>
+                        <code code="284215" codeSystem="2.16.840.1.113883.6.88">
+                          <originalText>
+                            <reference value="#_e377ae44-4806-4b12-9f4d-125831946fed" />
+                          </originalText>
+                          <translation code="68084024411" codeSystem="2.16.840.1.113883.6.69" />
+                        </code>
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </product>
+                </supply>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.3" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.3" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.3.1" />
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Results</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="20%" />
+                <col width="40%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody styleCode="xRowGroup">
+                <tr>
+                  <td>
+                    <content styleCode="xLabel xContentWrapping">Chest X-Ray Posterior-Anterior And Lateral Views</content>
+                  </td>
+                  <td>
+                    <content styleCode="xLabel">Laboratory: </content>
+                    <content> Value Labs</content>
+                    <content> 2474 Rockyplace Beaverton OR</content>
+                    <content> tel:+1-(555)666-1002</content>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <content styleCode="xSecondary xContentWrapping">22-Sep-2016 13:36</content>
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary" ID="_54d832dd-6afc-494c-b3b1-d8814684b0d2">Chest Xray</content>
+                    <content styleCode="xSecondary"> Lungs are not clear, cannot rule out Anemia.  Other tests are required to determine the presence or absence of Anemia.</content>
+                    <content styleCode="xSecondary"></content>
+                    <content styleCode="xSecondary"> (Normal)</content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.4.5" extension="14997900005" />
+              <code code="71020" codeSystem="2.16.840.1.113883.6.12" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160922133600" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <performer typeCode="PRF">
+                <assignedEntity>
+                  <id root="rdylab" />
+                  <addr use="H">
+                    <streetAddressLine>2474 Rockyplace</streetAddressLine>
+                    <city>Beaverton</city>
+                    <state>OR</state>
+                  </addr>
+                  <telecom use="WP" value="tel:+1-(555)666-1002" />
+                  <representedOrganization>
+                    <name>Value Labs</name>
+                    <telecom use="WP" value="tel:+1-(555)666-1002" />
+                    <addr use="H">
+                      <streetAddressLine>2474 Rockyplace</streetAddressLine>
+                      <city>Beaverton</city>
+                      <state>OR</state>
+                    </addr>
+                  </representedOrganization>
+                </assignedEntity>
+              </performer>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.5" extension="14997900003" />
+                  <id root="1.3.6.1.4.1.22812.3.2009333.3.4.5" extension="14997900007" />
+                  <code code="36643-5" codeSystem="2.16.840.1.113883.6.1" />
+                  <text>
+                    <reference value="#_54d832dd-6afc-494c-b3b1-d8814684b0d2" />
+                  </text>
+                  <statusCode code="active" />
+                  <effectiveTime value="20160922133600" />
+                  <value xsi:type="ST">Lungs are not clear, cannot rule out Anemia.  Other tests are required to determine the presence or absence of Anemia.</value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.22.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.22.1" />
+          <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Encounters</title>
+          <text>
+            <table>
+              <colgroup>
+                <col width="40%" />
+                <col width="20%" />
+                <col width="40%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID="_d5f047ed-a0d6-4de6-9f86-92199de62fda">Appointment; Allscripts, Cardiologist, M.D. </content>
+                    <br />
+                    <content styleCode="xSecondary xLabel">Encounter Diagnosis: </content>
+                    <content styleCode="xSecondary" ID="_752fcceb-b597-48d2-b0c1-cad05ade13e8">Problem not documented</content>
+                  </td>
+                  <td>
+                    <content styleCode="xSecondary">22-Jun-2015 10:00 </content>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <encounter classCode="ENC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              <id root="1.3.6.1.4.1.22812.3.2009333.3.3.4" extension="40780" />
+              <code nullFlavor="NI">
+                <originalText>
+                  <reference value="#_d5f047ed-a0d6-4de6-9f86-92199de62fda" />
+                </originalText>
+              </code>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20150622100000" />
+              </effectiveTime>
+              <entryRelationship typeCode="REFR">
+                <act classCode="ACT" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.80" />
+                  <code code="29308-4" codeSystem="2.16.840.1.113883.6.1" />
+                  <entryRelationship typeCode="SUBJ">
+                    <observation classCode="OBS" moodCode="EVN" negationInd="true">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                      <id nullFlavor="NI" />
+                      <code code="64572001" codeSystem="2.16.840.1.113883.6.96">
+                        <translation nullFlavor="NI" />
+                      </code>
+                      <text>
+                        <reference value="#_752fcceb-b597-48d2-b0c1-cad05ade13e8" />
+                      </text>
+                      <statusCode code="completed" />
+                      <effectiveTime xsi:type="IVL_TS">
+                        <low nullFlavor="NI" />
+                      </effectiveTime>
+                      <value xsi:type="CD" code="64572001" codeSystem="2.16.840.1.113883.6.96">
+                        <originalText>
+                          <reference value="#_752fcceb-b597-48d2-b0c1-cad05ade13e8" />
+                        </originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </act>
+              </entryRelationship>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

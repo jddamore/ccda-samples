@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML document was retrieved from a public repository of certified EHR samples for Meaningful Use 
+That repository states "The public will be able to view-download the submitted files from this repository." 
+The original files have been edited to make them human-readable and easier to download. Please refer to source repository for original versions 
+The copy date of original repository was February 1, 2018. Here is original repository: https://github.com/siteadmin/2015-C-CDA-Certification-Samples 
+All of these samples were supposed be C-CDA 2.1 clinical documents. The following disclaimer applies to ALL INFORMATION contained herein: 
+THIS INFORMATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE INFORMATION OR THE USE OR OTHER DEALINGS IN THE INFORMATION. 
+Beyond that, I hope they are useful and "hooray" for government transparency! John D'Amore, Diameter Health, Inc. -->
+<ClinicalDocument 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:schemaLocation="urn:hl7-org:v3 CDA.xsd" 
+  xmlns="urn:hl7-org:v3" 
+  xmlns:cda="urn:hl7-org:v3" 
+  xmlns:sdtc="urn:hl7-org:sdtc" 
+  xmlns:voc="urn:hl7-org/voc">
+  <!--
+********************************************************
+CDA Header
+********************************************************
+-->
+  <realmCode code="US" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2017-06-01" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.2" />
+  <id root="2.16.840.1.113883.19.5.99999.1" extension="2f2e8521-1dae-4cb9-9aff-2c12e042319a" />
+  <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summarization of Episode Note" />
+  <title>Consolidated Clinical Document Architecture: Health Summary</title>
+  <effectiveTime value="20170601145724-0000" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="normal" />
+  <languageCode code="en-US" />
+  <setId extension="sTT102" root="2.16.840.1.113883.19.5.99999.19" />
+  <versionNumber value="1" />
+  <recordTarget>
+    <patientRole>
+      <id root="2.16.840.1.113883.4.1" extension="MUBatJer" />
+      <addr use="HP">
+        <state>OR</state>
+        <city>Beaverton</city>
+        <postalCode>97006</postalCode>
+        <streetAddressLine>1357 Amber Dr</streetAddressLine>
+      </addr>
+      <telecom use="HP" value="tel:+1(555)-723-1544" />
+      <patient>
+        <name use="L">
+          <given>Jeremy</given>
+          <given>V</given>
+          <family>Bates</family>
+          <suffix>JR</suffix>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender" />
+        <birthTime value="19800801" />
+        <maritalStatusCode code="S" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode" displayName="Never Married" />
+        <religiousAffiliationCode code="1013" codeSystem="2.16.840.1.113883.5.1076" codeSystemName="HL7 Religious Affiliation" displayName="Christian (non-Catholic, non-specific)" />
+        <raceCode nullFlavor="ASKU" />
+        <ethnicGroupCode nullFlavor="UNK" />
+        <languageCommunication>
+          <languageCode code="en-US" />
+          <modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode" />
+          <preferenceInd value="true" />
+        </languageCommunication>
+      </patient>
+      <providerOrganization>
+        <id extension="99999999" root="2.16.840.1.113883.4.6" />
+        <name>Neighborhood Physicians Practice</name>
+        <telecom use="WP" value="tel:+1(555)-555-1002" />
+        <addr use="WP">
+          <streetAddressLine>2472 Rocky place </streetAddressLine>
+          <city>Beaverton,</city>
+          <state>OR</state>
+          <postalCode>97006</postalCode>
+        </addr>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20170601145724" />
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="6291027475" />
+      <code code="200000000X" codeSystem="2.16.840.1.113883.6.101" displayName="Allopathic &amp;amp; Osteopathic Physicians" />
+      <addr>
+        <streetAddressLine>2472, Rocky place</streetAddressLine>
+        <city>Beaverton,</city>
+        <state>OR</state>
+        <postalCode>97006</postalCode>
+      </addr>
+      <telecom use="WP" value="tel:+1(727)-460-5489" />
+      <assignedAuthoringDevice>
+        <manufacturerModelName>Neighborhood Physicians Practice EMR</manufacturerModelName>
+        <softwareName>MD Logic Worldwide</softwareName>
+      </assignedAuthoringDevice>
+      <representedOrganization>
+        <id root="2.16.840.1.113883.19.5" />
+        <name>Neighborhood Physicians Practice</name>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <informant>
+    <assignedEntity>
+      <id extension="KP00017" root="2.16.840.1.113883.19.5" />
+      <addr use="WP">
+        <streetAddressLine>2472, Rocky place</streetAddressLine>
+        <city>Beaverton,</city>
+        <state>OR</state>
+        <postalCode>97006</postalCode>
+      </addr>
+      <telecom use="WP" value="tel:+1(727)-460-5489" />
+      <assignedPerson>
+        <name>
+          <given>Albert</given>
+          <family>Davis</family>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </informant>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="99999999" root="2.16.840.1.113883.4.6" />
+        <name>Neighborhood Physicians Practice</name>
+        <telecom use="WP" value="tel:+1(727)-460-5489" />
+        <addr use="WP">
+          <streetAddressLine>2472 Rocky place </streetAddressLine>
+          <city>Beaverton,</city>
+          <state>OR</state>
+          <postalCode>97006</postalCode>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient>
+    <intendedRecipient>
+      <informationRecipient>
+        <name>
+          <prefix>Dr</prefix>
+          <given>Albert</given>
+          <family>Davis</family>
+        </name>
+      </informationRecipient>
+      <receivedOrganization>
+        <name>Neighborhood Physicians Practice</name>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+  <legalAuthenticator>
+    <time value="20150722" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id extension="999999999" root="2.16.840.1.113883.4.6" />
+      <addr use="WP">
+        <streetAddressLine>2472 Rocky place </streetAddressLine>
+        <city>Beaverton,</city>
+        <state>OR</state>
+        <postalCode>97006</postalCode>
+      </addr>
+      <telecom use="WP" value="tel:+1(727)-460-5489" />
+      <assignedPerson>
+        <name>
+          <prefix>Dr</prefix>
+          <given>Albert</given>
+          <family>Davis</family>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <authenticator>
+    <time value="20150622" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id extension="999999999" root="2.16.840.1.113883.4.6" />
+      <addr>
+        <streetAddressLine>2472, Rocky place</streetAddressLine>
+        <city>Beaverton,</city>
+        <state>OR</state>
+        <postalCode>97006</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:7274605489" />
+      <assignedPerson>
+        <name>
+          <prefix>Dr</prefix>
+          <given>Albert</given>
+          <family>Davis</family>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <code code="73424007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Caregiver Annual Health Check (001.1) (A00.1). " />
+      <effectiveTime>
+        <low value="20170601145724" />
+        <high value="20170601145724" />
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction" displayName="Primary Care Provider">
+          <originalText>Primary Care Provider</originalText>
+        </functionCode>
+        <assignedEntity>
+          <id root="b408557b-6d1a-4863-9397-b6aae8fd4c23" extension="PseudoMD-1" />
+          <code code="208D00000X" codeSystem="2.16.840.1.113883.6.101" displayName="General Practice" codeSystemName="Provider Codes" />
+          <addr use="WP">
+            <streetAddressLine>2472, Rocky place</streetAddressLine>
+            <city>Beaverton,</city>
+            <state>OR</state>
+            <postalCode>97006</postalCode>
+          </addr>
+          <telecom use="WP" value="tel:7274605489" />
+          <assignedPerson>
+            <name>
+              <given>Albert</given>
+              <family>Davis</family>
+            </name>
+          </assignedPerson>
+          <representedOrganization>
+            <id root="2.16.840.1.113883.19.5.9999.1393" />
+            <name>Neighborhood Physicians Practice</name>
+            <telecom use="WP" value="tel:555-555-1002" />
+            <addr use="WP">
+              <streetAddressLine>2472 Rocky place </streetAddressLine>
+              <city>Beaverton,</city>
+              <state>OR</state>
+              <postalCode>97006</postalCode>
+            </addr>
+          </representedOrganization>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <componentOf>
+    <encompassingEncounter>
+      <id root="54ca5046-6390-47df-84b1-c6948360f6d5" />
+      <effectiveTime>
+        <low value="20150722094745" />
+        <high value="20150722094745" />
+      </effectiveTime>
+      <encounterParticipant typeCode="ATND">
+        <time>
+          <low value="20170601145724" />
+          <high value="20170601145724" />
+        </time>
+        <assignedEntity>
+          <id root="7aa77806-dcdb-4d96-9579-d71b18323e2d" extension="PseudoMD-1" />
+          <code code="208D00000X" codeSystem="2.16.840.1.113883.6.101" displayName="Care Team" codeSystemName="Provider Codes" />
+          <addr use="WP">
+            <streetAddressLine>2472, Rocky place</streetAddressLine>
+            <city>Beaverton,</city>
+            <state>OR</state>
+            <postalCode>97006</postalCode>
+          </addr>
+          <telecom use="WP" value="tel:7274605489" />
+          <assignedPerson>
+            <name>
+              <given>Albert</given>
+              <family>Davis</family>
+            </name>
+          </assignedPerson>
+          <representedOrganization>
+            <id root="2.16.840.1.113883.19.5.9999.1393" />
+            <name>Neighborhood Physicians Practice</name>
+            <telecom use="WP" value="tel:555-555-1002" />
+            <addr use="WP">
+              <streetAddressLine>2472 Rocky place </streetAddressLine>
+              <city>Beaverton,</city>
+              <state>OR</state>
+              <postalCode>97006</postalCode>
+            </addr>
+          </representedOrganization>
+        </assignedEntity>
+      </encounterParticipant>
+    </encompassingEncounter>
+  </componentOf>
+  <!--
+********************************************************
+CCDA CCD Body
+********************************************************
+-->
+  <component>
+    <structuredBody>
+      <component>
+        <!--
+********************************************************
+ Allergies, Adverse Reactions, Alerts
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1" />
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies" />
+          <title>Allergies, Adverse Reactions, Alerts</title>
+          <text>No known Allergies</text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" />
+              <id root="86d42514-568e-4c3b-b202-0c39dcf746e0" />
+              <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts" />
+              <statusCode code="active" />
+              <effectiveTime>
+                <low nullFlavor="NI" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN" negationInd="true">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                  <id root="54dea350-c840-4e80-8fa6-a83c15b89a13" />
+                  <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="SNOMED CT" displayName="Drug Allergy">
+                    <translation code="416098002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Drug Allergy" />
+                  </code>
+                  <statusCode code="completed" />
+                  <effectiveTime nullFlavor="UNK" />
+                  <value xsi:type="CD" code="416098002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Drug Allergy" />
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <addr />
+                      <playingEntity classCode="MMAT">
+                        <code nullFlavor="NI" />
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Medications section
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
+          <!--Medications section template-->
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use" />
+          <title>Medications</title>
+          <text>
+            <paragraph>
+              <content ID="MedicationNoData">No Medications</content>
+            </paragraph>
+          </text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Problems section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="11450-4" codeSystemName="LOINC" displayName="Problem List" />
+          <title>Problems</title>
+          <text>No known Problems</text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <id root="af4d1f5b-b0d4-4fbe-b7aa-764b56a3b493" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+              <statusCode code="active" />
+              <effectiveTime>
+                <low value="20170601" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN" negationInd="true">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <id root="e82c8523-a2aa-45f0-a3d6-cf187a89b30d" />
+                  <code code="55607006" displayName="Problem" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96">
+                    <translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" displayName="Problem" codeSystemName="LOINC" />
+                  </code>
+                  <text>
+                    <reference value="#problems1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20170601" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem">
+                    <originalText>
+                      <reference value="#problems1" />
+                    </originalText>
+                  </value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Encounters section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.22.1" />
+          <!--Encounters section template-->
+          <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+          <title>Encounters</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Encounter Diagnosis</th>
+                  <th>Location</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID="ref_c6e54337be0d4491baf17263b2318c09_Encounter_Reason_1">Caregiver Annual Health Check (001.1) (A00.1).</td>
+                  <td></td>
+                  <td>July 22, 2015 at 09:47 AM EST</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <encounter classCode="ENC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2017-06-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              <!--Encounter activity template-->
+              <id root="e81d9ecd-1b85-415c-bcd0-419787a262c2" />
+              <code code="99213" displayName="Office outpatient visit" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4">
+                <originalText>
+                  <reference value="#ref_c6e54337be0d4491baf17263b2318c09_Encounter_Reason_1" />
+                </originalText>
+                <translation code="AMB" codeSystem="2.16.840.1.113883.5.4" displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode" />
+              </code>
+              <effectiveTime value="20150722094745" />
+              <participant typeCode="LOC">
+                <participantRole classCode="SDLOC">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.32" />
+                  <code code="1160-1" codeSystemName="HL7 HealthcareServiceLocation" codeSystem="2.16.840.1.113883.6.259" displayName="Urgent Care Center" />
+                  <addr>
+                    <streetAddressLine>2472 Rocky place </streetAddressLine>
+                    <city>Beaverton,</city>
+                    <state>OR</state>
+                    <postalCode>97006</postalCode>
+                    <country>US</country>
+                  </addr>
+                  <telecom value="555-555-1002" />
+                  <playingEntity classCode="PLC">
+                    <name>Neighborhood Physicians Practice</name>
+                  </playingEntity>
+                </participantRole>
+                <!--Location participation template-->
+              </participant>
+              <entryRelationship typeCode="SUBJ">
+                <act classCode="ACT" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2017-06-01" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.19" />
+                  <code code="29308-4" displayName="ENCOUNTER DIAGNOSIS" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <effectiveTime>
+                    <low value="20150722094745" />
+                  </effectiveTime>
+                  <entryRelationship typeCode="SUBJ" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                      <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                      <id root="4b4d1c98-63d6-4527-9d46-0e0a4ae198c0" />
+                      <code code="404684003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Caregiver Annual Health Check (001.1) (A00.1).">
+                        <translation code="75321-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical finding" />
+                      </code>
+                      <statusCode code="completed" />
+                      <effectiveTime>
+                        <low value="20150722094745" />
+                      </effectiveTime>
+                      <value xsi:type="CD" code="699134002" codeSystem="2.16.840.1.113883.6.96" displayName="Caregiver Annual Health Check (001.1) (A00.1)." />
+                    </observation>
+                  </entryRelationship>
+                </act>
+              </entryRelationship>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Immunizations section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.2.1" />
+          <!--Immunizations section template-->
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations" />
+          <title>Immunizations</title>
+          <text>
+            <paragraph>
+              <content ID="ImmunizationsNoData">No known immunization history.</content>
+            </paragraph>
+          </text>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              <id nullFlavor="NI" />
+              <statusCode code="completed" />
+              <effectiveTime nullFlavor="NI" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  <manufacturedMaterial>
+                    <code nullFlavor="UNK" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Vital Signs section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.4.1" />
+          <!--Vital signs section template-->
+          <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+          <title>Vital Signs</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Height</th>
+                  <th>Weight</th>
+                  <th>BP</th>
+                  <th>Heart Rate</th>
+                  <th>Oximetry</th>
+                  <th>Temperature</th>
+                  <th>Respiratory</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>July 22, 2015</td>
+                  <td>177.00 cm</td>
+                  <td>88.00 kg</td>
+                  <td>145/88 mm[Hg]</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.26" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.26" />
+              <!--Vital signs organizer template-->
+              <id root="b3670c90-6d1b-4288-a749-d33ba7fc9827" />
+              <code code="46680005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Vital signs">
+                <translation code="74728-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+              </code>
+              <statusCode code="completed" />
+              <effectiveTime value="20150722000000" />
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                  <!--Result observation template-->
+                  <id root="a8a25750-fdf6-4d48-a06f-d3a2b8bd8fee" />
+                  <code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20150722000000" />
+                  <value xsi:type="PQ" value="177.00" unit="cm" />
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                  <!--Result observation template-->
+                  <id root="da54f6cc-2fd9-42ef-91a8-bed8f7f4cb65" />
+                  <code code="29463-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Body Weight - Measured">
+                    <translation code="27113001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Body weight" />
+                  </code>
+                  <text>
+                    <reference value="#ref_3494ab6b9c3b4bb2a1a72f506b297c8a_vitalSigns_wt_2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20150722000000" />
+                  <value xsi:type="PQ" value="88.00" unit="kg" />
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                  <!--Result observation template-->
+                  <id root="981f2fa5-43b6-4f5a-9476-f4e855855722" />
+                  <code code="8480-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Intravascular Systolic">
+                    <translation code="271649006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Systolic BP" />
+                  </code>
+                  <text>
+                    <reference value="#ref_3494ab6b9c3b4bb2a1a72f506b297c8a_vitalSigns_bpSystolic_2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20150722000000" />
+                  <value xsi:type="PQ" value="145" unit="mm[Hg]" />
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                  <!--Result observation template-->
+                  <id root="c6f88323-67ad-11db-bd13-0800200c9a66" />
+                  <code code="8462-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="BP Diastolic">
+                    <translation code="271650006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diastolic BP" />
+                  </code>
+                  <text>
+                    <reference value="#ref_3494ab6b9c3b4bb2a1a72f506b297c8a_vitalSigns_bpDiastolic_2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20150722000000" />
+                  <value xsi:type="PQ" value="88" unit="mm[Hg]" />
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Social History section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.17" />
+          <id root="2.16.840.1.113883.3.441.1.50.300011.51.26604.68" assigningAuthorityName="CCD" />
+          <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social history" />
+          <title>Social History</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Social History Element</th>
+                  <th>Description</th>
+                  <th>Effective Dates</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Current Smoking Status</td>
+                  <td>Patient Characteristic: Tobacco User (Code: 2.16.840.1.113883.3.526.3.1170)</td>
+                  <td>July 22, 2015</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2016-12-12" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" />
+              <id root="2.16.840.1.113883.3.441.1.50.300011.51.26604.68" />
+              <code code="72166-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Current Smoking Status" />
+              <statusCode code="completed" />
+              <effectiveTime value="20150722094745" />
+              <value xsi:type="CD" code="449868002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Patient Characteristic: Tobacco User (Code: 2.16.840.1.113883.3.526.3.1170)" />
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.200" extension="2016-10-25" />
+              <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Sex Assigned At Birth" />
+              <text>
+                <reference value="#BirthSexInfo" />
+              </text>
+              <statusCode code="completed" />
+              <value xsi:type="CD" code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Surgeries/Procedures section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1" />
+          <!--Procedures section template-->
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="List of Procedures" />
+          <title>Surgeries/Procedures</title>
+          <text>No Procedures.
+            <paragraph ID="Proc1" />
+          </text>
+          <entry typeCode="DRIV">
+            <procedure classCode="PROC" moodCode="EVN" negationInd="true">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              <!--Procedure activity template-->
+              <id root="cb1ef184-4b9e-45ec-aa31-369880c536ea" />
+              <code code="71388002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Procedure">
+                <originalText>
+                  <reference value="#Proc1" />
+                </originalText>
+              </code>
+              <statusCode code="completed" />
+              <effectiveTime nullFlavor="NI" />
+              <participant typeCode="DEV">
+                <participantRole classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.37" />
+                  <id nullFlavor="NA" root="2.16.840.1.113883.3.3719" />
+                  <playingDevice>
+                    <code code="40388003" displayName="Implant" codeSystem="2.16.840.1.113883.6.96" />
+                  </playingDevice>
+                  <scopingEntity>
+                    <id root="2.16.840.1.113883.3.3719" />
+                  </scopingEntity>
+                </participantRole>
+              </participant>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Diagnostic Results section
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.3.1" assigningAuthorityName="HITSP/C83" extension="2015-08-01" />
+          <!--Diagnostic Results section template-->
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Results" />
+          <title>Diagnostic Results</title>
+          <text>No Lab Results.</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Functional Status section
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.14" />
+          <id root="2.16.840.1.113883.3.441.1.50.300011.51.26604.68" assigningAuthorityName="HL7 CCD" />
+          <code code="47420-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Functional status assessment" />
+          <title>Functional Status</title>
+          <text>No Functional Status</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Assessments
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.8" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="51848-0" codeSystemName="LOINC" displayName="ASSESSMENTS" />
+          <title>ASSESSMENTS</title>
+          <text>The patient was found to be healthy and advised to follow his current routine of exercise, work, sleep and quality of life.</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Treatment Plan
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" />
+          <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of Treatment" />
+          <title>Plan of Treatment</title>
+          <text>
+            <content styleCode="Bold" />
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th colspan="1">Planned Care</th>
+                  <th scope="col">Start Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Schedule a visit for next year.</td>
+                  <td>June 01, 2017</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+ Goals section 
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.60" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="61146-7" codeSystemName="LOINC" displayName="Goals" />
+          <title>Goals Secton</title>
+          <text>No known Goals</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+ Health Concerns Section 
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.58" extension="2017-06-01" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="75310-3" codeSystemName="LOINC" displayName="Health Concerns" />
+          <title>Health Concerns Section</title>
+          <text>No known Health Concerns</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Reason for Referral 
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <!--Reason for Referral  Section-->
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1" extension="2017-06-01" />
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1" />
+          <code code="42349-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason for Referral" />
+          <title>Reason for Referral</title>
+          <text>No Reason for Referral</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+ Cognitive Status section 
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2017-06-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.56" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="10190-7" codeSystemName="LOINC" displayName="Cognitive Status" />
+          <title>COGNITIVE STATUS</title>
+          <text>No known COGNITIVE STATUS</text>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+Instructions template ID
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.45" />
+          <id root="4596ffd9-89fc-405f-b23f-d838739c7fb6" />
+          <code code="69730-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Instructions" />
+          <title>Instructions</title>
+          <text>No Instructions</text>
+          <entry>
+            <act classCode="ACT" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.20" />
+              <code code="NI" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No Instruction" />
+              <statusCode code="completed" />
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+ Medical Equipment Section 
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.23" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="46264-8" codeSystemName="LOINC" displayName="Medical Equipments" />
+          <title>Medical Equipment Section</title>
+          <text>No known Medical Equipments</text>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <id extension="2744" root="1.2.840.114350.1.13.5552.1.7.2.737780" />
+              <code nullFlavor="UNK" />
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low nullFlavor="NI" />
+              </effectiveTime>
+              <targetSiteCode nullFlavor="NI" />
+              <participant typeCode="DEV">
+                <participantRole classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.37" />
+                  <id root="2.16.840.1.113883.3.3719" extension="(01)00643169007222(17)160128(21)BLC200461H" />
+                  <playingDevice>
+                    <code nullFlavor="NI" />
+                  </playingDevice>
+                  <scopingEntity>
+                    <id root="2.16.840.1.113883.3.3719" />
+                  </scopingEntity>
+                </participantRole>
+              </participant>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--
+********************************************************
+ MENTAL STATUS 
+********************************************************
+-->
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2015-08-01" />
+          <code codeSystem="2.16.840.1.113883.6.1" code="10190-7" codeSystemName="LOINC" displayName="MENTAL STATUS" />
+          <title>MENTAL STATUS</title>
+          <text>No Mental Status information</text>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

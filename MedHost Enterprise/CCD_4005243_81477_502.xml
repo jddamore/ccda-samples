@@ -1,0 +1,1385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This XML document was retrieved from a public repository of certified EHR samples for Meaningful Use 
+That repository states "The public will be able to view-download the submitted files from this repository." 
+The original files have been edited to make them human-readable and easier to download. Please refer to source repository for original versions 
+The copy date of original repository was February 1, 2018. Here is original repository: https://github.com/siteadmin/2015-C-CDA-Certification-Samples 
+All of these samples were supposed be C-CDA 2.1 clinical documents. The following disclaimer applies to ALL INFORMATION contained herein: 
+THIS INFORMATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE INFORMATION OR THE USE OR OTHER DEALINGS IN THE INFORMATION. 
+Beyond that, I hope they are useful and "hooray" for government transparency! John D'Amore, Diameter Health, Inc. -->
+<ClinicalDocument 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="urn:hl7-org:v3" 
+  xmlns:sdtc="urn:hl7-org:sdtc" 
+  xmlns:voc="urn:hl7-org:v3/voc" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+  <realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01"/>
+  <id root="2.16.840.1.113883.3.1579.7277837785.1.100" extension="3f38bff7-7466-47d6-9b06-5ce7f3d58517" assigningAuthorityName="HMS DOCUMENT ID"/>
+  <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Summarization of Episode Note"/>
+  <title>Continuity of Care Document</title>
+  <effectiveTime value="20161209132943+0000"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+  <languageCode code="en-US"/>
+  <setId root="2.16.840.1.113883.3.1579.7277837785.1.101" extension="0001.81477.4005243.00010101.23991231.CCD" assigningAuthorityName="HMS SET ID"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id root="2.16.840.1.113883.3.1579.7277837785.1.200" extension="81477" assigningAuthorityName="HMS MRN"/>
+      <id root="2.16.840.1.113883.3.1579.7277837785.1.300" extension="4005243" assigningAuthorityName="HMS PATIENT ACCOUNT NUMBER"/>
+      <addr use="HP">
+        <streetAddressLine>2237 ROOSEVELT STREET</streetAddressLine>
+        <city>SAN FRANCISCO</city>
+        <state>CA</state>
+        <postalCode>94111</postalCode>
+      </addr>
+      <telecom value="tel:(415)342-1212" use="HP"/>
+      <patient>
+        <name use="L">
+          <given>JOHN</given>
+          <family>YOSEMITE</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="Administrative Gender" displayName="Male"/>
+        <birthTime value="19631220"/>
+        <raceCode code="2106-3" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC" displayName="White"/>
+        <ethnicGroupCode nullFlavor="NAV"/>
+        <languageCommunication>
+          <languageCode nullFlavor="NA"/>
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20161209132943+0000"/>
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="1679502322" assigningAuthorityName="National Provider ID (NPI)"/>
+      <code code="261QE0002X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Health Care Provider Taxonomy" displayName="Emergency Care"/>
+      <addr use="WP">
+        <streetAddressLine>6550 CAROTHERS PKWY</streetAddressLine>
+        <city>FRANKLIN</city>
+        <state>TN</state>
+        <postalCode>370670000</postalCode>
+      </addr>
+      <telecom value="tel:(217)465-4141" use="WP"/>
+      <assignedPerson>
+        <name>MU CERTIFY HOSPITAL</name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.16.840.1.113883.3.1579.7277837785.1.500" extension="001" assigningAuthorityName="HMS HOSPITAL NUMBER"/>
+        <name>MU CERTIFY HOSPITAL</name>
+        <telecom value="tel:(217)465-4141" use="WP"/>
+        <addr use="WP">
+          <streetAddressLine>6550 CAROTHERS PKWY</streetAddressLine>
+          <city>FRANKLIN</city>
+          <state>TN</state>
+          <postalCode>370670000</postalCode>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <code displayName="COPD"/>
+      <effectiveTime>
+        <low value="20161111200500+0000"/>
+        <high value="20161209132943+0000"/>
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <functionCode code="ADMPHYS" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction" displayName="Admitting"/>
+        <assignedEntity classCode="ASSIGNED">
+          <id root="2.16.840.1.113883.4.6" extension="1841569555"/>
+          <code code="208D00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Health Care Provider Taxonomy" displayName="General Practice"/>
+          <addr>
+            <streetAddressLine>5599 MILLER PARKWAY</streetAddressLine>
+            <city>MILWAUKEE</city>
+            <state>WI</state>
+            <postalCode>53209</postalCode>
+          </addr>
+          <telecom value="tel:(414)214-1212" use="WP"/>
+          <assignedPerson>
+            <name>
+              <given>IVY</given>
+              <family>STUART</family>
+              <given>3</given>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <functionCode code="ATTPHYS" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction" displayName="Primary Attending"/>
+        <assignedEntity classCode="ASSIGNED">
+          <id root="2.16.840.1.113883.4.6" extension="1841569555"/>
+          <code code="208D00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Health Care Provider Taxonomy" displayName="General Practice"/>
+          <addr>
+            <streetAddressLine>5599 MILLER PARKWAY</streetAddressLine>
+            <city>MILWAUKEE</city>
+            <state>WI</state>
+            <postalCode>53209</postalCode>
+          </addr>
+          <telecom value="tel:(414)214-1212" use="WP"/>
+          <assignedPerson>
+            <name>
+              <given>IVY</given>
+              <family>STUART</family>
+              <given>3</given>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <componentOf>
+    <encompassingEncounter>
+      <id root="2.16.840.1.113883.3.1579.7277837785.1.300" extension="4005243" assigningAuthorityName="HMS PATIENT ACCOUNT NUMBER"/>
+      <code code="32485007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hospital Admission"/>
+      <effectiveTime>
+        <low value="20161111200500+0000"/>
+        <high value="20161201193100+0000"/>
+      </effectiveTime>
+      <dischargeDispositionCode code="9" codeSystem="2.16.840.1.113883.12.112" codeSystemName="HL7 Discharge Disposition" displayName="ADMITTED AS AN IP TO THIS HOSPITAL"/>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies and adverse reactions Document"/>
+          <title>ALLERGIES AND ADVERSE REACTIONS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>ALLERGIES AND ADVERSE REACTIONS</caption>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>System</th>
+                  <th>Allergy Substance</th>
+                  <th>Adverse Reaction Date</th>
+                  <th>Reaction (Severity)</th>
+                  <th>Comment</th>
+                  <th>Status</th>
+                  <th>Reported By</th>
+                  <th>Entered By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="9">No Known Allergies.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.30" extension="2015-08-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+              <id root="b0465f3e-0e15-486c-b0ac-e1f0ca00d85d"/>
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" codeSystemName="HL7 Act Class" displayName="Problem Concern"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low nullFlavor="UNK"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" negationInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+                  <id root="5435bc21-d85b-4540-a75d-1bbb7617013c"/>
+                  <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Alert Observation"/>
+                  <statusCode code="completed"/>
+                  <effectiveTime nullFlavor="NA"/>
+                  <value xsi:type="CD" code="419199007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Allergy to substance"/>
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <playingEntity classCode="MMAT">
+                        <code nullFlavor="NA"/>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.8"/>
+          <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="ASSESSMENTS"/>
+          <title>ASSESSMENTS</title>
+          <text>
+            <content styleCode="Bold">No Information Available</content>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.15" extension="2015-08-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.15"/>
+          <code code="10157-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="FAMILY HISTORY"/>
+          <title>FAMILY HISTORY</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>FAMILY HISTORY</caption>
+              <tbody>
+                <tr>
+                  <td colspan="3">No Family History Information Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.14" extension="2014-06-09"/>
+          <code code="47420-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="FUNCTIONAL STATUS"/>
+          <title>FUNCTIONAL STATUS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>FUNCTIONAL STATUS</caption>
+              <tbody>
+                <tr>
+                  <td colspan="5">Functional Status information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2015-08-01"/>
+          <code code="10190-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Mental Status"/>
+          <title>MENTAL STATUS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>MENTAL STATUS</caption>
+              <tbody>
+                <tr>
+                  <td colspan="5">Mental Status information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List"/>
+          <title>PROBLEMS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>PATIENT PROBLEMS</caption>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Description/Comments</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Entered By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="5">Information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2015-08-01"/>
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests/laboratory data Narrative"/>
+          <title>RESULTS</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th colspan="5">LABORATORY RESULTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LOINC</td>
+                  <td>TEST</td>
+                  <td>FLAG</td>
+                  <td>RESULT</td>
+                  <td>REFERENCE RANGE</td>
+                </tr>
+                <tr>
+                  <td colspan="10">Information is not available</td>
+                </tr>
+              </tbody>
+            </table>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th colspan="5">MICROBIOLOGY RESULTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LOINC</td>
+                  <td>ANTIBIOTIC</td>
+                  <td>MIC</td>
+                  <td>TYPE</td>
+                  <td>VALUE</td>
+                </tr>
+                <tr>
+                  <td colspan="10">Information is not available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09"/>
+          <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of Treatment"/>
+          <title>TREATMENT PLAN</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th colspan="8">DISCHARGE MEDICATIONS</th>
+                </tr>
+                <tr>
+                  <th>Status</th>
+                  <th>RXNORM</th>
+                  <th>Medication</th>
+                  <th>Dose</th>
+                  <th>Route</th>
+                  <th>Frequency</th>
+                  <th>Dates</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Continue</td>
+                  <td>836368</td>
+                  <td>atrovent HFA Inhalation Aeroso</td>
+                  <td>2 PUF</td>
+                  <td>INHALATION</td>
+                  <td>FOUR TIMES PER DAY</td>
+                  <td>Prescribed: December 1, 2016 5:18:36 PM UTC</td>
+                  <td>Take more if SOB persists during the day.</td>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th colspan="8">PATIENT OPEN ORDERS</th>
+                </tr>
+                <tr>
+                  <th>Code</th>
+                  <th>System</th>
+                  <th>Description</th>
+                  <th>Frequency</th>
+                  <th>Occurrences</th>
+                  <th>Priority</th>
+                  <th>Start Date</th>
+                  <th>Ordering Physician</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="11">Patient open order information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.42" extension="2014-06-09"/>
+              <id root="PlannedMed-7b040df2-a2ed-49d8-a3e2-4168b33465a4"/>
+              <text>medication:atrovent HFA Inhalation Aeroso|dose:PUF PUF|route:INHALATION|frequency:FOUR TIMES PER DAY</text>
+              <statusCode code="active"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20161201"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="2.0" unit="PUF"/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="836368" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="atrovent HFA Inhalation Aeroso">
+                      <translation code="00597008717" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="atrovent HFA Inhalation Aeroso"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <performer>
+                <assignedEntity>
+                  <id root="2.16.840.1.113883.3.1579.7277837785.1.400" extension="73649" assigningAuthorityName="HMS PROVIDER NUMBER"/>
+                  <addr>
+                    <streetAddressLine>5599 MILLER PARKWAY</streetAddressLine>
+                    <city>MILWAUKEE</city>
+                    <state>WI</state>
+                    <postalCode>53209</postalCode>
+                  </addr>
+                  <telecom nullFlavor="NAV"/>
+                  <assignedPerson>
+                    <name>
+                      <family>STUART</family>
+                      <given>IVY</given>
+                    </name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.5"/>
+          <code code="8648-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HOSPITAL COURSE"/>
+          <title>HOSPITAL COURSE</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>HOSPITAL COURSE</caption>
+              <tbody>
+                <tr>
+                  <td colspan="2">Information is not available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.2.1" extension="2015-08-01"/>
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Immunization Narrative"/>
+          <title>IMMUNIZATIONS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>PATIENT IMMUNIZATIONS</caption>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>System</th>
+                  <th>Vaccine Name</th>
+                  <th>Consent</th>
+                  <th>Reactions</th>
+                  <th>Comments</th>
+                  <th>Administered By</th>
+                  <th>Route</th>
+                  <th>Site</th>
+                  <th>Entered By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="10">Information is not available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication use Narrative"/>
+          <title>MEDICATIONS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>HOME MEDICATIONS</caption>
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>RXNORM</th>
+                  <th>Medication</th>
+                  <th>Dose</th>
+                  <th>Route</th>
+                  <th>Frequency</th>
+                  <th>Dates</th>
+                  <th>Comments</th>
+                  <th>Entered By</th>
+                  <th>Reported By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Active</td>
+                  <td>1368391</td>
+                  <td>Kazano 12.5 mg/1000mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: May 1, 2016 5:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>153666</td>
+                  <td>Avapro 150 mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: May 1, 2016 5:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>213182</td>
+                  <td>Bactroban 2% Topical Cream</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: March 10, 2016 6:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>310798</td>
+                  <td>Hydrochlorothiazide 25 mg tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: January 1, 2016 6:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>617318</td>
+                  <td>Lipitor 20mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: January 1, 2016 6:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>823934</td>
+                  <td>Avalide 150 mg/12.5 mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: May 1, 2016 5:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>824194</td>
+                  <td>Amoxicillin 875 MG / Clavulanate 125 MG Oral Tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: December 10, 2015 6:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>858819</td>
+                  <td>Vasotec 10 mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: January 1, 2016 6:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>859753</td>
+                  <td>Crestor 20 mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: May 1, 2016 5:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>861006</td>
+                  <td>Glucophage 1000 mg oral tablet</td>
+                  <td>0.0 </td>
+                  <td/>
+                  <td/>
+                  <td>Last Dose: May 1, 2016 5:00:00 AM UTC</td>
+                  <td/>
+                  <td>rcrawley</td>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <table border="1" width="100%">
+              <caption>DISCHARGE MEDICATIONS</caption>
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>RXNORM</th>
+                  <th>Medication</th>
+                  <th>Dose</th>
+                  <th>Route</th>
+                  <th>Frequency</th>
+                  <th>Dates</th>
+                  <th>Comments</th>
+                  <th>Physician</th>
+                  <th>Entered By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Continue</td>
+                  <td>836368</td>
+                  <td>atrovent HFA Inhalation Aeroso</td>
+                  <td>2.0 PUF</td>
+                  <td>INHALATION</td>
+                  <td>FOUR TIMES PER DAY</td>
+                  <td>Prescribed: December 1, 2016 5:18:36 PM UTC</td>
+                  <td>Take more if SOB persists during the day.</td>
+                  <td>IVY STUART</td>
+                  <td>ISTUART3</td>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <table border="1" width="100%">
+              <caption>INPATIENT MEDICATIONS</caption>
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>RXNORM</th>
+                  <th>Medication</th>
+                  <th>Dose</th>
+                  <th>Route</th>
+                  <th>Frequency</th>
+                  <th>Rate Quantity</th>
+                  <th>Dates</th>
+                  <th>Comments</th>
+                  <th>Physician</th>
+                  <th>Entered By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="11">No Inpatient Medication Information Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-09aad563-7934-4bd1-b75a-5453f2be0aee"/>
+              <text>medication:Kazano 12.5 mg/1000mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160501"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="1368391" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Kazano 12.5 mg/1000mg oral tablet">
+                      <translation code="FreeTextMed" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Kazano 12.5 mg/1000mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-7533132c-5e52-4a2b-b4ba-a964c74d3c54"/>
+              <text>medication:Avapro 150 mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160501"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="153666" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Avapro 150 mg oral tablet">
+                      <translation code="00087277231" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Avapro 150 mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-1df34182-9121-4fbb-a471-0d8405387644"/>
+              <text>medication:Bactroban 2% Topical Cream|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160310"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="213182" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Bactroban 2% Topical Cream">
+                      <translation code="FreeTextMed" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Bactroban 2% Topical Cream"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-9094abda-ea92-4930-9ceb-c757dfb57d1d"/>
+              <text>medication:Hydrochlorothiazide 25 mg tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160101"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="310798" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Hydrochlorothiazide 25 mg tablet">
+                      <translation code="63739012810" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Hydrochlorothiazide 25 mg tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-dd85621f-f808-4a58-9ab6-9e8f1a6f02d5"/>
+              <text>medication:Lipitor 20mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160101"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="617318" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Lipitor 20mg oral tablet">
+                      <translation code="00071015640" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Lipitor 20mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-43da0e7d-2b96-4b86-a19e-ec07c69d4c5f"/>
+              <text>medication:Avalide 150 mg/12.5 mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160501"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="823934" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Avalide 150 mg/12.5 mg oral tablet">
+                      <translation code="00087287531" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Avalide 150 mg/12.5 mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-ea109fd5-7b05-4fcc-b7df-4a61c1cbbcde"/>
+              <text>medication:Amoxicillin 875 MG / Clavulanate 125 MG Oral Tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20151210"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="824194" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Amoxicillin 875 MG / Clavulanate 125 MG Oral Tablet">
+                      <translation code="FreeTextMed" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Amoxicillin 875 MG / Clavulanate 125 MG Oral Tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-c7772ab7-a25d-4921-b7f0-a686beccf3c1"/>
+              <text>medication:Vasotec 10 mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160101"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="858819" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Vasotec 10 mg oral tablet">
+                      <translation code="FreeTextMed" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Vasotec 10 mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-5dcd0d4b-df31-4101-bfbc-8ae3cb4e5a1f"/>
+              <text>medication:Crestor 20 mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160501"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="859753" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Crestor 20 mg oral tablet">
+                      <translation code="00310075290" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Crestor 20 mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="HomeMed-d64ae39f-1b47-4061-9705-2c443628ff8f"/>
+              <text>medication:Glucophage 1000 mg oral tablet|dose: |route:|frequency:</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20160501"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="0.0" unit=""/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="861006" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="Glucophage 1000 mg oral tablet">
+                      <translation code="FreeTextMed" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Glucophage 1000 mg oral tablet"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id root="DischargeMed-e47b114b-50ba-4a49-99c4-e076e5431c52"/>
+              <text>medication:atrovent HFA Inhalation Aeroso|dose:PUF PUF|route:INHALATION|frequency:FOUR TIMES PER DAY</text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20161201"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode nullFlavor="UNK"/>
+              <doseQuantity value="2.0" unit="PUF"/>
+              <rateQuantity nullFlavor="UNK"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <manufacturedMaterial>
+                    <code code="836368" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RXNorm" displayName="atrovent HFA Inhalation Aeroso">
+                      <translation code="00597008717" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="atrovent HFA Inhalation Aeroso"/>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <performer>
+                <assignedEntity>
+                  <id root="2.16.840.1.113883.3.1579.7277837785.1.400" extension="73649" assigningAuthorityName="HMS PROVIDER NUMBER"/>
+                  <addr>
+                    <streetAddressLine>5599 MILLER PARKWAY</streetAddressLine>
+                    <city>MILWAUKEE</city>
+                    <state>WI</state>
+                    <postalCode>53209</postalCode>
+                  </addr>
+                  <telecom nullFlavor="NAV"/>
+                  <assignedPerson>
+                    <name>
+                      <family>STUART</family>
+                      <given>IVY</given>
+                    </name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01"/>
+          <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SOCIAL HISTORY"/>
+          <title>SOCIAL HISTORY</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>SOCIAL HISTORY</caption>
+              <thead>
+                <tr>
+                  <th>SNOMED-CT</th>
+                  <th>Social History Element</th>
+                  <th>Description</th>
+                  <th>Effective Dates</th>
+                  <th>Observation Date</th>
+                  <th>Offered Cessation</th>
+                  <th>Entered By</th>
+                  <th>Comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>266927001</td>
+                  <td>Smoking Status</td>
+                  <td>Unknown If Ever Smoked</td>
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <br/>
+            <table border="1" width="100%">
+              <caption>SOCIAL HISTORY - Birth Gender</caption>
+              <tbody>
+                <tr>
+                  <td>Birth Sex: Male</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2015-08-01"/>
+              <id root="6293e3cc-6f15-4523-96ba-d40a62245a4b"/>
+              <code code="72166-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Tobacco use and exposure"/>
+              <statusCode code="completed"/>
+              <effectiveTime nullFlavor="NA"/>
+              <value xsi:type="CD" code="266927001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Unknown If Ever Smoked"/>
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.200" extension="2016-06-01"/>
+              <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Sex Assigned At Birth"/>
+              <statusCode code="completed"/>
+              <effectiveTime nullFlavor="NA"/>
+              <value xsi:type="CD" code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="Administrative Gender" displayName="Male"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2015-08-01"/>
+          <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital Signs"/>
+          <title>VITAL SIGNS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>PATIENT VITAL SIGNS</caption>
+              <thead>
+                <tr>
+                  <td colspan="4">This section displays the most recent value for each vital sign as of December 9, 2016 1:29:43 PM UTC</td>
+                </tr>
+                <tr>
+                  <th scope="col">Vital Sign</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="9">No Vital Information Available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09"/>
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Procedures Document"/>
+          <title>PROCEDURES</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>PATIENT PROCEDURES</caption>
+              <thead>
+                <tr>
+                  <th>CODE</th>
+                  <th>SYSTEM</th>
+                  <th>DESCRIPTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">Procedure information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.60"/>
+          <code code="61146-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals"/>
+          <title>GOALS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>PATIENT GOALS</caption>
+              <thead>
+                <tr>
+                  <th>Goal</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Goal information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.58"/>
+          <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Concerns Document"/>
+          <title>HEALTH CONCERNS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>Problems</caption>
+              <thead>
+                <tr>
+                  <th>Concern</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">Health Concern problem information not available.</td>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <table border="1" width="100%">
+              <caption>Smoking Status</caption>
+              <thead>
+                <tr>
+                  <th>Concern</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">Health Concern social history information not available.</td>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <table border="1" width="100%">
+              <caption>Family History</caption>
+              <thead>
+                <tr>
+                  <th>Concern</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">Health Concern family history information not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09"/>
+          <code code="46264-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical Equipment"/>
+          <title>MEDICAL EQUIPMENT</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>MEDICAL EQUIPMENT</caption>
+              <thead>
+                <tr>
+                  <th>Device</th>
+                  <th>Status</th>
+                  <th>Quantity</th>
+                  <th>Dates</th>
+                  <th>Procedure</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Information not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.22.1" extension="2015-08-01"/>
+          <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of hospitalizations+History of outpatient visits Narrative"/>
+          <title>ENCOUNTERS</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>ENCOUNTER INFORMATION</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Reason for Visit</th>
+                  <td colspan="2">COPD</td>
+                </tr>
+                <tr>
+                  <th scope="row">Admission</th>
+                  <td>November 11, 2016 8:05:00 PM UTC</td>
+                  <td>MU CERTIFY HOSPITAL
+                    <br/>6550 CAROTHERS PKWY
+                    <br/>FRANKLIN TN 37067
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Discharge</th>
+                  <td>December 1, 2016 7:31:00 PM UTC</td>
+                  <td>ADMITTED AS AN IP TO THIS HOSPITAL</td>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <br/>
+            <table border="1" width="100%">
+              <caption>CARE TEAM</caption>
+              <thead>
+                <tr>
+                  <th>Care Team Member</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IVY STUART</td>
+                  <td>Admitting</td>
+                </tr>
+                <tr>
+                  <td>IVY STUART</td>
+                  <td>Primary Attending</td>
+                </tr>
+              </tbody>
+            </table>
+            <br/>
+            <br/>
+            <table border="1" width="100%">
+              <caption>ENCOUNTER DIAGNOSES</caption>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>System</th>
+                  <th>Diagnosis</th>
+                  <th>Onset Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4">Diagnosis information is not available.</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <encounter classCode="ENC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2015-08-01"/>
+              <id root="2.16.840.1.113883.3.1579.7277837785.1.300" extension="4005243" assigningAuthorityName="HMS PATIENT ACCOUNT NUMBER"/>
+              <code code="32485007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hospital Admission"/>
+              <effectiveTime>
+                <low value="20161111200500+0000"/>
+                <high value="20161201193100+0000"/>
+              </effectiveTime>
+              <performer>
+                <assignedEntity>
+                  <id root="2.16.840.1.113883.4.6" extension="1841569555"/>
+                  <addr>
+                    <streetAddressLine>5599 MILLER PARKWAY</streetAddressLine>
+                    <city>MILWAUKEE</city>
+                    <state>WI</state>
+                    <postalCode>53209</postalCode>
+                  </addr>
+                  <telecom value="tel:(414)214-1212" use="WP"/>
+                  <assignedPerson>
+                    <name>
+                      <family>STUART</family>
+                      <given>IVY</given>
+                    </name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+              <performer>
+                <assignedEntity>
+                  <id root="2.16.840.1.113883.4.6" extension="1841569555"/>
+                  <addr>
+                    <streetAddressLine>5599 MILLER PARKWAY</streetAddressLine>
+                    <city>MILWAUKEE</city>
+                    <state>WI</state>
+                    <postalCode>53209</postalCode>
+                  </addr>
+                  <telecom value="tel:(414)214-1212" use="WP"/>
+                  <assignedPerson>
+                    <name>
+                      <family>STUART</family>
+                      <given>IVY</given>
+                    </name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+              <participant typeCode="LOC">
+                <participantRole classCode="SDLOC">
+                  <playingEntity>
+                    <name>MU CERTIFY HOSPITAL</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section nullFlavor="NI">
+          <templateId root="2.16.840.1.113883.10.20.22.2.41"/>
+          <code code="8653-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hospital Discharge Instructions"/>
+          <title>HOSPITAL DISCHARGE INSTRUCTION</title>
+          <text>
+            <table border="1" width="100%">
+              <caption>DISCHARGE INSTRUCTION</caption>
+              <tbody>
+                <tr>
+                  <td colspan="5">Discharge instruction information is not available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

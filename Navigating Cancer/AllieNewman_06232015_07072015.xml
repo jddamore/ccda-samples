@@ -1,0 +1,2122 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- This XML document was retrieved from a public repository of certified EHR samples for Meaningful Use 
+That repository states "The public will be able to view-download the submitted files from this repository." 
+The original files have been edited to make them human-readable and easier to download. Please refer to source repository for original versions 
+The copy date of original repository was February 1, 2018. Here is original repository: https://github.com/siteadmin/2015-C-CDA-Certification-Samples 
+All of these samples were supposed be C-CDA 2.1 clinical documents. The following disclaimer applies to ALL INFORMATION contained herein: 
+THIS INFORMATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE INFORMATION OR THE USE OR OTHER DEALINGS IN THE INFORMATION. 
+Beyond that, I hope they are useful and "hooray" for government transparency! John D'Amore, Diameter Health, Inc. -->
+<ClinicalDocument 
+  xmlns:sdtc='urn:hl7-org:sdtc' 
+  xmlns:voc='urn:hl7-org:v3/voc' 
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xmlns='urn:hl7-org:v3'>
+  <!-- ** CDA Header ** -->
+  <realmCode code='US' />
+  <typeId extension='POCD_HD000040' root='2.16.840.1.113883.1.3' />
+  <!-- US General Header Template -->
+  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.1.1' />
+  <!-- Critical Change for backwards compatibility -->
+  <templateId root='2.16.840.1.113883.10.20.22.1.1' />
+  <!-- *** Note: The next templateId, code and title will differ depending on what type of document is being sent. *** -->
+  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.1.2' />
+  <!-- For backwards compatibility -->
+  <templateId root='2.16.840.1.113883.10.20.22.1.2' />
+  <id assigningAuthorityName='NavigatingCancer' extension='CCDA4' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+  <code code='34133-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Summarization of Episode Note' />
+  <title>Clinical Summary: Alexandra Jones Newman</title>
+  <effectiveTime value='20171109183910+0000' />
+  <confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25' codeSystemName='Confidentiality' displayName='normal' />
+  <languageCode code='en-US' />
+  <recordTarget>
+    <patientRole>
+      <id assigningAuthorityName='NavigatingCancer' extension='PatientInformation24' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+      <addr use='HP'>
+        <city>Beaverton
+</city>
+        <state>OR
+</state>
+        <postalCode>97006
+</postalCode>
+        <streetAddressLine>1357, Amber Dr,
+</streetAddressLine>
+        <country>US
+</country>
+      </addr>
+      <telecom use='HP' value='tel:+1(555)723-1544' />
+      <telecom use='MC' value='tel:+1(555)777-1234' />
+      <patient>
+        <name use='L'>
+          <given>Alexandra</given>
+          <given>Jones</given>
+          <family>Newman</family>
+        </name>
+        <name>
+          <given qualifier='BR'>Allie</given>
+          <family qualifier='BR'>Newman</family>
+        </name>
+        <administrativeGenderCode code='F' codeSystem='2.16.840.1.113883.5.1' codeSystemName='AdministrativeGender' displayName='Female' />
+        <birthTime value='19700501' />
+        <maritalStatusCode nullFlavor='UNK' />
+        <raceCode code='2106-3' codeSystem='2.16.840.1.113883.6.238' codeSystemName='Race and Ethnicity - CDC' displayName='White' />
+        <sdtc:raceCode code='2108-9' codeSystem='2.16.840.1.113883.6.238' codeSystemName='Race and Ethnicity - CDC' displayName='White European' />
+        <ethnicGroupCode code='2186-5' codeSystem='2.16.840.1.113883.6.238' codeSystemName='Race and Ethnicity - CDC' displayName='Not Hispanic or Latino' />
+        <languageCommunication>
+          <languageCode code='en' />
+          <preferenceInd value='true' />
+        </languageCommunication>
+      </patient>
+      <providerOrganization>
+        <id extension='111111' root='2.16.840.1.113883.4.6' />
+        <name>Neighborhood Physicians Practice, Beaverton</name>
+        <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+        <addr use='WP'>
+          <city>Beaverton
+</city>
+          <state>OR
+</state>
+          <postalCode>97006
+</postalCode>
+          <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+          <country>US
+</country>
+        </addr>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value='20171109183910+0000'></time>
+    <assignedAuthor>
+      <id extension='111111' root='2.16.840.1.113883.4.6'></id>
+      <code nullFlavor='UNK' />
+      <addr use='WP'>
+        <city>Beaverton
+</city>
+        <state>OR
+</state>
+        <postalCode>97006
+</postalCode>
+        <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+        <country>US
+</country>
+      </addr>
+      <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+      <assignedPerson>
+        <name use='L'>Neighborhood Physicians Practice, Beaverton</name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension='111111' root='2.16.840.1.113883.4.6' />
+        <name>Neighborhood Physicians Practice, Beaverton</name>
+        <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+        <addr use='WP'>
+          <city>Beaverton
+</city>
+          <state>OR
+</state>
+          <postalCode>97006
+</postalCode>
+          <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+          <country>US
+</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <documentationOf typeCode='DOC'>
+    <serviceEvent classCode='PCPR'>
+      <effectiveTime>
+        <low value='20150621'></low>
+        <high value='20150621'></high>
+      </effectiveTime>
+      <performer typeCode='PRF'>
+        <templateId root='2.16.840.1.113883.10.20.6.2.1'></templateId>
+        <assignedEntity>
+          <id extension='100000000' root='2.16.840.1.113883.4.6' />
+          <code code='207QA0505X' codeSystem='2.16.840.1.113883.6.101' codeSystemName='Provider Codes' displayName='Adult Medicine' />
+          <addr use='WP'>
+            <city>Beaverton
+</city>
+            <state>OR
+</state>
+            <postalCode>97006
+</postalCode>
+            <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+            <country>US
+</country>
+          </addr>
+          <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+          <assignedPerson>
+            <name>Albert Davis, M. D.</name>
+          </assignedPerson>
+          <representedOrganization>
+            <id extension='111111' root='2.16.840.1.113883.4.6' />
+            <name>Neighborhood Physicians Practice, Beaverton</name>
+            <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+            <addr use='WP'>
+              <city>Beaverton
+</city>
+              <state>OR
+</state>
+              <postalCode>97006
+</postalCode>
+              <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+              <country>US
+</country>
+            </addr>
+          </representedOrganization>
+        </assignedEntity>
+      </performer>
+      <performer typeCode='PRF'>
+        <templateId root='2.16.840.1.113883.10.20.6.2.1'></templateId>
+        <assignedEntity>
+          <id nullFlavor='UNK' />
+          <code codeSystem='2.16.840.1.113883.6.101' codeSystemName='Provider Codes' nullFlavor='UNK' />
+          <addr use='WP'>
+            <city>Beaverton
+</city>
+            <state>OR
+</state>
+            <postalCode>97006
+</postalCode>
+            <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+            <country>US
+</country>
+          </addr>
+          <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+          <assignedPerson>
+            <name>Tracy Davis</name>
+          </assignedPerson>
+          <representedOrganization>
+            <id extension='111111' root='2.16.840.1.113883.4.6' />
+            <name>Neighborhood Physicians Practice, Beaverton</name>
+            <telecom use='WP' value='tel:+1(555)555-1002'></telecom>
+            <addr use='WP'>
+              <city>Beaverton
+</city>
+              <state>OR
+</state>
+              <postalCode>97006
+</postalCode>
+              <streetAddressLine>2472 Rocky Place
+</streetAddressLine>
+              <country>US
+</country>
+            </addr>
+          </representedOrganization>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.6.1' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.6.1' />
+          <code code='48765-2' codeSystem='2.16.840.1.113883.6.1' />
+          <title>ALLERGIES, ADVERSE REACTIONS, ALERTS</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Substance</th>
+                  <th>Reaction</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID='product7'>Penicillin G</content>
+                  </td>
+                  <td>
+                    <content ID='reaction7'>Hives (Moderate)</content>
+                  </td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='product8'>Ampicillin</content>
+                  </td>
+                  <td>
+                    <content ID='reaction8'>Hives (Moderate)</content>
+                  </td>
+                  <td>Active</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.30' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.30' />
+              <!-- ** Allergy problem act ** -->
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientAllergy7' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' codeSystemName='LOINC' displayName='Allergies, adverse reactions, alerts' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='19800510' />
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN' negationInd='false'>
+                  <!-- allergy observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.7' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.7' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='PatientAllergy7' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='ASSERTION' codeSystem='2.16.840.1.113883.5.4' />
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='19800510' />
+                  </effectiveTime>
+                  <value code='416098002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Drug Allergy' xsi:type='CD'>
+                    <originalText>
+                      <reference value='#reaction7' />
+                    </originalText>
+                  </value>
+                  <participant typeCode='CSM'>
+                    <participantRole classCode='MANU'>
+                      <playingEntity classCode='MMAT'>
+                        <code code='7980' codeSystem='2.16.840.1.113883.6.88' codeSystemName='RxNorm' displayName='Penicillin G'>
+                          <originalText>
+                            <reference value='#product7' />
+                          </originalText>
+                        </code>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                  <entryRelationship inversionInd='true' typeCode='MFST'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.9' />
+                      <templateId root='2.16.840.1.113883.10.20.22.4.9' />
+                      <!-- Reaction observation template -->
+                      <id assigningAuthorityName='NavigatingCancer' extension='PatientAllergy7' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                      <code code='ASSERTION' codeSystem='2.16.840.1.113883.5.4' nullFlavor='NA' />
+                      <text>
+                        <reference value='#reaction7' />
+                      </text>
+                      <statusCode code='completed' />
+                      <effectiveTime>
+                        <low value='19800510' />
+                      </effectiveTime>
+                      <value code='247472004' codeSystem='2.16.840.1.113883.6.96' displayName='Hives (Moderate)' xsi:type='CD' />
+                      <entryRelationship inversionInd='true' typeCode='SUBJ'>
+                        <observation classCode='OBS' moodCode='EVN'>
+                          <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.8' />
+                          <templateId root='2.16.840.1.113883.10.20.22.4.8' />
+                          <!-- Allergy status observation template -->
+                          <code code='SEV' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' displayName='Severity Observation' />
+                          <statusCode code='completed' />
+                          <value code='6736007' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Moderate' xsi:type='CD' />
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.30' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.30' />
+              <!-- ** Allergy problem act ** -->
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientAllergy8' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' codeSystemName='LOINC' displayName='Allergies, adverse reactions, alerts' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='19800510' />
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN' negationInd='false'>
+                  <!-- allergy observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.7' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.7' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='PatientAllergy8' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='ASSERTION' codeSystem='2.16.840.1.113883.5.4' />
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='19800510' />
+                  </effectiveTime>
+                  <value code='416098002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Drug Allergy' xsi:type='CD'>
+                    <originalText>
+                      <reference value='#reaction8' />
+                    </originalText>
+                  </value>
+                  <participant typeCode='CSM'>
+                    <participantRole classCode='MANU'>
+                      <playingEntity classCode='MMAT'>
+                        <code code='733' codeSystem='2.16.840.1.113883.6.88' codeSystemName='RxNorm' displayName='Ampicillin'>
+                          <originalText>
+                            <reference value='#product8' />
+                          </originalText>
+                        </code>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                  <entryRelationship inversionInd='true' typeCode='MFST'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.9' />
+                      <templateId root='2.16.840.1.113883.10.20.22.4.9' />
+                      <!-- Reaction observation template -->
+                      <id assigningAuthorityName='NavigatingCancer' extension='PatientAllergy8' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                      <code code='ASSERTION' codeSystem='2.16.840.1.113883.5.4' nullFlavor='NA' />
+                      <text>
+                        <reference value='#reaction8' />
+                      </text>
+                      <statusCode code='completed' />
+                      <effectiveTime>
+                        <low value='19800510' />
+                      </effectiveTime>
+                      <value code='247472004' codeSystem='2.16.840.1.113883.6.96' displayName='Hives (Moderate)' xsi:type='CD' />
+                      <entryRelationship inversionInd='true' typeCode='SUBJ'>
+                        <observation classCode='OBS' moodCode='EVN'>
+                          <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.8' />
+                          <templateId root='2.16.840.1.113883.10.20.22.4.8' />
+                          <!-- Allergy status observation template -->
+                          <code code='SEV' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' displayName='Severity Observation' />
+                          <statusCode code='completed' />
+                          <value code='6736007' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Moderate' xsi:type='CD' />
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.2.1' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.2.1' />
+          <code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='History of immunizations' />
+          <title>IMMUNIZATIONS</title>
+          <text>
+            <content ID='immunizations-section' />
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Vaccine</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Additional Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID='immun4' />Influenza Virus Vaccine
+
+                  </td>
+                  <td>05/10/2014</td>
+                  <td>Completed</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='immun5' />Tetanus and diptheria
+
+                  </td>
+                  <td>01/04/2012</td>
+                  <td>Completed</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='immun6' />influenza, intradermal, quadrivalent, preservative free
+
+                  </td>
+                  <td>06/02/2015</td>
+                  <td>Cancelled</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.52' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.52' />
+              <!-- **   Immunization activity template    ** -->
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientImmunization4' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <text>
+                <reference value='#immun4' />
+              </text>
+              <statusCode code='completed' />
+              <effectiveTime value='20140510' xsi:type='IVL_TS' />
+              <consumable>
+                <manufacturedProduct classCode='MANU'>
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.54' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.54' />
+                  <!-- **   Immunization Medication Information    ** -->
+                  <manufacturedMaterial>
+                    <code code='88' codeSystem='2.16.840.1.113883.12.292' codeSystemName='CVX' displayName='Influenza Virus Vaccine'>
+                      <originalText>
+                        <reference value='#immun4' />
+                      </originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode='DRIV'>
+            <substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.52' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.52' />
+              <!-- **   Immunization activity template    ** -->
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientImmunization5' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <text>
+                <reference value='#immun5' />
+              </text>
+              <statusCode code='completed' />
+              <effectiveTime value='20120104' xsi:type='IVL_TS' />
+              <consumable>
+                <manufacturedProduct classCode='MANU'>
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.54' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.54' />
+                  <!-- **   Immunization Medication Information    ** -->
+                  <manufacturedMaterial>
+                    <code code='106' codeSystem='2.16.840.1.113883.12.292' codeSystemName='CVX' displayName='Tetanus and diptheria'>
+                      <originalText>
+                        <reference value='#immun5' />
+                      </originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode='DRIV'>
+            <substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='true'>
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.52' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.52' />
+              <!-- **   Immunization activity template    ** -->
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientImmunization6' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <text>
+                <reference value='#immun6' />
+              </text>
+              <statusCode code='cancelled' />
+              <effectiveTime value='20150602' xsi:type='IVL_TS' />
+              <consumable>
+                <manufacturedProduct classCode='MANU'>
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.54' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.54' />
+                  <!-- **   Immunization Medication Information    ** -->
+                  <manufacturedMaterial>
+                    <code code='166' codeSystem='2.16.840.1.113883.12.292' codeSystemName='CVX' displayName='influenza, intradermal, quadrivalent, preservative free'>
+                      <originalText>
+                        <reference value='#immun6' />
+                      </originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <!-- ************************************************************************* -->
+      <!-- ******************************* MEDICATIONS ***************************** -->
+      <!-- ************************************************************************* -->
+      <component>
+        <section>
+          <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.2.1.1' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.1.1' />
+          <code code='10160-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF MEDICATION USE' />
+          <title>MEDICATIONS</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Directions</th>
+                  <th>Start Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID='med80'>ceftriaxone (as ceftriaxone sodium) 10 GM per 100 ML Injectable Solution</content>
+                  </td>
+                  <td>1 unit 2 times daily</td>
+                  <td>2015-06-22</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='med81'>Tylenol</content>
+                  </td>
+                  <td>1 unit as needed</td>
+                  <td>2015-06-22</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='med82'>Aranesp</content>
+                  </td>
+                  <td>1 unit once a week</td>
+                  <td>2015-06-22</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <substanceAdministration classCode='SBADM' moodCode='EVN'>
+              <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.16' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.16' />
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientMedication80' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <statusCode code='completed' />
+              <effectiveTime xsi:type='IVL_TS'>
+                <low value='20150622' />
+                <high value='20150630' />
+              </effectiveTime>
+              <routeCode code='C38276' codeSystem='2.16.840.1.113883.3.26.1.1' codeSystemName='NCI Thesaurus' displayName='INTRAVENOUS' />
+              <doseQuantity unit='MG/ML' value='100' />
+              <consumable>
+                <manufacturedProduct classCode='MANU'>
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.23' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.23' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='PatientMedication80' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <manufacturedMaterial>
+                    <code code='309090' codeSystem='2.16.840.1.113883.6.88' codeSystemName='RxNorm' displayName='ceftriaxone (as ceftriaxone sodium) 10 GM per 100 ML Injectable Solution'></code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode='DRIV'>
+            <substanceAdministration classCode='SBADM' moodCode='EVN'>
+              <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.16' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.16' />
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientMedication81' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <statusCode code='completed' />
+              <effectiveTime xsi:type='IVL_TS'>
+                <low value='20150622' />
+                <high value='20150701' />
+              </effectiveTime>
+              <routeCode code='C38288' codeSystem='2.16.840.1.113883.3.26.1.1' codeSystemName='NCI Thesaurus' displayName='ORAL' />
+              <doseQuantity unit='mg' value='500' />
+              <consumable>
+                <manufacturedProduct classCode='MANU'>
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.23' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.23' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='PatientMedication81' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <manufacturedMaterial>
+                    <code code='209459' codeSystem='2.16.840.1.113883.6.88' codeSystemName='RxNorm' displayName='Tylenol'></code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode='DRIV'>
+            <substanceAdministration classCode='SBADM' moodCode='EVN'>
+              <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.16' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.16' />
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientMedication82' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <statusCode code='active' />
+              <effectiveTime xsi:type='IVL_TS'>
+                <low value='20150622' />
+                <high nullFlavor='UNK' />
+              </effectiveTime>
+              <routeCode code='C38276' codeSystem='2.16.840.1.113883.3.26.1.1' codeSystemName='NCI Thesaurus' displayName='INTRAVENOUS' />
+              <doseQuantity unit='MG/ML' value='.5' />
+              <consumable>
+                <manufacturedProduct classCode='MANU'>
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.23' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.23' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='PatientMedication82' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <manufacturedMaterial>
+                    <code code='731241' codeSystem='2.16.840.1.113883.6.88' codeSystemName='RxNorm' displayName='Aranesp'></code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='2.16.840.1.113883.10.20.22.2.60' />
+          <code code='61146-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+          <title>GOALS</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID='goal-3'>Get rid of intermittent fever that is occurring every few weeks.</td>
+                  <td></td>
+                  <td>06/23/2015</td>
+                </tr>
+                <tr>
+                  <td ID='goal-4'>Need to gain more energy to do regular activities</td>
+                  <td></td>
+                  <td>06/24/2015</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode='OBS' moodCode='GOL'>
+              <templateId root='2.16.840.1.113883.10.20.22.4.121' />
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientGoal3' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='44616-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+              <statusCode code='active' />
+              <effectiveTime value='20150623'></effectiveTime>
+              <author>
+                <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                <time value='20171109183910+0000'></time>
+                <assignedAuthor>
+                  <id assigningAuthorityName='NavigatingCancer' extension='ClinicLocation4' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <assignedPerson>
+                    <name use='L'>Neighborhood Physicians Practice, Beaverton</name>
+                  </assignedPerson>
+                </assignedAuthor>
+              </author>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode='OBS' moodCode='GOL'>
+              <templateId root='2.16.840.1.113883.10.20.22.4.121' />
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientGoal4' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='44616-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+              <statusCode code='active' />
+              <effectiveTime value='20150624'></effectiveTime>
+              <author>
+                <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                <time value='20171109183910+0000'></time>
+                <assignedAuthor>
+                  <id assigningAuthorityName='NavigatingCancer' extension='ClinicLocation4' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <assignedPerson>
+                    <name use='L'>Neighborhood Physicians Practice, Beaverton</name>
+                  </assignedPerson>
+                </assignedAuthor>
+              </author>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='2.16.840.1.113883.10.20.22.2.8' />
+          <code code='51848-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Assessments' />
+          <title>Assessments</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID='assessment-3'>The patient was found to have fever and Dr Davis is suspecting Anemia based on the patient history. So Dr Davis asked the patient to closely monitor the temperature and blood pressure and get admitted to Community Health Hospitals if the fever does not subside within a day.</td>
+                  <td></td>
+                  <td>06/23/2015</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <!-- Plan of Treatment Section (V2) -->
+          <templateId root='2.16.840.1.113883.10.20.22.2.10' />
+          <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.2.10' />
+          <code code='18776-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Treatment plan' />
+          <title>Plan of Treatment</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Planned Activity</th>
+                  <th>Planned Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>i. Get an EKG done on 6/23/2015
+ii. Take Clindamyacin 300 mg three times a day as needed if pain does not subside/
+iii. Schedule follow on visit with Neighborhood Physicians Practice on 7/1/2015</td>
+                  <td>06/23/2015</td>
+                </tr>
+                <tr>
+                  <td>Urinanalysis</td>
+                  <td>06/29/2015</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.1' />
+          <templateId extension='2014-06-09' root='1.3.6.1.4.1.19376.1.5.3.1.3.1' />
+          <code code='42349-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Reason for Referral' />
+          <title>REASON FOR REFERRAL</title>
+          <text>Ms Alexandra Newman is being referred to Community Health Hospitals Inpatient facility because of the high fever noticed and suspected Anemia</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='2.16.840.1.113883.10.20.22.2.5.1' />
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.5.1' />
+          <code code='11450-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROBLEM LIST' />
+          <title>PROBLEMS</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Diagnosis</th>
+                  <th>Started</th>
+                  <th>Ended</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID='problem45'>Fever (finding)</content>
+                  </td>
+                  <td>06/22/2015</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='problem44'>Chronic rejection of renal transplant (disorder)</content>
+                  </td>
+                  <td>12/31/2011</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='problem42'>Essential hypertension (Disorder, )</content>
+                  </td>
+                  <td>10/05/2011</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='problem46'>Overweight (finding)</content>
+                  </td>
+                  <td>12/31/2006</td>
+                  <td>06/01/2007</td>
+                </tr>
+                <tr>
+                  <td>
+                    <content ID='problem43'>Severe Hypothyroidism (Disorder)</content>
+                  </td>
+                  <td>12/31/2006</td>
+                  <td>Active</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <!-- Problem act template -->
+              <templateId root='2.16.840.1.113883.10.20.22.4.3' />
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.3' />
+              <id assigningAuthorityName='NavigatingCancer' extension='Problem45' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' displayName='Concern' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='20150622'></low>
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Problem observation template -->
+                  <templateId root='2.16.840.1.113883.10.20.22.4.4' />
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.4' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='Problem45' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='404684003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Finding'>
+                    <translation code='75321-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Finding'></translation>
+                  </code>
+                  <text>
+                    <reference value='#problem45' />
+                  </text>
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='20150622'></low>
+                  </effectiveTime>
+                  <value code='386661006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Fever (finding)' xsi:type='CD'></value>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId root='2.16.840.1.113883.10.20.22.4.5' />
+                      <!-- Health status observation template -->
+                      <code code='11323-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem45' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' nullFlavor='UNK' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <!-- Status observation template -->
+                      <templateId root='2.16.840.1.113883.10.20.22.4.6' />
+                      <code code='33999-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem45' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value code='55561003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Active' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <!-- Problem act template -->
+              <templateId root='2.16.840.1.113883.10.20.22.4.3' />
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.3' />
+              <id assigningAuthorityName='NavigatingCancer' extension='Problem44' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' displayName='Concern' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='20111231'></low>
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Problem observation template -->
+                  <templateId root='2.16.840.1.113883.10.20.22.4.4' />
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.4' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='Problem44' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='64572001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Disease'>
+                    <translation code='75323-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Disease'></translation>
+                  </code>
+                  <text>
+                    <reference value='#problem44' />
+                  </text>
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='20111231'></low>
+                  </effectiveTime>
+                  <value code='236578006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Chronic rejection of renal transplant (disorder)' xsi:type='CD'></value>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId root='2.16.840.1.113883.10.20.22.4.5' />
+                      <!-- Health status observation template -->
+                      <code code='11323-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem44' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' nullFlavor='UNK' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <!-- Status observation template -->
+                      <templateId root='2.16.840.1.113883.10.20.22.4.6' />
+                      <code code='33999-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem44' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value code='55561003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Active' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <!-- Problem act template -->
+              <templateId root='2.16.840.1.113883.10.20.22.4.3' />
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.3' />
+              <id assigningAuthorityName='NavigatingCancer' extension='Problem42' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' displayName='Concern' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='20111005'></low>
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Problem observation template -->
+                  <templateId root='2.16.840.1.113883.10.20.22.4.4' />
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.4' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='Problem42' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='64572001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Disease'>
+                    <translation code='75323-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Disease'></translation>
+                  </code>
+                  <text>
+                    <reference value='#problem42' />
+                  </text>
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='20111005'></low>
+                  </effectiveTime>
+                  <value code='59621000' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Essential hypertension (Disorder, )' xsi:type='CD'></value>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId root='2.16.840.1.113883.10.20.22.4.5' />
+                      <!-- Health status observation template -->
+                      <code code='11323-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem42' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' nullFlavor='UNK' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <!-- Status observation template -->
+                      <templateId root='2.16.840.1.113883.10.20.22.4.6' />
+                      <code code='33999-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem42' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value code='55561003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Active' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <!-- Problem act template -->
+              <templateId root='2.16.840.1.113883.10.20.22.4.3' />
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.3' />
+              <id assigningAuthorityName='NavigatingCancer' extension='Problem46' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' displayName='Concern' />
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20061231'></low>
+                <high value='20070601'></high>
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Problem observation template -->
+                  <templateId root='2.16.840.1.113883.10.20.22.4.4' />
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.4' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='Problem46' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='404684003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Finding'>
+                    <translation code='75321-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Finding'></translation>
+                  </code>
+                  <text>
+                    <reference value='#problem46' />
+                  </text>
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='20061231'></low>
+                    <high value='20070601'></high>
+                  </effectiveTime>
+                  <value code='238131007' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Overweight (finding)' xsi:type='CD'></value>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId root='2.16.840.1.113883.10.20.22.4.5' />
+                      <!-- Health status observation template -->
+                      <code code='11323-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem46' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' nullFlavor='UNK' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <!-- Status observation template -->
+                      <templateId root='2.16.840.1.113883.10.20.22.4.6' />
+                      <code code='33999-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem46' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value code='413322009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Resolved' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode='DRIV'>
+            <act classCode='ACT' moodCode='EVN'>
+              <!-- Problem act template -->
+              <templateId root='2.16.840.1.113883.10.20.22.4.3' />
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.3' />
+              <id assigningAuthorityName='NavigatingCancer' extension='Problem43' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='CONC' codeSystem='2.16.840.1.113883.5.6' displayName='Concern' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='20061231'></low>
+              </effectiveTime>
+              <entryRelationship typeCode='SUBJ'>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Problem observation template -->
+                  <templateId root='2.16.840.1.113883.10.20.22.4.4' />
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.4' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='Problem43' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='64572001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Disease'>
+                    <translation code='75323-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Disease'></translation>
+                  </code>
+                  <text>
+                    <reference value='#problem43' />
+                  </text>
+                  <statusCode code='completed' />
+                  <effectiveTime>
+                    <low value='20061231'></low>
+                  </effectiveTime>
+                  <value code='83986005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Severe Hypothyroidism (Disorder)' xsi:type='CD'></value>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId root='2.16.840.1.113883.10.20.22.4.5' />
+                      <!-- Health status observation template -->
+                      <code code='11323-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem43' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' nullFlavor='UNK' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode='REFR'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <!-- Status observation template -->
+                      <templateId root='2.16.840.1.113883.10.20.22.4.6' />
+                      <code code='33999-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Status' xsi:type='CE' />
+                      <text>
+                        <reference value='#problem43' />
+                      </text>
+                      <statusCode code='completed' />
+                      <value code='55561003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Active' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='2.16.840.1.113883.10.20.22.2.58' />
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.58' />
+          <code code='75310-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health Concerns Document' />
+          <title>HEALTH CONCERNS</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Observation</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chronic Sickness exhibited by patient</td>
+                  <td>active</td>
+                  <td>12/22/2014</td>
+                </tr>
+                <tr>
+                  <td>Health Concerns refer to underlying clinical facts
+    i. Documented HyperTension problem
+    ii. Documented HypoThyroidism problem
+    iii. Watch Weight of patient</td>
+                  <td>active</td>
+                  <td>06/22/2015</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode='OBS' moodCode='EVN'>
+              <templateId root='2.16.840.1.113883.10.20.22.4.5' />
+              <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.5' />
+              <id assigningAuthorityName='NavigatingCancer' extension='OtherDiagnosis12' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='11323-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health Status' />
+              <statusCode code='completed' />
+              <value code='161901003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' xsi:type='CD' />
+            </observation>
+          </entry>
+          <entry>
+            <act classCode='ACT' moodCode='EVN'>
+              <!-- Health Concern Act (V2) -->
+              <templateId root='2.16.840.1.113883.10.20.22.4.132' />
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.132' />
+              <id assigningAuthorityName='NavigatingCancer' extension='OtherDiagnosis13' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='75310-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Health Concern' />
+              <statusCode code='active' />
+              <effectiveTime>
+                <low value='20150622' />
+              </effectiveTime>
+              <entryRelationship typeCode='REFR'>
+                <act classCode='ACT' moodCode='EVN'>
+                  <!-- Entry Reference -->
+                  <templateId root='2.16.840.1.113883.10.20.22.4.122' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='OtherDiagnosis13' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code nullFlavor='NP' />
+                  <statusCode code='completed' />
+                </act>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.22' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.22' />
+          <code code='46240-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='History of encounters' />
+          <title>Encounters</title>
+          <text />
+          <entry typeCode='DRIV'>
+            <encounter classCode='ENC' moodCode='EVN'>
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.49' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.49' />
+              <id root='be1d4921-c4ef-11e7-a17e-0242ac120004' />
+              <code code='99201' codeSystem='2.16.840.1.113883.6.12' codeSystemName='CPT4' displayName='Office or other outpatient visit (problem focused)' />
+              <effectiveTime value='20171108' />
+              <entryRelationship typeCode='SUBJ'>
+                <act classCode='ACT' moodCode='EVN'>
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.80' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.80' />
+                  <code code='29308-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='DIAGNOSIS' />
+                  <entryRelationship typeCode='SUBJ'>
+                    <observation classCode='OBS' moodCode='EVN'>
+                      <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.4' />
+                      <templateId root='2.16.840.1.113883.10.20.22.4.4' />
+                      <id assigningAuthorityName='NavigatingCancer' root='abcd123' />
+                      <code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnosis'>
+                        <translation code='29308-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='DIAGNOSIS' />
+                      </code>
+                      <statusCode code='completed' />
+                      <effectiveTime>
+                        <low value='20150607' />
+                      </effectiveTime>
+                      <value code='386661006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Fever - Finding' xsi:type='CD' />
+                    </observation>
+                  </entryRelationship>
+                </act>
+              </entryRelationship>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='2.16.840.1.113883.10.20.22.2.7.1' />
+          <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.2.7.1' />
+          <code code='47519-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF PROCEDURES' />
+          <title>PROCEDURES</title>
+          <text>
+NO PROCEDURES KNOWN
+</text>
+          <entry typeCode='DRIV'>
+            <procedure classCode='PROC' moodCode='EVN'>
+              <templateId root='2.16.840.1.113883.10.20.22.4.14' />
+              <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.14' />
+              <id assigningAuthorityName='NavigatingCancer' extension='CCDA4' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code nullFlavor='UNK'></code>
+              <statusCode code='completed'></statusCode>
+              <effectiveTime nullFlavor='UNK'></effectiveTime>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root='2.16.840.1.113883.10.20.22.2.23' />
+          <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.2.23' />
+          <code code='46264-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Medical Equipment' />
+          <title>Implants</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Implanted</th>
+                  <th>Area</th>
+                  <th>UDI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID='implant-2'>Cardiac resynchronization therapy implantable packemaker</td>
+                  <td>Structure of subclavian vein</td>
+                  <td>(01)00643169007222(17)160128(21)BLC200461J</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <procedure classCode='PROC' moodCode='EVN'>
+              <templateId root='2.16.840.1.113883.10.20.22.4.14' />
+              <templateId extension='20140-06-09' root='2.16.840.1.113883.10.20.22.4.14' />
+              <id assigningAuthorityName='NavigatingCancer' extension='implant-2' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='71388002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Procedure' />
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20111004' />
+              </effectiveTime>
+              <targetSiteCode code='9454009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Structure of subclavian vein' />
+              <participant typeCode='DEV'>
+                <participantRole classCode='MANU'>
+                  <templateId root='2.16.840.1.113883.10.20.22.4.37' />
+                  <id extension='(01)00643169007222(17)160128(21)BLC200461J' root='2.16.840.1.113883.3.3719' />
+                  <playingDevice>
+                    <code code='704708004' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Cardiac resynchronization therapy implantable packemaker' />
+                  </playingDevice>
+                  <scopingEntity>
+                    <id root='2.16.840.1.113883.3.3719' />
+                  </scopingEntity>
+                </participantRole>
+              </participant>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.3.1' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.3.1' />
+          <code code='30954-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Results' />
+          <title>Lab Results</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th colspan='3'>LABORATORY INFORMATION</th>
+                </tr>
+                <tr>
+                  <th colspan='3'>Chemistries and drug levels</th>
+                </tr>
+                <tr>
+                  <th>Group</th>
+                  <th>Component</th>
+                  <th>Quantity</th>
+                  <th>Performed</th>
+                  <th>Specimen Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>
+                    <content ID='result237'>
+Ketones [Mass/volume] in Urine by Test strip
+
+(
+0.0 - 0.0 
+)
+</content>
+                  </td>
+                  <td>Negative</td>
+                  <td>2015-07-06</td>
+                  <td>Urine</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <content ID='result236'>
+Glucose [Mass/volume] in Urine by Test strip
+mg/dL
+(
+0.0 - 0.0 mg/dL
+)
+</content>
+                  </td>
+                  <td>50</td>
+                  <td>2015-07-05</td>
+                  <td>Urine</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <content ID='result235'>
+pH of Urine by Test strip
+[pH]
+(
+5.0 - 1.03 [pH]
+)
+</content>
+                  </td>
+                  <td>5.0</td>
+                  <td>2015-07-04</td>
+                  <td>Urine</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <content ID='result234'>
+Specific gravity of Urine by Test strip
+
+(
+1.005 - 1.03 
+)
+</content>
+                  </td>
+                  <td>1.015</td>
+                  <td>2015-07-03</td>
+                  <td>Urine</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <content ID='result233'>
+Appearance of Urine
+
+(
+0.0 - 0.0 
+)
+</content>
+                  </td>
+                  <td>CLEAR</td>
+                  <td>2015-07-02</td>
+                  <td>Urine</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <content ID='result232'>
+Color of Urine
+
+(
+0.0 - 0.0 
+)
+</content>
+                  </td>
+                  <td>YELLOW</td>
+                  <td>2015-07-01</td>
+                  <td>Urine</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <organizer classCode='BATTERY' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.1' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.1' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-07-06-' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' nullFlavor='UNK' xsi:type='CE' />
+              <statusCode code='completed' />
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.2' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.2' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult237' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='5797-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Ketones [Mass/volume] in Urine by Test strip' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150706' />
+                  <value xsi:type='ST'>Negative</value>
+                  <interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+                  <author>
+                    <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                    <time value='20150706' />
+                    <assignedAuthor>
+                      <id root='be11bdaa-c4ef-11e7-a17e-0242ac120004' />
+                      <representedOrganization>
+                        <id root='2.16.840.1.113883.19.5' />
+                        <name>Value Labs</name>
+                        <telecom use='WP' value='555-666-1002' />
+                        <addr use='WP'>
+                          <state>OR</state>
+                          <city>Beaverton</city>
+                          <postalCode>97006</postalCode>
+                          <streetAddressLine>2474, Rocky place</streetAddressLine>
+                        </addr>
+                      </representedOrganization>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type='IVL_PQ'>
+                        <low value='0.0'></low>
+                        <high value='0.0'></high>
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='BATTERY' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.1' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.1' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-07-05-' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' nullFlavor='UNK' xsi:type='CE' />
+              <statusCode code='completed' />
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.2' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.2' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult236' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='5792-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Glucose [Mass/volume] in Urine by Test strip' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150705' />
+                  <value unit='mg/dL' value='50' xsi:type='PQ' />
+                  <interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+                  <author>
+                    <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                    <time value='20150705' />
+                    <assignedAuthor>
+                      <id root='be1155d8-c4ef-11e7-a17e-0242ac120004' />
+                      <representedOrganization>
+                        <id root='2.16.840.1.113883.19.5' />
+                        <name>Value Labs</name>
+                        <telecom use='WP' value='555-666-1002' />
+                        <addr use='WP'>
+                          <state>OR</state>
+                          <city>Beaverton</city>
+                          <postalCode>97006</postalCode>
+                          <streetAddressLine>2474, Rocky place</streetAddressLine>
+                        </addr>
+                      </representedOrganization>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type='IVL_PQ'>
+                        <low unit='mg/dL' value='0.0'></low>
+                        <high unit='mg/dL' value='0.0'></high>
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='BATTERY' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.1' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.1' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-07-04-' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' nullFlavor='UNK' xsi:type='CE' />
+              <statusCode code='completed' />
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.2' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.2' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult235' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='5803-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='pH of Urine by Test strip' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150704' />
+                  <value unit='[pH]' value='5.0' xsi:type='PQ' />
+                  <interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+                  <author>
+                    <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                    <time value='20150704' />
+                    <assignedAuthor>
+                      <id root='be11319c-c4ef-11e7-a17e-0242ac120004' />
+                      <representedOrganization>
+                        <id root='2.16.840.1.113883.19.5' />
+                        <name>Value Labs</name>
+                        <telecom use='WP' value='555-666-1002' />
+                        <addr use='WP'>
+                          <state>OR</state>
+                          <city>Beaverton</city>
+                          <postalCode>97006</postalCode>
+                          <streetAddressLine>2474, Rocky place</streetAddressLine>
+                        </addr>
+                      </representedOrganization>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type='IVL_PQ'>
+                        <low unit='[pH]' value='5.0'></low>
+                        <high unit='[pH]' value='1.03'></high>
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='BATTERY' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.1' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.1' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-07-03-' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' nullFlavor='UNK' xsi:type='CE' />
+              <statusCode code='completed' />
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.2' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.2' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult234' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='5811-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Specific gravity of Urine by Test strip' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150703' />
+                  <value value='1.015' xsi:type='PQ' />
+                  <interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+                  <author>
+                    <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                    <time value='20150703' />
+                    <assignedAuthor>
+                      <id root='be11126d-c4ef-11e7-a17e-0242ac120004' />
+                      <representedOrganization>
+                        <id root='2.16.840.1.113883.19.5' />
+                        <name>Value Labs</name>
+                        <telecom use='WP' value='555-666-1002' />
+                        <addr use='WP'>
+                          <state>OR</state>
+                          <city>Beaverton</city>
+                          <postalCode>97006</postalCode>
+                          <streetAddressLine>2474, Rocky place</streetAddressLine>
+                        </addr>
+                      </representedOrganization>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type='IVL_PQ'>
+                        <low value='1.005'></low>
+                        <high value='1.03'></high>
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='BATTERY' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.1' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.1' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-07-02-' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' nullFlavor='UNK' xsi:type='CE' />
+              <statusCode code='completed' />
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.2' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.2' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult233' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='5767-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Appearance of Urine' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150702' />
+                  <value xsi:type='ST'>CLEAR</value>
+                  <interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+                  <author>
+                    <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                    <time value='20150702' />
+                    <assignedAuthor>
+                      <id root='be10b428-c4ef-11e7-a17e-0242ac120004' />
+                      <representedOrganization>
+                        <id root='2.16.840.1.113883.19.5' />
+                        <name>Value Labs</name>
+                        <telecom use='WP' value='555-666-1002' />
+                        <addr use='WP'>
+                          <state>OR</state>
+                          <city>Beaverton</city>
+                          <postalCode>97006</postalCode>
+                          <streetAddressLine>2474, Rocky place</streetAddressLine>
+                        </addr>
+                      </representedOrganization>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type='IVL_PQ'>
+                        <low value='0.0'></low>
+                        <high value='0.0'></high>
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='BATTERY' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.1' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.1' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-07-01-' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' nullFlavor='UNK' xsi:type='CE' />
+              <statusCode code='completed' />
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.2' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.2' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult232' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='5778-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Color of Urine' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150701' />
+                  <value xsi:type='ST'>YELLOW</value>
+                  <interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+                  <author>
+                    <templateId root='2.16.840.1.113883.10.20.22.4.119' />
+                    <time value='20150701' />
+                    <assignedAuthor>
+                      <id root='be10940c-c4ef-11e7-a17e-0242ac120004' />
+                      <representedOrganization>
+                        <id root='2.16.840.1.113883.19.5' />
+                        <name>Value Labs</name>
+                        <telecom use='WP' value='555-666-1002' />
+                        <addr use='WP'>
+                          <state>OR</state>
+                          <city>Beaverton</city>
+                          <postalCode>97006</postalCode>
+                          <streetAddressLine>2474, Rocky place</streetAddressLine>
+                        </addr>
+                      </representedOrganization>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type='IVL_PQ'>
+                        <low value='0.0'></low>
+                        <high value='0.0'></high>
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!-- ******** Social History ******** -->
+        <section>
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.17' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.17' />
+          <code code='29762-2' codeSystem='2.16.840.1.113883.6.1' displayName='Social History' />
+          <title>SOCIAL HISTORY</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th>Social History Element</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <content ID='soc24'>Smoking</content>
+                  </td>
+                  <td>Current every day smoker</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <observation classCode='OBS' moodCode='EVN'>
+              <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.78' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.78' />
+              <id assigningAuthorityName='NavigatingCancer' extension='PatientInformation24' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='72166-2' codeSystem='2.16.840.1.113883.6.1' />
+              <statusCode code='completed' />
+              <effectiveTime value='20171108174601-0800' />
+              <value code='449868002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Current every day smoker' xsi:type='CD' />
+            </observation>
+          </entry>
+          <entry typeCode='DRIV'>
+            <observation classCode='OBS' moodCode='EVN'>
+              <!-- New templateId for Birth Sex -->
+              <templateId extension='2016-06-01' root='2.16.840.1.113883.10.20.22.4.200' />
+              <code code='76689-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Sex Assigned At Birth' />
+              <statusCode code='completed' />
+              <value code='F' codeSystem='2.16.840.1.113883.5.1' codeSystemName='AdministrativeGender' displayName='Female' xsi:type='CD' />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.2.4.1' />
+          <templateId root='2.16.840.1.113883.10.20.22.2.4.1' />
+          <code code='8716-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='VITAL SIGNS' />
+          <title>VITAL SIGNS</title>
+          <text>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-30</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>Respiratory</th>
+                  <td>
+                    <content ID='result231'>18 /min</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-29</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>Temperature</th>
+                  <td>
+                    <content ID='result230'>38 Cel</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-28</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>Pulse oximetry (O2 Sat)</th>
+                  <td>
+                    <content ID='result229'>95 %</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-27</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>Heart rate</th>
+                  <td>
+                    <content ID='result228'>80 /min</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-26</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>systolic</th>
+                  <td>
+                    <content ID='result227'>145 mm[Hg]</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-25</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>diastolic</th>
+                  <td>
+                    <content ID='result226'>88 mm[Hg]</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-24</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>Weight</th>
+                  <td>
+                    <content ID='result225'>88 kg</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border='1' width='100%'>
+              <thead>
+                <tr>
+                  <th align='right'>Date / Time:</th>
+                  <th>2015-06-23</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align='left'>Height</th>
+                  <td>
+                    <content ID='result224'>177 cm</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-30-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult231' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='9279-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Respiratory' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150630' />
+                  <value unit='/min' value='18' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-29-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult230' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='8310-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Temperature' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150629' />
+                  <value unit='Cel' value='38' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-28-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult229' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='59408-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pulse oximetry (O2 Sat)' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150628' />
+                  <value unit='%' value='95' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-27-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult228' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='8867-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Heart rate' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150627' />
+                  <value unit='/min' value='80' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-26-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult227' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='8480-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='systolic' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150626' />
+                  <value unit='mm[Hg]' value='145' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-25-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult226' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='8462-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='diastolic' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150625' />
+                  <value unit='mm[Hg]' value='88' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-24-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult225' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='29463-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Weight' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150624' />
+                  <value unit='kg' value='88' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode='DRIV'>
+            <organizer classCode='CLUSTER' moodCode='EVN'>
+              <!-- Result organizer template -->
+              <templateId extension='2015-08-01' root='2.16.840.1.113883.10.20.22.4.26' />
+              <templateId root='2.16.840.1.113883.10.20.22.4.26' />
+              <id assigningAuthorityName='NavigatingCancer' extension='TestGroupComparator40-2015-06-23-Vital Signs' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+              <code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital Signs'>
+                <translation code='74728-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Vital Signs' />
+              </code>
+              <statusCode code='completed' />
+              <effectiveTime>
+                <low value='20150623' />
+                <high value='20150630' />
+              </effectiveTime>
+              <component>
+                <observation classCode='OBS' moodCode='EVN'>
+                  <!-- Result observation template -->
+                  <templateId extension='2014-06-09' root='2.16.840.1.113883.10.20.22.4.27' />
+                  <templateId root='2.16.840.1.113883.10.20.22.4.27' />
+                  <id assigningAuthorityName='NavigatingCancer' extension='TestResult224' root='ca0d3db2-529c-4229-af63-986596a2cdee' />
+                  <code code='8302-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Height' xsi:type='CE'></code>
+                  <statusCode code='completed' />
+                  <effectiveTime value='20150623' />
+                  <value unit='cm' value='177' xsi:type='PQ' />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
