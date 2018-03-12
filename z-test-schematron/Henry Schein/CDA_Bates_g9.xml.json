@@ -1,0 +1,113 @@
+{
+  "errorCount": 8,
+  "warningCount": 0,
+  "ignoredCount": 0,
+  "errors": [
+    {
+      "type": "error",
+      "test": "cda:templateId[@root='2.16.840.1.113883.10.20.22.1.15' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.4' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.2' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.8' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.3' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.13' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.14' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.9' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.6' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.7' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.1' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.5' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.22.1.10' and @extension = '2015-08-01'] or cda:templateId[@root='2.16.840.1.113883.10.20.29.1' and @extension = '2015-08-01']",
+      "modifiedTest": null,
+      "description": "The document must contain at least 1 of the document level templates for this schematron to be applicable.",
+      "line": 11,
+      "path": "/ClinicalDocument[1]",
+      "patternId": "p-DOCUMENT-TEMPLATE",
+      "ruleId": "r-errors-DOC",
+      "assertionId": "a-IG-1198-DOC",
+      "context": "cda:ClinicalDocument",
+      "xml": "<ClinicalDocument xsi:schemaLocation=\"urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd\" xmlns=\"urn:hl7-org:v3\" xmlns:sdtc=\"urn:hl7-org:sdtc\" xml..."
+    },
+    {
+      "type": "error",
+      "test": "not(cda:rateQuantity) or cda:rateQuantity[@unit]",
+      "modifiedTest": null,
+      "description": "The rateQuantity, if present, SHALL contain exactly one [1..1] @unit, which SHALL be selected from ValueSet UnitsOfMeasureCaseSensitive urn:oid:2.16.840.1.113883.1.11.12839 DYNAMIC (CONF:1098-7525).",
+      "line": 402,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[3]/section[1]/entry[1]/substanceAdministration[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.16-2014-06-09-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.16-2014-06-09-errors",
+      "assertionId": "a-1098-7525",
+      "context": "cda:substanceAdministration[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.16' and @extension = '2014-06-09']]",
+      "xml": "<substanceAdministration classCode=\"SBADM\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.16\" extension=\"2014-06-09\"/>\r\n              <templateId ..."
+    },
+    {
+      "type": "error",
+      "test": "count(cda:author[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.119']]) > 0",
+      "modifiedTest": null,
+      "description": "SHALL contain at least one [1..*] Author Participation (identifier: urn:oid:2.16.840.1.113883.10.20.22.4.119) (CONF:1098-30995).",
+      "line": 1226,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[21]/section[1]/entry[1]/observation[1]",
+      "patternId": "p-urn-oid-2.16.840.1.113883.10.20.22.4.121-errors",
+      "ruleId": "r-urn-oid-2.16.840.1.113883.10.20.22.4.121-errors",
+      "assertionId": "a-1098-30995",
+      "context": "cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.121']]",
+      "xml": "<observation classCode=\"OBS\" moodCode=\"GOL\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.121\"/>\r\n              <id nullFlavor=\"NA\"/>\r\n              <code codeS..."
+    },
+    {
+      "type": "error",
+      "test": "not(cda:effectiveTime) or cda:effectiveTime[count(cda:low)=1]",
+      "modifiedTest": null,
+      "description": "The effectiveTime, if present, SHALL contain exactly one [1..1] low (CONF:1198-32488).",
+      "line": 1181,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[19]/section[1]/entry[1]/organizer[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.1-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.1-2015-08-01-errors",
+      "assertionId": "a-1198-32488",
+      "context": "cda:organizer[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.1' and @extension = '2015-08-01']]",
+      "xml": "<organizer classCode=\"BATTERY\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.1\" extension=\"2015-08-01\"/>\r\n              <templateId root=\"2.16.84..."
+    },
+    {
+      "type": "error",
+      "test": "not(cda:effectiveTime) or cda:effectiveTime[count(cda:high)=1]",
+      "modifiedTest": null,
+      "description": "The effectiveTime, if present, SHALL contain exactly one [1..1] high (CONF:1198-32489).",
+      "line": 1181,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[19]/section[1]/entry[1]/organizer[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.1-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.1-2015-08-01-errors",
+      "assertionId": "a-1198-32489",
+      "context": "cda:organizer[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.1' and @extension = '2015-08-01']]",
+      "xml": "<organizer classCode=\"BATTERY\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.1\" extension=\"2015-08-01\"/>\r\n              <templateId root=\"2.16.84..."
+    },
+    {
+      "type": "error",
+      "test": "cda:code[@code='CONC']",
+      "modifiedTest": null,
+      "description": "This code SHALL contain exactly one [1..1] @code=\"CONC\" Concern (CONF:1198-19184).",
+      "line": 454,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[4]/section[1]/entry[1]/act[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.3-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.3-2015-08-01-errors",
+      "assertionId": "a-1198-19184",
+      "context": "cda:act[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.3' and @extension = '2015-08-01']]",
+      "xml": "<act classCode=\"ACT\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\" extension=\"2015-08-01\"/>\r\n              <templateId root=\"2.16.840.1.113883..."
+    },
+    {
+      "type": "error",
+      "test": "cda:code[@code='CONC']",
+      "modifiedTest": null,
+      "description": "This code SHALL contain exactly one [1..1] @code=\"CONC\" Concern (CONF:1198-19184).",
+      "line": 483,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[4]/section[1]/entry[2]/act[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.3-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.3-2015-08-01-errors",
+      "assertionId": "a-1198-19184",
+      "context": "cda:act[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.3' and @extension = '2015-08-01']]",
+      "xml": "<act classCode=\"ACT\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\" extension=\"2015-08-01\"/>\r\n              <templateId root=\"2.16.840.1.113883..."
+    },
+    {
+      "type": "error",
+      "test": "cda:code[@code='CONC']",
+      "modifiedTest": null,
+      "description": "This code SHALL contain exactly one [1..1] @code=\"CONC\" Concern (CONF:1198-19158).",
+      "line": 304,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[2]/section[1]/entry[1]/act[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.30-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.30-2015-08-01-errors",
+      "assertionId": "a-1198-19158",
+      "context": "cda:act[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.30' and @extension = '2015-08-01']]",
+      "xml": "<act classCode=\"ACT\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.30\" extension=\"2015-08-01\"/>\r\n              <templateId root=\"2.16.840.1.11388..."
+    }
+  ],
+  "warnings": [],
+  "ignored": []
+}

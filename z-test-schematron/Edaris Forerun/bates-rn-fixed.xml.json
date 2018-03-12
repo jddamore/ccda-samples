@@ -1,0 +1,100 @@
+{
+  "errorCount": 7,
+  "warningCount": 0,
+  "ignoredCount": 0,
+  "errors": [
+    {
+      "type": "error",
+      "test": "count(cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'])=1",
+      "modifiedTest": null,
+      "description": "SHALL contain exactly one [1..1] templateId (CONF:81-7711) such that it SHALL contain exactly one [1..1] @root=\"2.16.840.1.113883.10.20.22.2.8\" (CONF:81-10382).",
+      "line": 612,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[6]/section[1]",
+      "patternId": "p-urn-oid-2.16.840.1.113883.10.20.22.2.8-errors",
+      "ruleId": "r-urn-oid-2.16.840.1.113883.10.20.22.2.8-errors",
+      "assertionId": "a-81-7711",
+      "context": "cda:section[cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8']]",
+      "xml": "<section nullFlavor=\"NI\" xmlns=\"urn:hl7-org:v3\">\r\n                                  <templateId root=\"2.16.840.1.113883.10.20.22.2.8\"/>\r\n                                  <templateId root=\"2.16.840.1...."
+    },
+    {
+      "type": "error",
+      "test": "cda:code[count(cda:translation) > 0]",
+      "modifiedTest": null,
+      "description": "This code SHALL contain at least one [1..*] translation, which SHOULD be selected from CodeSystem LOINC (urn:oid:2.16.840.1.113883.6.1) (CONF:1198-32853).",
+      "line": 313,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[3]/section[1]/entry[1]/observation[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.38-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.38-2015-08-01-errors",
+      "assertionId": "a-1198-32853",
+      "context": "cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.38' and @extension = '2015-08-01']]",
+      "xml": "<observation classCode=\"OBS\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.38\"/>\r\n                <templateId root=\"2.16.840.1.113883.10.20.22...."
+    },
+    {
+      "type": "error",
+      "test": "count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'])<=1 and count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.10'][@extension='2014-06-09'])<=1 and count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'] | //cda:templateId[@root='2.16.840.1.113883.10.20.22.2.10'][@extension='2014-06-09'])=2 or (count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.9'][@extension='2014-06-09'])=1 and count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'] | //cda:templateId[@root='2.16.840.1.113883.10.20.22.2.10'][@extension='2014-06-09'])=0)",
+      "modifiedTest": null,
+      "description": "This structuredBody *SHALL* contain an Assessment and Plan Section (V2) (2.16.840.1.113883.10.20.22.2.9:2014-06-09), or an Assessment Section (2.16.840.1.113883.10.20.22.2.8) and a Plan of Treatment Section (V2) (2.16.840.1.113883.10.20.22.2.10:2014-06-09) (CONF:1198-29102).",
+      "line": 11,
+      "path": "/ClinicalDocument[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.1.14-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.1.14-2015-08-01-errors",
+      "assertionId": "a-1198-29102-c",
+      "context": "cda:ClinicalDocument[cda:templateId[@root='2.16.840.1.113883.10.20.22.1.14' and @extension = '2015-08-01']]",
+      "xml": "<ClinicalDocument xmlns=\"urn:hl7-org:v3\">\r\n  <realmCode code=\"US\"/>\r\n  <typeId root=\"2.16.840.1.113883.1.3\" extension=\"POCD_HD000040\"/>\r\n  <templateId root=\"2.16.840.1.113883.10.20.22.1.1\"/>\r\n  <templ..."
+    },
+    {
+      "type": "error",
+      "test": "count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'])<=1 and count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.10'][@extension='2014-06-09'])<=1 and count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'] | //cda:templateId[@root='2.16.840.1.113883.10.20.22.2.10'][@extension='2014-06-09'])=2 or (count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.9'][@extension='2014-06-09'])=1 and count(//cda:templateId[@root='2.16.840.1.113883.10.20.22.2.8'] | //cda:templateId[@root='2.16.840.1.113883.10.20.22.2.10'][@extension='2014-06-09'])=0)",
+      "modifiedTest": null,
+      "description": "This structuredBody *SHALL NOT* contain an Assessment and Plan Section (V2) (2.16.840.1.113883.10.20.22.2.9:2014-06-09) when either an Assessment Section (2.16.840.1.113883.10.20.22.2.8) or a Plan of Treatment Section (V2) (2.16.840.1.113883.10.20.22.2.10:2014-06-09) is present (CONF:1198-29103).",
+      "line": 11,
+      "path": "/ClinicalDocument[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.1.14-2015-08-01-errors",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.1.14-2015-08-01-errors",
+      "assertionId": "a-1198-29103-c",
+      "context": "cda:ClinicalDocument[cda:templateId[@root='2.16.840.1.113883.10.20.22.1.14' and @extension = '2015-08-01']]",
+      "xml": "<ClinicalDocument xmlns=\"urn:hl7-org:v3\">\r\n  <realmCode code=\"US\"/>\r\n  <typeId root=\"2.16.840.1.113883.1.3\" extension=\"POCD_HD000040\"/>\r\n  <templateId root=\"2.16.840.1.113883.10.20.22.1.1\"/>\r\n  <templ..."
+    },
+    {
+      "type": "error",
+      "test": "cda:code[count(cda:translation) > 0]",
+      "modifiedTest": null,
+      "description": "This code SHALL contain at least one [1..*] translation, which SHOULD be selected from CodeSystem LOINC (urn:oid:2.16.840.1.113883.6.1) (CONF:1198-32853).",
+      "line": 313,
+      "path": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[3]/section[1]/entry[1]/observation[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.38-2015-08-01-warnings",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.38-2015-08-01-warnings",
+      "assertionId": "a-1198-32853-v",
+      "context": "cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.38' and @extension = '2015-08-01']]",
+      "xml": "<observation classCode=\"OBS\" moodCode=\"EVN\" xmlns=\"urn:hl7-org:v3\">\r\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.38\"/>\r\n                <templateId root=\"2.16.840.1.113883.10.20.22...."
+    },
+    {
+      "type": "error",
+      "test": "count(cda:confidentialityCode[@code=document('voc.xml')/voc:systems/voc:system[@valueSetOid='2.16.840.1.113883.1.11.16926']/voc:code/@value])=1",
+      "modifiedTest": "count(cda:confidentialityCode[(@code='N' or @code='R' or @code='V')])=1",
+      "description": "SHALL contain exactly one [1..1] confidentialityCode, which SHOULD be selected from ValueSet HL7 BasicConfidentialityKind urn:oid:2.16.840.1.113883.1.11.16926 STATIC (CONF:1198-5259).",
+      "line": 11,
+      "path": "/ClinicalDocument[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.1.1-2015-08-01-warnings",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.1.1-2015-08-01-warnings",
+      "assertionId": "a-1198-5259-v",
+      "context": "cda:ClinicalDocument[cda:templateId[@root='2.16.840.1.113883.10.20.22.1.1' and @extension = '2015-08-01']]",
+      "xml": "<ClinicalDocument xmlns=\"urn:hl7-org:v3\">\r\n  <realmCode code=\"US\"/>\r\n  <typeId root=\"2.16.840.1.113883.1.3\" extension=\"POCD_HD000040\"/>\r\n  <templateId root=\"2.16.840.1.113883.10.20.22.1.1\"/>\r\n  <templ..."
+    },
+    {
+      "type": "error",
+      "test": "count(cda:confidentialityCode[@code=document('voc.xml')/voc:systems/voc:system[@valueSetOid='2.16.840.1.113883.1.11.16926']/voc:code/@value])=1",
+      "modifiedTest": "count(cda:confidentialityCode[(@code='N' or @code='R' or @code='V')])=1",
+      "description": "SHALL contain exactly one [1..1] confidentialityCode, which SHOULD be selected from ValueSet HL7 BasicConfidentialityKind urn:oid:2.16.840.1.113883.1.11.16926 STATIC (CONF:1198-5259).",
+      "line": 11,
+      "path": "/ClinicalDocument[1]",
+      "patternId": "p-urn-hl7ii-2.16.840.1.113883.10.20.22.1.14-2015-08-01-warnings",
+      "ruleId": "r-urn-hl7ii-2.16.840.1.113883.10.20.22.1.14-2015-08-01-warnings",
+      "assertionId": "a-1198-5259-v",
+      "context": "cda:ClinicalDocument[cda:templateId[@root='2.16.840.1.113883.10.20.22.1.14' and @extension = '2015-08-01']]",
+      "xml": "<ClinicalDocument xmlns=\"urn:hl7-org:v3\">\r\n  <realmCode code=\"US\"/>\r\n  <typeId root=\"2.16.840.1.113883.1.3\" extension=\"POCD_HD000040\"/>\r\n  <templateId root=\"2.16.840.1.113883.10.20.22.1.1\"/>\r\n  <templ..."
+    }
+  ],
+  "warnings": [],
+  "ignored": []
+}
