@@ -16,6 +16,9 @@ For the script which runs the automated posting of the files, you will need Node
 
 This will created the directory layouts as shown in this directory. Note that scores may change over time due to changes in the C-CDA Scorecard offered by the ONC.  
 
-## Score Distribution
+## Score Distribution (1/23/2019)
 
-TBD
+Average Score: 65.3
+Median Score: 67
+Standard Deviation: 12.5 
+Min/10th/25th/75th/90th/Max: 43/48/57/74/81/100
