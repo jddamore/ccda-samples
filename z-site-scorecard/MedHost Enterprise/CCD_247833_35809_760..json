@@ -1,0 +1,336 @@
+{
+  "errorMessage": null,
+  "filename": "CCD_247833_35809_760.xml",
+  "ccdaDocumentType": "CCD",
+  "results": {
+    "finalGrade": "D",
+    "finalNumericalGrade": 60,
+    "categoryList": [
+      {
+        "categoryName": "Miscellaneous",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "Generally, the identifiers found within a CDA document should be unique and non-reoccurring within the same document.",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Social History",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": true,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Encounters",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": true,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Patient Demographics",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "Patient DOB should be valid and properly precisioned",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Patient's Alternative Name Rule",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Allergies",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Immunizations",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Laboratory Tests and Results",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Medications",
+        "categoryGrade": "D",
+        "categoryNumericalScore": 43,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "467 - 470",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"UNK\"/>\n                <high nullFlavor=\"UNK\"/>\n              </effectiveTime>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/MED_Oral_Med_QID_with_PRN.xml"
+            ],
+            "igReferences": [
+              "Section 3.48 Medication Activity"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Medications coded with RxNorm SCD, SBD, GPCK, or BPCPK codes",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "473 - 481",
+                "xmlString": "<manufacturedProduct xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"MANU\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.23\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.23\"/>\n                  <manufacturedMaterial>\n                    <code nullFlavor=\"NI\">\n                      <originalText>#nomeds</originalText>\n                    </code>\n                  </manufacturedMaterial>\n                </manufacturedProduct>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/MED_Oral_Med_QID_with_PRN.xml"
+            ],
+            "igReferences": [
+              "Section 3.48 Medication Activity"
+            ],
+            "description": "C-CDA medication lists should contain medications coded as RxNorm Semantic Clinical Drugs, Semantic Branded Drugs, and packs. This means prescribable products on the level of 'loratadine 10mg oral tablet'."
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "461 - 483",
+                "xmlString": "<substanceAdministration xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"SBADM\" moodCode=\"EVN\">\n              <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.16\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.16\"/>\n              <id root=\"56666f14-8fa3-4f38-be19-5a44dc6b3219\"/>\n              <code code=\"182904002\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Drug Treatment Unknown\"/>\n              <statusCode code=\"completed\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"UNK\"/>\n                <high nullFlavor=\"UNK\"/>\n              </effectiveTime>\n              <doseQuantity nullFlavor=\"UNK\"/>\n              <consumable>\n                <manufacturedProduct classCode=\"MANU\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.23\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.23\"/>\n                  <manufacturedMaterial>\n                    <code nullFlavor=\"NI\">\n                      <originalText>#nomeds</originalText>\n                    </code>\n                  </manufacturedMaterial>\n                </manufacturedProduct>\n              </consumable>\n            </substanceAdministration>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/MED_Oral_Med_QID_with_PRN.xml"
+            ],
+            "igReferences": [
+              "Section 2.39.1: Medications Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "Each medication needs to have its own Medication Signture Text EntryRelationship and the reference should exist in the same section where you found it",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "461 - 483",
+                "xmlString": "<substanceAdministration xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"SBADM\" moodCode=\"EVN\">\n              <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.16\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.16\"/>\n              <id root=\"56666f14-8fa3-4f38-be19-5a44dc6b3219\"/>\n              <code code=\"182904002\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Drug Treatment Unknown\"/>\n              <statusCode code=\"completed\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"UNK\"/>\n                <high nullFlavor=\"UNK\"/>\n              </effectiveTime>\n              <doseQuantity nullFlavor=\"UNK\"/>\n              <consumable>\n                <manufacturedProduct classCode=\"MANU\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.23\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.23\"/>\n                  <manufacturedMaterial>\n                    <code nullFlavor=\"NI\">\n                      <originalText>#nomeds</originalText>\n                    </code>\n                  </manufacturedMaterial>\n                </manufacturedProduct>\n              </consumable>\n            </substanceAdministration>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/MED_Oral_Med_QID_with_PRN.xml"
+            ],
+            "igReferences": [
+              "Section 2.39.1: Medications Section"
+            ],
+            "description": "Each medication needs to have its own Medication Signture Text EntryRelationship and the reference should exist in the same section where you found it"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 4,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Problems",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Procedures",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Vital Signs",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      }
+    ],
+    "numberOfIssues": 4,
+    "igReferenceUrl": "http://www.hl7.org/implement/standards/product_brief.cfm?product_id=379",
+    "industryAverageScore": 79,
+    "industryAverageGrade": "C",
+    "numberOfDocumentsScored": 34192,
+    "ccdaVersion": "R2.1",
+    "passedCertification": null,
+    "numberOfDocsScoredPerCcdaDocumentType": 20058,
+    "industryAverageScoreForCcdaDocumentType": 77,
+    "industryAverageGradeForCcdaDocumentType": "C"
+  },
+  "referenceResults": [
+    {
+      "type": "C-CDA IG Conformance Errors",
+      "totalErrorCount": 5,
+      "referenceErrors": [
+        {
+          "description": "A compatible R1.1 templateId without an extension must be included in addition to the existing R2.1 templateId with an extension for Functional Status Section2 2.16.840.1.113883.10.20.22.2.14:2014-06-09. When asserting this templateId, all C-CDA R2.1 document, section, and entry templates that had a previous version in C-CDA R1.1 SHALL include both the C-CDA R2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936, CONF:1198-32934, DSTU:757, DSTU:781).",
+          "type": "C-CDA MDHT Conformance Error",
+          "xPath": "/ClinicalDocument/component/structuredBody/component[4]/section",
+          "validatorConfiguredXpath": null,
+          "documentLineNumber": "208",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": null
+        },
+        {
+          "description": "A compatible R1.1 templateId without an extension must be included in addition to the existing R2.1 templateId with an extension for Plan Of Treatment Section2 2.16.840.1.113883.10.20.22.2.10:2014-06-09. When asserting this templateId, all C-CDA R2.1 document, section, and entry templates that had a previous version in C-CDA R1.1 SHALL include both the C-CDA R2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936, CONF:1198-32934, DSTU:757, DSTU:781).",
+          "type": "C-CDA MDHT Conformance Error",
+          "xPath": "/ClinicalDocument/component/structuredBody/component[8]/section",
+          "validatorConfiguredXpath": null,
+          "documentLineNumber": "316",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": null
+        },
+        {
+          "description": "A compatible R1.1 templateId without an extension must be included in addition to the existing R2.1 templateId with an extension for Social History Section (V3) 2.16.840.1.113883.10.20.22.2.17:2015-08-01. When asserting this templateId, all C-CDA R2.1 document, section, and entry templates that had a previous version in C-CDA R1.1 SHALL include both the C-CDA R2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936, CONF:1198-32934, DSTU:757, DSTU:781).",
+          "type": "C-CDA MDHT Conformance Error",
+          "xPath": "/ClinicalDocument/component/structuredBody/component[12]/section",
+          "validatorConfiguredXpath": null,
+          "documentLineNumber": "488",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": "Social History"
+        },
+        {
+          "description": "A compatible R1.1 templateId without an extension must be included in addition to the existing R2.1 templateId with an extension for Medical Equipment Section2 2.16.840.1.113883.10.20.22.2.23:2014-06-09. When asserting this templateId, all C-CDA R2.1 document, section, and entry templates that had a previous version in C-CDA R1.1 SHALL include both the C-CDA R2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936, CONF:1198-32934, DSTU:757, DSTU:781).",
+          "type": "C-CDA MDHT Conformance Error",
+          "xPath": "/ClinicalDocument/component/structuredBody/component[17]/section",
+          "validatorConfiguredXpath": null,
+          "documentLineNumber": "683",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": null
+        },
+        {
+          "description": "A compatible R1.1 templateId without an extension must be included in addition to the existing R2.1 templateId with an extension for Encounter Activity (V3) 2.16.840.1.113883.10.20.22.4.49:2015-08-01. When asserting this templateId, all C-CDA R2.1 document, section, and entry templates that had a previous version in C-CDA R1.1 SHALL include both the C-CDA R2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936, CONF:1198-32934, DSTU:757, DSTU:781).",
+          "type": "C-CDA MDHT Conformance Error",
+          "xPath": "/ClinicalDocument/component/structuredBody/component[18]/section/entry/encounter",
+          "validatorConfiguredXpath": null,
+          "documentLineNumber": "778",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": "Encounters"
+        }
+      ]
+    },
+    {
+      "type": "2015 Edition Certification Feedback",
+      "totalErrorCount": 0,
+      "referenceErrors": []
+    }
+  ],
+  "schemaErrorList": null,
+  "schemaErrors": false,
+  "success": true
+}

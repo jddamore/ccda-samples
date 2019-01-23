@@ -1,0 +1,502 @@
+{
+  "errorMessage": null,
+  "filename": "MyraJones.xml",
+  "ccdaDocumentType": "CCD",
+  "results": {
+    "finalGrade": "C",
+    "finalNumericalGrade": 71,
+    "categoryList": [
+      {
+        "categoryName": "Miscellaneous",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "Generally, the identifiers found within a CDA document should be unique and non-reoccurring within the same document.",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Patient Demographics",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "Patient DOB should be valid and properly precisioned",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Patient's Alternative Name Rule",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Allergies",
+        "categoryGrade": "B-",
+        "categoryNumericalScore": 80,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "133",
+                "xmlString": "<code xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" code=\"48765-2\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Allergies, adverse reactions, alerts\"/>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Allergies_Status_with_Author_Timestamp.xml"
+            ],
+            "igReferences": [
+              "Section 2.4.1: Allergies and Intolerances Section"
+            ],
+            "description": "Each of the code systems, value sets specified by the C-CDA IG refers back to standard terminologies like SNOMED-CT, LOINC, RxNorm, ICD9, ICD10. When codes from these codesystems are used to represent structured data the display name corresponding to the code should be used as part of the document"
+          },
+          {
+            "rule": "Allergies Concern observation effective times reflect the appropriate allergy concern status",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 4,
+            "issuesList": [
+              {
+                "lineNumber": "186 - 263",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <id root=\"2104f96d-360e-407c-a4b2-1318a6bcd2cf\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime>\n                <low value=\"20060501\"/>\n                <high nullFlavor=\"UNK\"/>\n              </effectiveTime>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <id root=\"b6bf50bf-a089-46ff-b8fb-73343f164f03\"/>\n                  <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime>\n                    <low value=\"20060501\"/>\n                    <high nullFlavor=\"UNK\"/>\n                  </effectiveTime>\n                  <value code=\"416098002\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Drug allergy (disorder)\" xsi:type=\"CD\">\n                    <originalText>Drug allergy (disorder)\n                      <reference value=\"#allergytype1\"/>\n                    </originalText>\n                  </value>\n                  <participant contextControlCode=\"OP\" typeCode=\"CSM\">\n                    <participantRole classCode=\"MANU\">\n                      <playingEntity classCode=\"MMAT\" determinerCode=\"INSTANCE\">\n                        <code code=\"2670\" codeSystem=\"2.16.840.1.113883.6.88\" codeSystemName=\"RxNorm\" displayName=\"Codeine\">\n                          <originalText>Codeine\n                            <reference value=\"#allergy1\"/>\n                          </originalText>\n                        </code>\n                      </playingEntity>\n                    </participantRole>\n                  </participant>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.28\"/>\n                      <code code=\"33999-4\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Status\"/>\n                      <statusCode code=\"completed\"/>\n                      <value code=\"55561003\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED-CT\" displayName=\"Active\" xsi:type=\"CE\"/>\n                    </observation>\n                  </entryRelationship>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"MFST\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <id root=\"d88ab212-fc9c-40c6-bda7-ca41ccd1ea12\"/>\n                      <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                      <statusCode code=\"completed\"/>\n                      <effectiveTime>\n                        <low nullFlavor=\"UNK\"/>\n                        <high nullFlavor=\"UNK\"/>\n                      </effectiveTime>\n                      <value nullFlavor=\"OTH\" xsi:type=\"CD\">\n                        <originalText>Shortness of Breath\n                          <reference value=\"#reaction1\"/>\n                        </originalText>\n                      </value>\n                      <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                        <observation classCode=\"OBS\" moodCode=\"EVN\">\n                          <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <templateId root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <code code=\"SEV\" codeSystem=\"2.16.840.1.113883.5.4\" codeSystemName=\"ActCode\" displayName=\"Severity Observation\"/>\n                          <text>\n                            <reference value=\"#severity1\"/>\n                          </text>\n                          <statusCode code=\"completed\"/>\n                          <value code=\"6736007\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED-CT\" displayName=\"Moderate\" xsi:type=\"CD\"/>\n                        </observation>\n                      </entryRelationship>\n                    </observation>\n                  </entryRelationship>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": null,
+                "xmlString": null
+              },
+              {
+                "lineNumber": "266 - 343",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <id root=\"adb5ff45-eee6-4fa5-9270-c04730d8298d\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime>\n                <low value=\"20080501\"/>\n                <high nullFlavor=\"UNK\"/>\n              </effectiveTime>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <id root=\"16f82eae-8c27-489a-b47d-cb1d58362499\"/>\n                  <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime>\n                    <low value=\"20080501\"/>\n                    <high nullFlavor=\"UNK\"/>\n                  </effectiveTime>\n                  <value code=\"416098002\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Drug allergy (disorder)\" xsi:type=\"CD\">\n                    <originalText>Drug allergy (disorder)\n                      <reference value=\"#allergytype2\"/>\n                    </originalText>\n                  </value>\n                  <participant contextControlCode=\"OP\" typeCode=\"CSM\">\n                    <participantRole classCode=\"MANU\">\n                      <playingEntity classCode=\"MMAT\" determinerCode=\"INSTANCE\">\n                        <code code=\"1191\" codeSystem=\"2.16.840.1.113883.6.88\" codeSystemName=\"RxNorm\" displayName=\"Aspirin\">\n                          <originalText>Aspirin\n                            <reference value=\"#allergy2\"/>\n                          </originalText>\n                        </code>\n                      </playingEntity>\n                    </participantRole>\n                  </participant>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.28\"/>\n                      <code code=\"33999-4\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Status\"/>\n                      <statusCode code=\"completed\"/>\n                      <value code=\"55561003\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED-CT\" displayName=\"Active\" xsi:type=\"CE\"/>\n                    </observation>\n                  </entryRelationship>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"MFST\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <id root=\"e0a5a0fc-78e3-4caa-8781-5fe0755bb12e\"/>\n                      <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                      <statusCode code=\"completed\"/>\n                      <effectiveTime>\n                        <low nullFlavor=\"UNK\"/>\n                        <high nullFlavor=\"UNK\"/>\n                      </effectiveTime>\n                      <value nullFlavor=\"OTH\" xsi:type=\"CD\">\n                        <originalText>Hives\n                          <reference value=\"#reaction2\"/>\n                        </originalText>\n                      </value>\n                      <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                        <observation classCode=\"OBS\" moodCode=\"EVN\">\n                          <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <templateId root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <code code=\"SEV\" codeSystem=\"2.16.840.1.113883.5.4\" codeSystemName=\"ActCode\" displayName=\"Severity Observation\"/>\n                          <text>\n                            <reference value=\"#severity2\"/>\n                          </text>\n                          <statusCode code=\"completed\"/>\n                          <value code=\"6736007\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED-CT\" displayName=\"Moderate\" xsi:type=\"CD\"/>\n                        </observation>\n                      </entryRelationship>\n                    </observation>\n                  </entryRelationship>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": null,
+                "xmlString": null
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Allergies_Status_with_Author_Timestamp.xml"
+            ],
+            "igReferences": [
+              "Section 2.4.1: Allergies and Intolerances Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 5,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Encounters",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Immunizations",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Laboratory Tests and Results",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Medications",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": true,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Problems",
+        "categoryGrade": "D",
+        "categoryNumericalScore": 60,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 4,
+            "issuesList": [
+              {
+                "lineNumber": "554 - 556",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <low value=\"20120806000000\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "569 - 571",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <low value=\"20120806000000\"/>\n                  </effectiveTime>"
+              },
+              {
+                "lineNumber": "588 - 590",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <low value=\"20070103000000\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "603 - 605",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <low value=\"20070103000000\"/>\n                  </effectiveTime>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 3.78: Problem Concern Act"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 4,
+            "issuesList": [
+              {
+                "lineNumber": "554 - 556",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <low value=\"20120806000000\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "569 - 571",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <low value=\"20120806000000\"/>\n                  </effectiveTime>"
+              },
+              {
+                "lineNumber": "588 - 590",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <low value=\"20070103000000\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "603 - 605",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <low value=\"20070103000000\"/>\n                  </effectiveTime>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 3.78: Problem Concern Act"
+            ],
+            "description": " EffectiveDate/Times for historical events should be greater than the patient's date of birth and less than the earliest of current time or patient's date of death. "
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 2,
+            "issuesList": [
+              {
+                "lineNumber": "563",
+                "xmlString": "<translation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Problem HL7.CCDAR2\"/>"
+              },
+              {
+                "lineNumber": "597",
+                "xmlString": "<translation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Problem HL7.CCDAR2\"/>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 2.53.1: Problem Section"
+            ],
+            "description": "Each of the code systems, value sets specified by the C-CDA IG refers back to standard terminologies like SNOMED-CT, LOINC, RxNorm, ICD9, ICD10. When codes from these codesystems are used to represent structured data the display name corresponding to the code should be used as part of the document"
+          },
+          {
+            "rule": "All problem codes are should express with core subset of SNOMED codes",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Problem Concern effective times reflect the appropriate problem concern status",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 2,
+            "issuesList": [
+              {
+                "lineNumber": "548 - 579",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id root=\"5b901137-ab0f-4af5-9933-d5873771badf\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\" codeSystemName=\"HL7ActClass\" displayName=\"Concern\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime>\n                <low value=\"20120806000000\"/>\n              </effectiveTime>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id root=\"5b901137-ab0f-4af5-9933-d5873771badf\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Problem\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Problem HL7.CCDAR2\"/>\n                  </code>\n                  <text>Pneumonia (Pneumonia)\n                    <reference value=\"#problem1\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime>\n                    <low value=\"20120806000000\"/>\n                  </effectiveTime>\n                  <value code=\"233604007\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Pneumonia\" xsi:type=\"CD\">\n                    <originalText>Pneumonia (Pneumonia)\n                      <reference value=\"#problem1\"/>\n                    </originalText>\n                  </value>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "582 - 613",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id root=\"7a3129d6-bbba-4a38-9bf9-eed06915ad57\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\" codeSystemName=\"HL7ActClass\" displayName=\"Concern\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime>\n                <low value=\"20070103000000\"/>\n              </effectiveTime>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id root=\"7a3129d6-bbba-4a38-9bf9-eed06915ad57\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Problem\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Problem HL7.CCDAR2\"/>\n                  </code>\n                  <text>Asthma (Asthma)\n                    <reference value=\"#problem2\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime>\n                    <low value=\"20070103000000\"/>\n                  </effectiveTime>\n                  <value code=\"195967001\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Asthma\" xsi:type=\"CD\">\n                    <originalText>Asthma (Asthma)\n                      <reference value=\"#problem2\"/>\n                    </originalText>\n                  </value>\n                </observation>\n              </entryRelationship>\n            </act>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 2.53.1: Problem Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 12,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Procedures",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      },
+      {
+        "categoryName": "Social History",
+        "categoryGrade": "D",
+        "categoryNumericalScore": 63,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "679 - 687",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <id root=\"50bb936d-c82e-47fa-870a-3d458446848f\"/>\n              <code code=\"72166-2\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Tobacco smoking status NHIS\"/>\n              <statusCode code=\"completed\"/>\n              <effectiveTime nullFlavor=\"UNK\"/>\n              <value code=\"428041000124106\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Current some day smoker\" xsi:type=\"CD\"/>\n            </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/SMOKING_Former_Smoker.xml"
+            ],
+            "igReferences": [
+              "Section 2.66: Social History Section"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Smoking status code value should be valid",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Smoking status observation Template Id should be valid",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Systems should capture birth sex independent of the Administrative Gender and encode them as an observation in the Social History Section",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "690 - 695",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2016-06-01\" root=\"2.16.840.1.113883.10.20.22.4.200\"/>\n              <code code=\"76689-9\" codeSystem=\"2.16.840.1.113883.6.1\" displayName=\"Sex Assigned At Birth\"/>\n              <statusCode code=\"completed\"/>\n              <value codeSystem=\"2.16.840.1.113883.5.1\" displayName=\"Unknown\" nullFlavor=\"UNK\" xsi:type=\"CD\"/>\n            </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/SMOKING_Former_Smoker.xml"
+            ],
+            "igReferences": [
+              "Section 3.101: Social History Observation"
+            ],
+            "description": "Systems should capture birth sex independent of the Administrative Gender and encode them as an observation in the Social History Section."
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 2,
+            "issuesList": [
+              {
+                "lineNumber": "679 - 687",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <id root=\"50bb936d-c82e-47fa-870a-3d458446848f\"/>\n              <code code=\"72166-2\" codeSystem=\"2.16.840.1.113883.6.1\" codeSystemName=\"LOINC\" displayName=\"Tobacco smoking status NHIS\"/>\n              <statusCode code=\"completed\"/>\n              <effectiveTime nullFlavor=\"UNK\"/>\n              <value code=\"428041000124106\" codeSystem=\"2.16.840.1.113883.6.96\" codeSystemName=\"SNOMED CT\" displayName=\"Current some day smoker\" xsi:type=\"CD\"/>\n            </observation>"
+              },
+              {
+                "lineNumber": "690 - 695",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2016-06-01\" root=\"2.16.840.1.113883.10.20.22.4.200\"/>\n              <code code=\"76689-9\" codeSystem=\"2.16.840.1.113883.6.1\" displayName=\"Sex Assigned At Birth\"/>\n              <statusCode code=\"completed\"/>\n              <value codeSystem=\"2.16.840.1.113883.5.1\" displayName=\"Unknown\" nullFlavor=\"UNK\" xsi:type=\"CD\"/>\n            </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/SMOKING_Former_Smoker.xml"
+            ],
+            "igReferences": [
+              "Section 2.66: Social History Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 4,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Vital Signs",
+        "categoryGrade": null,
+        "categoryNumericalScore": 0,
+        "categoryRubrics": [],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": true
+      }
+    ],
+    "numberOfIssues": 21,
+    "igReferenceUrl": "http://www.hl7.org/implement/standards/product_brief.cfm?product_id=379",
+    "industryAverageScore": 79,
+    "industryAverageGrade": "C",
+    "numberOfDocumentsScored": 34140,
+    "ccdaVersion": "R2.1",
+    "passedCertification": null,
+    "numberOfDocsScoredPerCcdaDocumentType": 20016,
+    "industryAverageScoreForCcdaDocumentType": 77,
+    "industryAverageGradeForCcdaDocumentType": "C"
+  },
+  "referenceResults": [
+    {
+      "type": "C-CDA IG Conformance Errors",
+      "totalErrorCount": 1,
+      "referenceErrors": [
+        {
+          "description": "A compatible R1.1 templateId without an extension must be included in addition to the existing R2.1 templateId with an extension for Assessment and Plan Section (V2) 2.16.840.1.113883.10.20.22.2.9:2014-06-09. When asserting this templateId, all C-CDA R2.1 document, section, and entry templates that had a previous version in C-CDA R1.1 SHALL include both the C-CDA R2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936, CONF:1198-32934, DSTU:757, DSTU:781).",
+          "type": "C-CDA MDHT Conformance Error",
+          "xPath": "/ClinicalDocument/component/structuredBody/component[14]/section",
+          "validatorConfiguredXpath": null,
+          "documentLineNumber": "793",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": null
+        }
+      ]
+    },
+    {
+      "type": "2015 Edition Certification Feedback",
+      "totalErrorCount": 1,
+      "referenceErrors": [
+        {
+          "description": "Code 435 does not exist in the value set(s) 2.16.840.1.113762.1.4.1010.4",
+          "type": "ONC 2015 S&CC Vocabulary Validation Conformance Error",
+          "xPath": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[2]/section[1]/entry[1]/substanceAdministration[1]/consumable[1]/manufacturedProduct[1]/manufacturedMaterial[1]/code[1]",
+          "validatorConfiguredXpath": "//v3:manufacturedProduct/v3:templateId[@root='2.16.840.1.113883.10.20.22.4.23' and @extension='2014-06-09']/ancestor::v3:manufacturedProduct[1]/v3:manufacturedMaterial/v3:code[not(@nullFlavor)]",
+          "documentLineNumber": "419",
+          "actualCode": "435",
+          "actualCodeSystem": "2.16.840.1.113883.6.88",
+          "actualCodeSystemName": "RXNORM",
+          "actualDisplayName": "ALBUTEROL",
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": "Medications"
+        }
+      ]
+    }
+  ],
+  "schemaErrorList": null,
+  "schemaErrors": false,
+  "success": true
+}

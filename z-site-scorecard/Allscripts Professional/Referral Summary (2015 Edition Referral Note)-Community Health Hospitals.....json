@@ -1,0 +1,851 @@
+{
+  "errorMessage": null,
+  "filename": "Referral Summary (2015 Edition Referral Note)-Community Health Hospitals....xml",
+  "ccdaDocumentType": "Referral Note",
+  "results": {
+    "finalGrade": "A-",
+    "finalNumericalGrade": 91,
+    "categoryList": [
+      {
+        "categoryName": "Miscellaneous",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "Generally, the identifiers found within a CDA document should be unique and non-reoccurring within the same document.",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Patient Demographics",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "Patient DOB should be valid and properly precisioned",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Patient's Alternative Name Rule",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Allergies",
+        "categoryGrade": "B-",
+        "categoryNumericalScore": 83,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 2,
+            "issuesList": [
+              {
+                "lineNumber": "1085 - 1087",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "1197 - 1199",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Allergies_Status_with_Author_Timestamp.xml"
+            ],
+            "igReferences": [
+              "Section 3.5: Allergy Concern Act"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Allergies Concern observation effective times reflect the appropriate allergy concern status",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 2,
+            "issuesList": [
+              {
+                "lineNumber": "1079 - 1188",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <id extension=\"10382963\" root=\"1.3.6.1.4.1.22812.4.17.11.4.10\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20170112190116+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <id extension=\"10382963\" root=\"1.3.6.1.4.1.22812.4.17.11.4.10.2\"/>\n                  <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"19800510\"/>\n                  </effectiveTime>\n                  <value code=\"416098002\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\"/>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                        <city>Cary</city>\n                        <state>NC</state>\n                        <postalCode>27511</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <assignedPerson>\n                        <name>\n                          <family>Manning</family>\n                          <given>Terry</given>\n                          <given>A</given>\n                          <suffix>MD</suffix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20170112190116+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <participant typeCode=\"CSM\">\n                    <participantRole classCode=\"MANU\">\n                      <playingEntity classCode=\"MMAT\">\n                        <code code=\"733\" codeSystem=\"2.16.840.1.113883.6.88\">\n                          <originalText>\n                            <reference value=\"#_e66e0ba1-1342-4b21-8033-ae3ae3500b51\"/>\n                          </originalText>\n                          <translation code=\"01200020200105\" codeSystem=\"2.16.840.1.113883.6.68\"/>\n                        </code>\n                      </playingEntity>\n                    </participantRole>\n                  </participant>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"MFST\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <id nullFlavor=\"NI\"/>\n                      <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                      <text>\n                        <reference value=\"#_9620ecaf-ca7f-4922-882f-13af0eb90507\"/>\n                      </text>\n                      <statusCode code=\"completed\"/>\n                      <value code=\"247472004\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                        <originalText>\n                          <reference value=\"#_9620ecaf-ca7f-4922-882f-13af0eb90507\"/>\n                        </originalText>\n                      </value>\n                      <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                        <observation classCode=\"OBS\" moodCode=\"EVN\">\n                          <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <templateId root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <code code=\"SEV\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                          <text>Moderate</text>\n                          <statusCode code=\"completed\"/>\n                          <value code=\"6736007\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\"/>\n                        </observation>\n                      </entryRelationship>\n                    </observation>\n                  </entryRelationship>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.145\"/>\n                      <code code=\"82606-5\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <statusCode code=\"completed\"/>\n                      <value code=\"CRITH\" codeSystem=\"2.16.840.1.113883.5.1063\" xsi:type=\"CD\"/>\n                    </observation>\n                  </entryRelationship>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "1191 - 1300",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.30\"/>\n              <id extension=\"10382962\" root=\"1.3.6.1.4.1.22812.4.17.11.4.10\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20170112190116+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.7\"/>\n                  <id extension=\"10382962\" root=\"1.3.6.1.4.1.22812.4.17.11.4.10.2\"/>\n                  <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"19800510\"/>\n                  </effectiveTime>\n                  <value code=\"416098002\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\"/>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                        <city>Cary</city>\n                        <state>NC</state>\n                        <postalCode>27511</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <assignedPerson>\n                        <name>\n                          <family>Manning</family>\n                          <given>Terry</given>\n                          <given>A</given>\n                          <suffix>MD</suffix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20170112190116+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <participant typeCode=\"CSM\">\n                    <participantRole classCode=\"MANU\">\n                      <playingEntity classCode=\"MMAT\">\n                        <code code=\"7980\" codeSystem=\"2.16.840.1.113883.6.88\">\n                          <originalText>\n                            <reference value=\"#_f0f5dbb3-2623-4e49-a6b6-e29f9916eab2\"/>\n                          </originalText>\n                          <translation code=\"01100010102135\" codeSystem=\"2.16.840.1.113883.6.68\"/>\n                        </code>\n                      </playingEntity>\n                    </participantRole>\n                  </participant>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"MFST\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.9\"/>\n                      <id nullFlavor=\"NI\"/>\n                      <code code=\"ASSERTION\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                      <text>\n                        <reference value=\"#_355c6a98-f813-4b00-b6fb-5725e63fc332\"/>\n                      </text>\n                      <statusCode code=\"completed\"/>\n                      <value code=\"247472004\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                        <originalText>\n                          <reference value=\"#_355c6a98-f813-4b00-b6fb-5725e63fc332\"/>\n                        </originalText>\n                      </value>\n                      <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                        <observation classCode=\"OBS\" moodCode=\"EVN\">\n                          <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <templateId root=\"2.16.840.1.113883.10.20.22.4.8\"/>\n                          <code code=\"SEV\" codeSystem=\"2.16.840.1.113883.5.4\"/>\n                          <text>Moderate</text>\n                          <statusCode code=\"completed\"/>\n                          <value code=\"6736007\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\"/>\n                        </observation>\n                      </entryRelationship>\n                    </observation>\n                  </entryRelationship>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <observation classCode=\"OBS\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.145\"/>\n                      <code code=\"82606-5\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <statusCode code=\"completed\"/>\n                      <value code=\"CRITH\" codeSystem=\"2.16.840.1.113883.5.1063\" xsi:type=\"CD\"/>\n                    </observation>\n                  </entryRelationship>\n                </observation>\n              </entryRelationship>\n            </act>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Allergies_Status_with_Author_Timestamp.xml"
+            ],
+            "igReferences": [
+              "Section 2.4.1: Allergies and Intolerances Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 4,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Encounters",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Immunizations",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Immunizations coded with CVX codes",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Laboratory Tests and Results",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 98,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "3161 - 3391",
+                "xmlString": "<organizer xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"BATTERY\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.1\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.1\"/>\n              <id extension=\"10031676\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n              <code code=\"81000\" codeSystem=\"2.16.840.1.113883.6.12\">\n                <originalText>\n                  <reference value=\"#_61bf5bb5-accc-44ca-b34f-7f6592da83d3\"/>\n                </originalText>\n              </code>\n              <statusCode code=\"completed\"/>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20150622140849+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194940\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5804-0\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_8cd426ec-bf4d-45d6-a39d-b67b3c434a51\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value unit=\"mg/dL\" value=\"100\" xsi:type=\"PQ\"/>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </component>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194939\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5811-5\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_d77fb84c-02fb-419c-b91d-919c02be1f87\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value value=\"1.015\" xsi:type=\"PQ\"/>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                  <referenceRange>\n                    <observationRange>\n                      <value xsi:type=\"IVL_PQ\">\n                        <low value=\"1.005\"/>\n                        <high value=\"1.030\"/>\n                      </value>\n                    </observationRange>\n                  </referenceRange>\n                </observation>\n              </component>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194938\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5797-6\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_88a06008-d8dd-4567-b45b-ca43d455fe7b\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value xsi:type=\"ST\">negative</value>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </component>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194937\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5803-2\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_ceb28b45-a312-4897-bf3e-5192cbea22f0\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value unit=\"[pH]\" value=\"5.0\" xsi:type=\"PQ\"/>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                  <referenceRange>\n                    <observationRange>\n                      <value xsi:type=\"IVL_PQ\">\n                        <low unit=\"[pH]\" value=\"5.0\"/>\n                        <high unit=\"[pH]\" value=\"8.0\"/>\n                      </value>\n                    </observationRange>\n                  </referenceRange>\n                </observation>\n              </component>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194936\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5792-7\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_fecc196e-3c6b-4ebf-844a-f04e28414918\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value unit=\"mg/dL\" value=\"50\" xsi:type=\"PQ\"/>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </component>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194935\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5778-6\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_ec0775dd-53bf-48a5-b058-081f110ea747\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value xsi:type=\"ST\">yellow</value>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </component>\n              <component>\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.2\"/>\n                  <id extension=\"10194934\" root=\"1.3.6.1.4.1.22812.4.17.11.4.5\"/>\n                  <code code=\"5767-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <text>\n                    <reference value=\"#_2a40ff45-56ec-4e90-a667-bc7fa49a02a1\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622\"/>\n                  <value xsi:type=\"ST\">clear</value>\n                  <interpretationCode code=\"N\" codeSystem=\"2.16.840.1.113883.5.83\"/>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622140801+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10045531\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </component>\n            </organizer>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/RESULT_Value_Less_Than_Physical_Quantity.xml"
+            ],
+            "igReferences": [
+              "Section 3.93: Result Organizer"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Lab Result values should use preferred UCUM units",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Lab results should be expressed with LOINC codes",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The EffectiveDate/Time elements for the Result Organizer must encompass the underlying observations",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 1,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Medications",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Medications coded with RxNorm SCD, SBD, GPCK, or BPCPK codes",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each medication needs to have its own Medication Signture Text EntryRelationship and the reference should exist in the same section where you found it",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "1306",
+                "xmlString": "<templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.2.1\"/>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Allergies_Status_with_Author_Timestamp.xml"
+            ],
+            "igReferences": [
+              "Section 2.4.1: Allergies and Intolerances Section"
+            ],
+            "description": "All Template Ids should be present with valid extension value"
+          }
+        ],
+        "numberOfIssues": 1,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Problems",
+        "categoryGrade": "B-",
+        "categoryNumericalScore": 80,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 7,
+            "issuesList": [
+              {
+                "lineNumber": "411 - 413",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "504 - 506",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "603 - 605",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "680 - 682",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "757 - 759",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "834 - 836",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>"
+              },
+              {
+                "lineNumber": "857 - 859",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                    <low nullFlavor=\"NI\"/>\n                  </effectiveTime>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 3.78: Problem Concern Act"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "All problem codes are should express with core subset of SNOMED codes",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "846 - 899",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10242467\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_c57cdb82-56c2-4e10-8097-4d002a95030e\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low nullFlavor=\"NI\"/>\n                  </effectiveTime>\n                  <value codeSystem=\"2.16.840.1.113883.6.96\" nullFlavor=\"UNK\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_c57cdb82-56c2-4e10-8097-4d002a95030e\"/>\n                    </originalText>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>2472 Rocky Place</streetAddressLine>\n                        <city>Beaverton</city>\n                        <state>OR</state>\n                        <postalCode>97006</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <telecom use=\"WP\" value=\"tel:+1-(555)555-1002\"/>\n                      <assignedPerson>\n                        <name>\n                          <family>Davis</family>\n                          <given>Albert</given>\n                          <prefix>Dr</prefix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622155711+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10046386\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 3.79: Problem Observation"
+            ],
+            "description": "code validation Rubric failed for Problems"
+          },
+          {
+            "rule": "Problem Concern effective times reflect the appropriate problem concern status",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "857 - 859",
+                "xmlString": "<effectiveTime xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"IVL_TS\">\n                    <low nullFlavor=\"NI\"/>\n                  </effectiveTime>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 3.78: Problem Concern Act"
+            ],
+            "description": "A Problem Concern of completed or suspended should have a Problem Concern effectiveTime/high value present.Similarly a Problem Concern which is Active shall not have a Problem Concern effectiveTime/high value."
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 6,
+            "issuesList": [
+              {
+                "lineNumber": "405 - 495",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id extension=\"10382964\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20170112190116+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                  <addr>\n                    <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                    <city>Cary</city>\n                    <state>NC</state>\n                    <postalCode>27511</postalCode>\n                    <country>US</country>\n                  </addr>\n                  <telecom nullFlavor=\"UNK\"/>\n                  <assignedPerson>\n                    <name>\n                      <family>Manning</family>\n                      <given>Terry</given>\n                      <given>A</given>\n                      <suffix>MD</suffix>\n                    </name>\n                  </assignedPerson>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10382964\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_e5e99537-fbfd-4d73-8812-9e88f019fa95\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"20111005\"/>\n                  </effectiveTime>\n                  <value code=\"59621000\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_e5e99537-fbfd-4d73-8812-9e88f019fa95\"/>\n                    </originalText>\n                    <translation code=\"58052941\" codeSystem=\"2.16.840.1.113883.3.247.1.1\"/>\n                    <translation code=\"I10\" codeSystem=\"2.16.840.1.113883.6.90\"/>\n                    <translation code=\"401.9\" codeSystem=\"2.16.840.1.113883.6.103\"/>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                        <city>Cary</city>\n                        <state>NC</state>\n                        <postalCode>27511</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <assignedPerson>\n                        <name>\n                          <family>Manning</family>\n                          <given>Terry</given>\n                          <given>A</given>\n                          <suffix>MD</suffix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20170112190116+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "498 - 594",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id extension=\"10242440\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20050501183456+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                  <addr>\n                    <streetAddressLine>2472 Rocky Place</streetAddressLine>\n                    <city>Beaverton</city>\n                    <state>OR</state>\n                    <postalCode>97006</postalCode>\n                    <country>US</country>\n                  </addr>\n                  <telecom use=\"WP\" value=\"tel:+1-(555)555-1002\"/>\n                  <assignedPerson>\n                    <name>\n                      <family>Davis</family>\n                      <given>Albert</given>\n                      <prefix>Dr</prefix>\n                    </name>\n                  </assignedPerson>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10242440\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_2c53d1b9-1ca6-4862-8df5-d8dd3030ce8e\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"20050501\"/>\n                  </effectiveTime>\n                  <value code=\"48167000\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_2c53d1b9-1ca6-4862-8df5-d8dd3030ce8e\"/>\n                    </originalText>\n                    <translation code=\"37913\" codeSystem=\"2.16.840.1.113883.3.247.1.1\"/>\n                    <translation code=\"R41.3\" codeSystem=\"2.16.840.1.113883.6.90\"/>\n                    <translation code=\"780.93\" codeSystem=\"2.16.840.1.113883.6.103\"/>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>2472 Rocky Place</streetAddressLine>\n                        <city>Beaverton</city>\n                        <state>OR</state>\n                        <postalCode>97006</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <telecom use=\"WP\" value=\"tel:+1-(555)555-1002\"/>\n                      <assignedPerson>\n                        <name>\n                          <family>Davis</family>\n                          <given>Albert</given>\n                          <prefix>Dr</prefix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20050501183456+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10046356\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </entryRelationship>\n              <entryRelationship typeCode=\"SUBJ\">\n                <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                  <id extension=\"10046356\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                </encounter>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "597 - 671",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id extension=\"10382966\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20170112190116+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10382966\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_b6a0a816-f2c9-4fe3-89de-23d714bb3d73\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"20111231\"/>\n                  </effectiveTime>\n                  <value code=\"236578006\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_b6a0a816-f2c9-4fe3-89de-23d714bb3d73\"/>\n                    </originalText>\n                    <translation code=\"706070\" codeSystem=\"2.16.840.1.113883.3.247.1.1\"/>\n                    <translation code=\"T86.11\" codeSystem=\"2.16.840.1.113883.6.90\"/>\n                    <translation code=\"996.81\" codeSystem=\"2.16.840.1.113883.6.103\"/>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                        <city>Cary</city>\n                        <state>NC</state>\n                        <postalCode>27511</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <assignedPerson>\n                        <name>\n                          <family>Manning</family>\n                          <given>Terry</given>\n                          <given>A</given>\n                          <suffix>MD</suffix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20170112190116+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "674 - 748",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id extension=\"10242248\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20170112190116+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10242248\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_468fb40b-5ef4-482a-b320-51450c182eb9\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"20150622\"/>\n                  </effectiveTime>\n                  <value code=\"386661006\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_468fb40b-5ef4-482a-b320-51450c182eb9\"/>\n                    </originalText>\n                    <translation code=\"27348\" codeSystem=\"2.16.840.1.113883.3.247.1.1\"/>\n                    <translation code=\"R50.9\" codeSystem=\"2.16.840.1.113883.6.90\"/>\n                    <translation code=\"780.60\" codeSystem=\"2.16.840.1.113883.6.103\"/>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                        <city>Cary</city>\n                        <state>NC</state>\n                        <postalCode>27511</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <assignedPerson>\n                        <name>\n                          <family>Manning</family>\n                          <given>Terry</given>\n                          <given>A</given>\n                          <suffix>MD</suffix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20170112190116+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "751 - 825",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id extension=\"10382965\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20170112190116+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10382965\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_8d7307bf-653b-4637-88aa-bda84acd00ea\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low value=\"20061231\"/>\n                  </effectiveTime>\n                  <value code=\"83986005\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_8d7307bf-653b-4637-88aa-bda84acd00ea\"/>\n                    </originalText>\n                    <translation code=\"18857\" codeSystem=\"2.16.840.1.113883.3.247.1.1\"/>\n                    <translation code=\"E03.8\" codeSystem=\"2.16.840.1.113883.6.90\"/>\n                    <translation code=\"244.8\" codeSystem=\"2.16.840.1.113883.6.103\"/>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>5555 Waverly Way</streetAddressLine>\n                        <city>Cary</city>\n                        <state>NC</state>\n                        <postalCode>27511</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <assignedPerson>\n                        <name>\n                          <family>Manning</family>\n                          <given>Terry</given>\n                          <given>A</given>\n                          <suffix>MD</suffix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20170112190116+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"68\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <id extension=\"2547845075\" root=\"2.16.840.1.113883.4.6\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                </observation>\n              </entryRelationship>\n            </act>"
+              },
+              {
+                "lineNumber": "828 - 906",
+                "xmlString": "<act xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"ACT\" moodCode=\"EVN\">\n              <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.3\"/>\n              <id extension=\"10242467\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1\"/>\n              <code code=\"CONC\" codeSystem=\"2.16.840.1.113883.5.6\"/>\n              <statusCode code=\"active\"/>\n              <effectiveTime xsi:type=\"IVL_TS\">\n                <low nullFlavor=\"NI\"/>\n              </effectiveTime>\n              <author>\n                <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                <time value=\"20150622155711+0000\"/>\n                <assignedAuthor>\n                  <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                  <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                </assignedAuthor>\n              </author>\n              <entryRelationship typeCode=\"SUBJ\">\n                <observation classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2015-08-01\" root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.4\"/>\n                  <id extension=\"10242467\" root=\"1.3.6.1.4.1.22812.4.17.11.4.1.2.1\"/>\n                  <code code=\"55607006\" codeSystem=\"2.16.840.1.113883.6.96\">\n                    <translation code=\"75326-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  </code>\n                  <text>\n                    <reference value=\"#_c57cdb82-56c2-4e10-8097-4d002a95030e\"/>\n                  </text>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime xsi:type=\"IVL_TS\">\n                    <low nullFlavor=\"NI\"/>\n                  </effectiveTime>\n                  <value codeSystem=\"2.16.840.1.113883.6.96\" nullFlavor=\"UNK\" xsi:type=\"CD\">\n                    <originalText>\n                      <reference value=\"#_c57cdb82-56c2-4e10-8097-4d002a95030e\"/>\n                    </originalText>\n                  </value>\n                  <performer typeCode=\"PRF\">\n                    <assignedEntity>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                      <addr>\n                        <streetAddressLine>2472 Rocky Place</streetAddressLine>\n                        <city>Beaverton</city>\n                        <state>OR</state>\n                        <postalCode>97006</postalCode>\n                        <country>US</country>\n                      </addr>\n                      <telecom use=\"WP\" value=\"tel:+1-(555)555-1002\"/>\n                      <assignedPerson>\n                        <name>\n                          <family>Davis</family>\n                          <given>Albert</given>\n                          <prefix>Dr</prefix>\n                        </name>\n                      </assignedPerson>\n                    </assignedEntity>\n                  </performer>\n                  <author>\n                    <templateId root=\"2.16.840.1.113883.10.20.22.4.119\"/>\n                    <time value=\"20150622155711+0000\"/>\n                    <assignedAuthor>\n                      <id extension=\"10108\" root=\"1.3.6.1.4.1.22812.4.17.11\"/>\n                      <code code=\"260000000X\" codeSystem=\"2.16.840.1.113883.6.101\"/>\n                    </assignedAuthor>\n                  </author>\n                  <entryRelationship typeCode=\"SUBJ\">\n                    <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                      <id extension=\"10046386\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                    </encounter>\n                  </entryRelationship>\n                </observation>\n              </entryRelationship>\n              <entryRelationship typeCode=\"SUBJ\">\n                <encounter classCode=\"ENC\" moodCode=\"EVN\">\n                  <id extension=\"10046386\" root=\"1.3.6.1.4.1.22812.4.17.11.3.4\"/>\n                </encounter>\n              </entryRelationship>\n            </act>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/No_Known_Problems_Section_20140226.xml"
+            ],
+            "igReferences": [
+              "Section 2.53.1: Problem Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 15,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Procedures",
+        "categoryGrade": "A+",
+        "categoryNumericalScore": 100,
+        "categoryRubrics": [
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 0,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Social History",
+        "categoryGrade": "C",
+        "categoryNumericalScore": 75,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 1,
+            "issuesList": [
+              {
+                "lineNumber": "2377 - 2385",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <id nullFlavor=\"NI\"/>\n              <code code=\"72166-2\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n              <statusCode code=\"completed\"/>\n              <effectiveTime nullFlavor=\"NI\"/>\n              <value code=\"449868002\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\"/>\n            </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/SMOKING_Former_Smoker.xml"
+            ],
+            "igReferences": [
+              "Section 2.66: Social History Section"
+            ],
+            "description": "EffectiveTime elements in the section are expected to have timeoffsets along with the date and are typically nonzero timeoffsets. In addition they are expected to have the timezone information for proper interpretation.For e.g if the time is being defaulted to 000000 for hours, minutes and seconds for multiple entries it might be worth checking if the data was entered properly. Also if the time offsets are present without a timezone, the time may be interpreted incorrectly, hence timezones should be specified as part of the time element."
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Smoking status code value should be valid",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Smoking status observation Template Id should be valid",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Systems should capture birth sex independent of the Administrative Gender and encode them as an observation in the Social History Section",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 2,
+            "issuesList": [
+              {
+                "lineNumber": "2377 - 2385",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <templateId root=\"2.16.840.1.113883.10.20.22.4.78\"/>\n              <id nullFlavor=\"NI\"/>\n              <code code=\"72166-2\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n              <statusCode code=\"completed\"/>\n              <effectiveTime nullFlavor=\"NI\"/>\n              <value code=\"449868002\" codeSystem=\"2.16.840.1.113883.6.96\" xsi:type=\"CD\"/>\n            </observation>"
+              },
+              {
+                "lineNumber": "2369 - 2374",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n              <templateId extension=\"2016-06-01\" root=\"2.16.840.1.113883.10.20.22.4.200\"/>\n              <code code=\"76689-9\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n              <statusCode code=\"completed\"/>\n              <value code=\"F\" codeSystem=\"2.16.840.1.113883.5.1\" xsi:type=\"CD\"/>\n            </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/SMOKING_Former_Smoker.xml"
+            ],
+            "igReferences": [
+              "Section 2.66: Social History Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 3,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      },
+      {
+        "categoryName": "Vital Signs",
+        "categoryGrade": "B+",
+        "categoryNumericalScore": 88,
+        "categoryRubrics": [
+          {
+            "rule": "EffectiveDate/Time elements have the right time and timezone offsets",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "EffectiveDate/Times for all historical activities should be within the lifespan on the patient",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Display Names used by the structured data should match the Display Name (Preferred Name) within the Terminology",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The Vital Sign Observation entries should use LOINC codes to represent the type of vital sign being captured",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each of the Vital Sign Observations should use the recommended UCUM units to represent the vital sign measurement result",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "The EffectiveDate/Time elements for the Vital Sign Organizer must encompass the underlying observations",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          },
+          {
+            "rule": "Each entry has to be linked to related narrative text",
+            "numberOfIssues": 10,
+            "issuesList": [
+              {
+                "lineNumber": "3546 - 3554",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638707\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"8310-5\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"Cel\" value=\"38\" xsi:type=\"PQ\"/>\n                </observation>"
+              },
+              {
+                "lineNumber": "3557 - 3574",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638703\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"8867-4\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"/min\" value=\"80\" xsi:type=\"PQ\"/>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <act classCode=\"ACT\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.64\"/>\n                      <code code=\"48767-8\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <text>\n                        <reference value=\"#_35e6a9c7-a5fd-4715-ae54-eb92440922c6\"/>\n                      </text>\n                    </act>\n                  </entryRelationship>\n                </observation>"
+              },
+              {
+                "lineNumber": "3577 - 3594",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638701\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"9279-1\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"/min\" value=\"18\" xsi:type=\"PQ\"/>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <act classCode=\"ACT\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.64\"/>\n                      <code code=\"48767-8\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <text>\n                        <reference value=\"#_fb0da458-82f6-47bf-ad74-ea6518ab6b17\"/>\n                      </text>\n                    </act>\n                  </entryRelationship>\n                </observation>"
+              },
+              {
+                "lineNumber": "3597 - 3614",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638704\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"59408-5\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"%\" value=\"95\" xsi:type=\"PQ\"/>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <act classCode=\"ACT\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.64\"/>\n                      <code code=\"48767-8\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <text>\n                        <reference value=\"#_0acc8e15-f866-4473-a9d9-3619a1e2c59e\"/>\n                      </text>\n                    </act>\n                  </entryRelationship>\n                </observation>"
+              },
+              {
+                "lineNumber": "3617 - 3634",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638705\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"8480-6\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"mm[Hg]\" value=\"145\" xsi:type=\"PQ\"/>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <act classCode=\"ACT\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.64\"/>\n                      <code code=\"48767-8\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <text>\n                        <reference value=\"#_7797fe7a-de3a-455c-93c6-71d780bebb49\"/>\n                      </text>\n                    </act>\n                  </entryRelationship>\n                </observation>"
+              },
+              {
+                "lineNumber": "3637 - 3654",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638706\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"8462-4\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"mm[Hg]\" value=\"88\" xsi:type=\"PQ\"/>\n                  <entryRelationship inversionInd=\"true\" typeCode=\"SUBJ\">\n                    <act classCode=\"ACT\" moodCode=\"EVN\">\n                      <templateId root=\"2.16.840.1.113883.10.20.22.4.64\"/>\n                      <code code=\"48767-8\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                      <text>\n                        <reference value=\"#_d1953841-2761-4ffd-b4a2-4f94785f29c8\"/>\n                      </text>\n                    </act>\n                  </entryRelationship>\n                </observation>"
+              },
+              {
+                "lineNumber": "3657 - 3665",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638711\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"29463-7\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"kg\" value=\"88\" xsi:type=\"PQ\"/>\n                </observation>"
+              },
+              {
+                "lineNumber": "3668 - 3676",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638708\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"8302-2\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"cm\" value=\"177\" xsi:type=\"PQ\"/>\n                </observation>"
+              },
+              {
+                "lineNumber": "3679 - 3687",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638713\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"39156-5\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"kg/m2\" value=\"28.09\" xsi:type=\"PQ\"/>\n                </observation>"
+              },
+              {
+                "lineNumber": "3690 - 3698",
+                "xmlString": "<observation xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" classCode=\"OBS\" moodCode=\"EVN\">\n                  <templateId extension=\"2014-06-09\" root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <templateId root=\"2.16.840.1.113883.10.20.22.4.27\"/>\n                  <id extension=\"100638714\" root=\"1.3.6.1.4.1.22812.4.17.11.4.6\"/>\n                  <code code=\"3140-1\" codeSystem=\"2.16.840.1.113883.6.1\"/>\n                  <statusCode code=\"completed\"/>\n                  <effectiveTime value=\"20150622130041+0000\"/>\n                  <value unit=\"m2\" value=\"2.05\" xsi:type=\"PQ\"/>\n                </observation>"
+              }
+            ],
+            "exampleTaskForceLinks": [
+              "https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/VITALS_Complete_Panel_Metric.xml"
+            ],
+            "igReferences": [
+              "Section 2.70.1: Vital Signs Section"
+            ],
+            "description": "Each entry has to be linked to related narrative text"
+          },
+          {
+            "rule": "All Template Ids should be Valid with correct extension value",
+            "numberOfIssues": 0,
+            "issuesList": [],
+            "exampleTaskForceLinks": [],
+            "igReferences": [],
+            "description": null
+          }
+        ],
+        "numberOfIssues": 10,
+        "certificationFeedback": false,
+        "failingConformance": false,
+        "nullFlavorNI": false
+      }
+    ],
+    "numberOfIssues": 34,
+    "igReferenceUrl": "http://www.hl7.org/implement/standards/product_brief.cfm?product_id=379",
+    "industryAverageScore": 79,
+    "industryAverageGrade": "C",
+    "numberOfDocumentsScored": 33977,
+    "ccdaVersion": "R2.1",
+    "passedCertification": null,
+    "numberOfDocsScoredPerCcdaDocumentType": 1577,
+    "industryAverageScoreForCcdaDocumentType": 75,
+    "industryAverageGradeForCcdaDocumentType": "C"
+  },
+  "referenceResults": [
+    {
+      "type": "C-CDA IG Conformance Errors",
+      "totalErrorCount": 0,
+      "referenceErrors": []
+    },
+    {
+      "type": "2015 Edition Certification Feedback",
+      "totalErrorCount": 1,
+      "referenceErrors": [
+        {
+          "description": "The node '@unit' does not exist at the expected path /ClinicalDocument[1]/component[1]/structuredBody[1]/component[16]/section[1]/entry[1]/organizer[1]/component[2]/observation[1]/value[1] but is required as per the specification: If Observation/value is a physical quantity (xsi:type=\"PQ\"), the unit of measure SHALL be selected from ValueSet UnitsOfMeasureCaseSensitive 2.16.840.1.113883.1.11.12839 DYNAMIC (CONF:1198-31484).",
+          "type": "ONC 2015 S&CC Vocabulary Validation Conformance Error",
+          "xPath": "/ClinicalDocument[1]/component[1]/structuredBody[1]/component[16]/section[1]/entry[1]/organizer[1]/component[2]/observation[1]/value[1]",
+          "validatorConfiguredXpath": "//v3:observation/v3:templateId[@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/ancestor::v3:observation[1]/v3:value[@xsi:type='PQ' and not(@nullFlavor) and ancestor::v3:section[not(@nullFlavor)]]",
+          "documentLineNumber": "3218",
+          "actualCode": null,
+          "actualCodeSystem": null,
+          "actualCodeSystemName": null,
+          "actualDisplayName": null,
+          "schemaError": false,
+          "dataTypeSchemaError": false,
+          "sectionName": null
+        }
+      ]
+    }
+  ],
+  "schemaErrorList": null,
+  "schemaErrors": false,
+  "success": true
+}
