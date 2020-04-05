@@ -10,7 +10,9 @@ All of these samples have been copied, unzipped, renamed, formatted and organize
 
 # Why was this repository created?
 
-We created this repository for a joint research study by the Veterans Health Administration (VA), Diameter Health (DH), InterSystems and ONC. That research investigated issues regarding the interoperability of clinical data (submitted for publication in March 2018). The authors on that study are John D'Amore (DH), Omar Bouhaddou (VA), Sandi Mitchell (VA), Chun Li (DH), Russ Leftwich (InterSystems), Todd Turner (VA), Matt Rahn (ONC) and Margaret Donahue (VA). For questions on that study, please contact jdamore at diameterhealth.com who also created this repo (github:jddamore)
+We created this repository for a joint research study by the Veterans Health Administration (VA), Diameter Health (DH), InterSystems and ONC. That research investigated issues regarding the interoperability of clinical data and was published at the American Medical Informatics Association in 2018. The paper won the "Most Distinguished" research award for that year. The authors on that study are John D'Amore (DH), Omar Bouhaddou (VA), Sandi Mitchell (VA), Chun Li (DH), Russ Leftwich (InterSystems), Todd Turner (VA), Matt Rahn (ONC) and Margaret Donahue (VA). For questions on that study, please contact jdamore at diameterhealth.com who also created this repo (github:jddamore). The link to the full paper is here: 
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371305/
 
 This repository contains several directories beginning with "z-" that have non-XML files collected or created as part of the research study:
 
