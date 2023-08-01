@@ -32,4 +32,4 @@ THIS INFORMATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 # Contact
 
-For questions on this repository or the research study, please contact jdamore at diameterhealth.com (github:jddamore)
+For questions on this repository or the research study, please contact johnd at moreinformatics.com (github:jddamore)
